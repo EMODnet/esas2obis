@@ -85,7 +85,7 @@ limit <- 100
 Create a SQLite database with the source data, so it can be queried with SQL in the next steps:
 
 ```{r}
-esas_db <- DBI::dbConnect(RSQLite::SQLite(), ":memory:", extended_types = TRUE)
+esas_db <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
 DBI::dbWriteTable(esas_db, "campaigns", campaigns)
 DBI::dbWriteTable(esas_db, "samples", samples)
 DBI::dbWriteTable(esas_db, "positions", positions)
@@ -97,25 +97,25 @@ DBI::dbWriteTable(esas_db, "species", species)
 
 The Darwin Core mapping follows the recommendations of the [OBIS Darwin Core manual](https://obis.org/manual/darwincore/) and is structured as [OBIS-ENV-DATA](https://obis.org/manual/dataformat/#obis-env-data).
 
-Create DwC Event core:
+Create [Event](https://rs.gbif.org/core/dwc_event_2022-02-02.xml) core:
 
 ```{r}
 dwc_event_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_event.sql")), .con = esas_db)
 dwc_event <- DBI::dbGetQuery(esas_db, dwc_event_sql)
 ```
 
-Create DwC Occurrence extension:
+Create [Occurrence](https://rs.gbif.org/core/dwc_occurrence_2022-02-02.xml) extension:
 
 ```{r}
 dwc_occurrence_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_occurrence.sql")), .con = esas_db)
 dwc_occurrence <- DBI::dbGetQuery(esas_db, dwc_occurrence_sql)
 ```
 
-Create DwC Measurement or fact extension:
+Create [Extended Measurement Or Facts](https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml) extension:
 
 ```{r}
-dwc_mof_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_mof.sql")), .con = esas_db)
-dwc_mof <- DBI::dbGetQuery(esas_db, dwc_mof_sql)
+dwc_emof_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_emof.sql")), .con = esas_db)
+dwc_emof <- DBI::dbGetQuery(esas_db, dwc_emof_sql)
 ```
 
 ## Write data to CSV
@@ -123,5 +123,5 @@ dwc_mof <- DBI::dbGetQuery(esas_db, dwc_mof_sql)
 ```{r}
 write_csv(dwc_event, here("data", "processed", "event.csv"), na = "")
 write_csv(dwc_occurrence, here("data", "processed", "occurrence.csv"), na = "")
-write_csv(dwc_mof, here("data", "processed", "mof.csv"), na = "")
+write_csv(dwc_emof, here("data", "processed", "emof.csv"), na = "")
 ```
