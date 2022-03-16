@@ -1,0 +1,636 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "campaigns",
+      "path": "CAMPAIGNS_BE_ICES_2022.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "schema": {
+        "title": "Campaigns",
+        "description": "Campaigns that generated the data.\n",
+        "fields": [
+          {
+            "name": "CampaignID",
+            "description": "Unique identifier for the campaign. Should be a globally unique and permanent identifier to  allow re-uploads.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "unique": true,
+              "maxLength": 50
+            }
+          },
+          {
+            "name": "DataAccess",
+            "description": "Whether data for the campaign can be made publicly accessible under the conditions of the \nICES data policy. Uses the [Data_access](https://vocab.ices.dk/?ref=1435) vocabulary:\n- `Public`\n- `Restricted`\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 15,
+              "enum": ["Public", "Restricted"]
+            }
+          },
+          {
+            "name": "StartDate",
+            "description": "Start date of the campaign. Format: `yyyy-mm-dd`.\n",
+            "type": "date",
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "EndDate",
+            "description": "End date of the campaign. Format: `yyyy-mm-dd`.\n",
+            "type": "date",
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "Notes",
+            "description": "Additional details related to the campaign, such as research purpose, area covered or route  followed.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 300
+            }
+          }
+        ],
+        "missingValues": ["", "NA"],
+        "primaryKey": "CampaignID"
+      }
+    },
+    {
+      "name": "samples",
+      "path": "SAMPLES_BE_ICES_2022.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "schema": {
+        "title": "Samples",
+        "description": "Sampling events during a campaign, with a specific methodology. Use separate sample records when  multiple observers are producing independent data streams.\n",
+        "fields": [
+          {
+            "name": "CampaignID",
+            "description": "Unique identifier of the campaign this sample belongs to.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 50
+            }
+          },
+          {
+            "name": "SampleID",
+            "description": "Unique identifier for the sample.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "unique": true,
+              "maxLength": 50
+            }
+          },
+          {
+            "name": "Date",
+            "description": "Sampling date. Format: `yyyy-mm-dd`.\n",
+            "type": "date",
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "PlatformCode",
+            "description": "Platform used for sampling. Uses the [SHIPC](https://vocab.ices.dk/?ref=315) vocabulary.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 6
+            }
+          },
+          {
+            "name": "PlatformClass",
+            "description": "Type of the platform used for sampling. Uses the \n[Platform Class](https://vocab.ices.dk/?ref=311) vocabulary:\n- `ship` [30: Ship](https://vocab.ices.dk/?CodeID=120897)\n- `aeroplane` [62: Aeroplane](https://vocab.ices.dk/?CodeID=137773)\n- `helicopter` [67: Helicopter](https://vocab.ices.dk/?CodeID=120899)\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 2,
+              "enum": ["30", "62", "67"]
+            }
+          },
+          {
+            "name": "PlatformSide",
+            "description": "Side of the platform used for sampling. Uses the\n[PlatformSide](http://vocab.ices.dk/?ref=1688) vocabulary:\n- `right` Starboard\n- `right front`\n- `right back`\n- `left` Port\n- `left front`\n- `left back`\n- `both` Observers on both sides producing one collective data stream\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 15,
+              "enum": ["right", "right front", "right back", "left", "left front", "left back", "both"]
+            }
+          },
+          {
+            "name": "PlatformHeight",
+            "description": "Height (m) of the platform during sampling, e.g. average flying height of aeroplane.\n",
+            "type": "number",
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "TransectWidth",
+            "description": "Width of the sampling transect (m).\n",
+            "type": "integer",
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "SamplingMethod",
+            "description": "Sampling method. Uses the \n[BD_CountMethod](https://vocab.ices.dk/?CodeTypeRelID=1440&CodeID=235388) vocabulary:\n- `1` Full ship-based transect method with snapshot for flying birds\n- `2` Full ship-based transect method, no snapshot for flying birds\n- `3` All observations, but no transect operated\n- `4` Presence/absence data\n- `5` Full ship-based transect method with snapshot for flying birds, but no scan data for outside the transect\n- `6` Ship-based strip transect, no snapshot, no distance estimation\n- `7` Ship-based strip transect, with snapshot, no distance estimation\n- `8` Visual aerial line transect method with distance sampling\n- `9` Visual aerial strip transect, no distance estimation\n- `10` Visual aerial total counts\n- `11` Digital aerial – video\n- `12` Digital aerial – stills\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 10,
+              "enum": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+            }
+          },
+          {
+            "name": "PrimarySampling",
+            "description": "Whether the sample should be considered primary (`true`) or ancillary (`false`) in case of  double or triple observer sampling.\n",
+            "type": "boolean",
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "TargetTaxa",
+            "description": "Species (groups) that were counted during sampling. Uses the \n[TargetTaxa](http://vocab.ices.dk/?ref=1713) vocabulary:\n- `1` All species recorded (standard)\n- `2` All species except Larus gulls\n- `3` All species except fulmars\n- `4` All species except Larus gulls, fulmars and kittiwakes\n- `5` Auks only\n- `6` Auks and seaduck only\n- `7` All species except eiders and gulls\n- `8` All species except gannets\n- `9` Auks and unusual seabirds only\n- `10` All species except auks and divers\n- `11` All species except small gulls (Little, Black-headed & Common Gull/Black-legged Kittiwake)\n- `12` All species except Lesser Black-backed Gulls\n- `13` All species except seaduck and divers\n- `14` All species except gannets, fulmars and kittiwakes\n- `15` All species except fulmars and gannets\n- `16` Cetaceans only\n- `17` Auks, divers, grebes and seaduck only\n- `18` Cetaceans and rare birds only\n- `99` Other\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 3,
+              "enum": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "99"]
+            }
+          },
+          {
+            "name": "DistanceBins",
+            "description": "List of distance bin boundaries applied during sampling and to be used for distance analyses.  Format: `x|x|...|x`. For typical ship-based sampling using a 300 m wide transect this would  be `0|50|100|200|300`.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 100,
+              "pattern": "(\\d+\\|)+\\d+"
+            }
+          },
+          {
+            "name": "UseOfBinoculars",
+            "description": "Extent to which binoculars were used during sampling. Uses the \n[UseOfBinoculars](http://vocab.ices.dk/?ref=1719) vocabulary:\n- `1` No binoculars used\n- `2` Binoculars used for scanning far ahead of the platform (e.g. for seaduck and diver monitoring)\n- `3` Binoculars used extensively for scanning ahead and to the side, naked eye used for close observations (e.g. for cetacean monitoring)\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 2,
+              "enum": ["1", "2", "3"]
+            }
+          },
+          {
+            "name": "NumberOfObservers",
+            "description": "Number of observers that contributed to the sample.\n",
+            "type": "integer",
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "Notes",
+            "description": "Additional details related to the sample, such as the name of the ship if no `SHIPC` code  exists.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 300
+            }
+          }
+        ],
+        "missingValues": ["", "NA"],
+        "primaryKey": "SampleID",
+        "foreignKeys": [
+          {
+            "fields": "CampaignID",
+            "reference": {
+              "resource": "campaigns",
+              "fields": "CampaignID"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "positions",
+      "path": "POSITIONS_BE_ICES_2022.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "schema": {
+        "title": "Positions",
+        "description": "Positions during sampling. Since the platform moves during sampling, these positions often  represent the calculated middle point of a trajectory. These trajectories (called \"observation  bins\") typically have predefined durations (e.g. 2 minutes).\n",
+        "fields": [
+          {
+            "name": "SampleID",
+            "description": "Unique identifier of the sample this position belongs to.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 50
+            }
+          },
+          {
+            "name": "PositionID",
+            "description": "Unique identifier for the position.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "unique": true,
+              "maxLength": 50
+            }
+          },
+          {
+            "name": "Time",
+            "description": "UTC time of the observation bin, defined as the start time of the trajectory. Format:  `hh:mm:ss`.\n",
+            "type": "time",
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "Latitude",
+            "description": "Latitude of the position in decimal degrees, using the WGS84 datum.\n",
+            "type": "number",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "minimum": -90,
+              "maximum": 90
+            }
+          },
+          {
+            "name": "Longitude",
+            "description": "Longitude of the position in decimal degrees, using the WGS84 datum.\n",
+            "type": "number",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "minimum": -180,
+              "maximum": 180
+            }
+          },
+          {
+            "name": "Distance",
+            "description": "Distance travelled during the observation bin in km. Can only remain empty if `Area` is used.\n",
+            "type": "number",
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "Area",
+            "description": "Area of sea surveyed during the observation bin in km². Can only remain empty if `Distance`  is used.\n",
+            "type": "number",
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "Beaufort",
+            "description": "Sea state according to the Beaufort scale. Uses the [Beaufort](http://vocab.ices.dk/?ref=1705) vocabulary:\n- `0` Calm - Sea like mirror\n- `1` Light air - Ripples with appearance of scales, no foam crests\n- `2` Light breeze - Small wavelets, crests of glassy appearance, not breaking\n- `3` Gentle breeze - Large wavelets, crests begin to break, scattered whitecaps\n- `4` Moderate breeze - Small waves becoming longer, numerous whitecaps\n- `5` Fresh breeze - Moderate waves, many whitecaps, some spray\n- `6` Strong breeze - Larger waves, whitecaps everywhere, more spray\n- `7` High wind, moderate gale, near gale - Sea heaps up and white foam from breaking waves begins to be blown in streaks along the direction of the wind\n- `8` Gale, fresh gale - Moderately high waves; edges of crests begin to break into the spindrift; foam is blown in well-marked streaks along the direction of the wind\n- `9` Strong/severe gale - High waves; dense streaks of foam along wind; crests begin to topple, tumble and roll over; spray may affect visibility\n- `10` Storm, whole gale - Very high waves with long overhanging crests; foam in great patches blown in dense white streaks along wind; sea surface takes a white appearance; tumbling becomes heavy and shock-like; visibility affected\n- `11` Violent storm - Exceptionally high waves (medium sized ships may be lost to view behind waves); sea covered with long white patches of foam lying along the wind; everywhere edges of crests are blown into froth; visibility affected\n- `12` Hurricane force - Air is filled with foam and spray; sea completely white with driving spray; visibility seriously affected\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 2,
+              "enum": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+            }
+          },
+          {
+            "name": "Visibility",
+            "description": "Visibility in kilometer, uses the [Visibility](http://vocab.ices.dk/?ref=1708) vocabulary:\n- `0.1`\n- `0.2`\n- `0.3`\n- `0.4`\n- `0.5`\n- `0.6`\n- `0.7`\n- `0.8`\n- `0.9`\n- `1`\n- `1.5`\n- `2`\n- `2.5`\n- `3`\n- `3.5`\n- `4`\n- `5`\n- `6`\n- `7`\n- `8`\n- `9`\n- `10` Visibility of >= 10 km\n\nOr as a range (historical codes, avoid use):\n- `A` Poor (< 1 km)\n- `B` Fair/moderate (1 – 5 km)\n- `C` Good/very good (5 – 10 km)\n- `D` Excellent/infinity (> 10 km)\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 3,
+              "enum": ["0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "1", "1.5", "2", "2.5", "3", "3.5", "4", "5", "6", "7", "8", "9", "10", "A", "B", "C", "D"]
+            }
+          },
+          {
+            "name": "Glare",
+            "description": "Glare that could be affecting the observation quality. Uses the\n[Glare](http://vocab.ices.dk/?ref=1717) vocabulary:\n- `none` No glare\n- `weak` Weak glare (no major effect on the counting)\n- `medium` Medium glare (a part of the viewing area is affected by glare)\n- `strong` Strong glare (the whole viewing area is affected)\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 25,
+              "enum": ["none", "weak", "medium", "strong"]
+            }
+          },
+          {
+            "name": "SunAngle",
+            "description": "Angle of the sun in relation to the observer (`0` – `359`).\n",
+            "type": "integer",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 360
+            }
+          },
+          {
+            "name": "CloudCover",
+            "description": "Cloud cover expressed as x/8 (octas). Uses the  [CloudCover](http://vocab.ices.dk/?ref=1706) vocabulary.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 2,
+              "enum": ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
+            }
+          },
+          {
+            "name": "Precipitation",
+            "description": "Uses the [Precipitation vocabulary](http://vocab.ices.dk/?ref=1707):\n- `N` None\n- `R` Rain\n- `S` Snow\n- `F` Fog\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 2,
+              "enum": ["N", "R", "S", "F"]
+            }
+          },
+          {
+            "name": "IceCover",
+            "description": "Ice coverage within the transect % (`0` – `100`).\n",
+            "type": "integer",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          {
+            "name": "ObservationConditions",
+            "description": "General impression of the observation conditions. Uses the \n[Sightability](https://vocab.ices.dk/?ref=1704) vocabulary:\n- `G` Good\n- `M` Moderate\n- `P` Poor\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 3,
+              "enum": ["G", "M", "P"]
+            }
+          }
+        ],
+        "missingValues": ["", "NA"],
+        "primaryKey": "PositionID",
+        "foreignKeys": [
+          {
+            "fields": "SampleID",
+            "reference": {
+              "resource": "samples",
+              "fields": "SampleID"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "observations",
+      "path": "OBSERVATIONS_BE_ICES_2022.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "schema": {
+        "title": "Observations",
+        "description": "Observation of a group of birds or marine mammals of a certain species. Use separate observations  to distinguish between species, ages, etc.\n",
+        "fields": [
+          {
+            "name": "PositionID",
+            "description": "Unique identifier of the position this observation belongs to.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 50
+            }
+          },
+          {
+            "name": "ObservationID",
+            "description": "Unique identifier for the observation.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "unique": true,
+              "maxLength": 50
+            }
+          },
+          {
+            "name": "GroupID",
+            "description": "Identifier of aggregations of individuals of one or several species. Should be unique among  all observations from the same `SampleID`.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 3
+            }
+          },
+          {
+            "name": "Transect",
+            "description": "Whether the observation was in (`TRUE`) or out (`FALSE`) of the transect.\n",
+            "type": "boolean",
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "SpeciesCodeType",
+            "description": "Reference list for the `SpeciesCode`. Uses the [RLIST](https://vocab.ices.dk/?ref=44) \nvocabulary:\n- `ESAS`: [European Seabirds at Sea](../species/) species codes\n- `ERID`: [World Register of Marine Species](https://www.marinespecies.org/) Aphia IDs\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 10,
+              "enum": ["ESAS", "ERID"]
+            }
+          },
+          {
+            "name": "SpeciesCode",
+            "description": "Code of the observed species, see the [lookup  table](https://esas-docs.ices.dk/species/).\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "maxLength": 10,
+              "enum": ["20", "30", "40", "45", "50", "59", "70", "90", "100", "110", "120", "127", "128", "129", "140", "220", "262", "260", "263", "269", "35990", "340", "350", "359", "360", "361", "362", "35970", "400", "409", "410", "430", "460", "462", "463", "469", "480", "482", "483", "499", "500", "510", "520", "550", "558", "559", "560", "580", "581", "640", "660", "670", "700", "710", "720", "721", "800", "849", "920", "930", "1010", "1110", "1190", "1210", "1220", "1340", "1360", "1440", "1520", "1530", "1540", "1559", "20800", "1569", "1570", "1571", "1574", "1580", "1590", "1610", "1620", "1659", "1660", "1670", "1680", "1681", "1682", "1700", "1730", "1790", "1820", "1840", "1845", "1860", "1863", "1890", "1910", "1940", "1959", "1980", "2030", "2040", "2059", "2060", "2070", "2110", "2120", "2130", "2139", "2140", "2150", "2160", "2180", "2200", "2210", "2230", "2239", "2269", "2310", "2380", "2430", "2600", "2610", "2670", "2690", "2870", "2900", "3009", "3010", "3040", "3070", "3090", "3100", "3110", "3180", "3200", "3219", "4070", "4080", "4240", "4290", "4330", "4500", "4510", "4560", "4690", "4700", "4710", "4770", "4820", "4850", "4860", "4930", "4960", "4970", "5010", "5090", "5100", "5120", "5129", "5170", "5180", "5190", "5290", "5320", "5340", "5380", "5400", "5410", "5450", "5460", "5480", "5530", "5540", "5560", "5610", "5640", "5645", "5650", "5659", "5660", "5670", "5680", "5690", "5709", "5750", "5780", "5790", "5820", "5880", "5890", "5900", "5902", "5909", "5910", "5911", "5912", "5919", "5920", "5921", "5922", "5926", "5927", "5980", "5982", "5985", "5990", "90080", "6000", "6009", "6010", "6020", "6040", "6049", "6050", "6060", "6070", "6090", "6110", "6111", "6140", "6150", "6160", "6169", "6230", "6240", "6250", "6259", "6260", "6270", "6280", "6285", "6300", "6340", "6345", "6350", "6360", "6380", "6470", "6540", "6545", "6549", "6650", "6657", "6680", "6700", "6829", "6840", "6870", "6999", "6919", "7240", "7610", "7670", "7680", "7780", "7940", "7950", "7980", "8060", "8460", "8480", "8760", "9720", "9740", "9760", "9780", "9789", "9810", "9910", "9920", "9995", "10010", "10090", "10100", "10110", "10140", "10142", "10159", "10170", "10171", "10180", "10190", "10200", "10201", "10202", "10239", "10480", "10490", "10660", "10840", "10990", "11040", "11060", "11061", "11210", "11220", "11370", "11390", "11460", "11770", "11860", "11870", "11890", "11980", "12000", "12005", "12010", "12020", "12069", "12200", "12360", "12430", "12500", "12510", "12549", "12590", "12600", "12730", "12740", "12750", "12760", "12770", "12930", "12970", "13000", "13080", "13110", "13120", "13129", "13140", "13150", "13350", "13430", "13490", "14610", "14620", "14640", "15150", "15280", "15600", "15630", "15670", "15671", "15673", "15720", "15749", "15820", "15910", "15980", "16350", "16360", "16380", "16389", "16400", "16490", "16520", "16530", "16540", "16600", "16620", "16630", "16660", "16790", "17100", "17170", "17450", "18470", "18500", "18570", "18770", "18810", "18820", "18829", "19998", "19999", "51000", "60000", "61000", "61010", "61020", "61040", "61050", "61060", "61070", "62040", "62210", "62220", "62230", "62240", "62250", "62260", "62270", "62520", "62620", "62740", "62750", "62770", "62800", "62880", "62890", "63010", "63020", "63030", "63040", "63070", "63080", "63089", "63110", "63120", "63130", "63150", "63190", "63200", "63240", "63250", "63255", "63260", "63270", "63280", "63400", "63510", "64210", "64310", "64320", "64330", "64350", "64380", "64400", "64410", "64420", "65000", "65010", "65020", "65050", "66000", " 66010", "66020", "66030", "66050", "66065", "67000", "67600", "67810", "67815", "67820", "67900", "67902", "67905", "67906", "67907", "68000", "68001", "68002", "68100", "68500"]
+            }
+          },
+          {
+            "name": "Count",
+            "description": "Number of birds or marine mammals counted or estimated. This should equal the number without  distance correction.\n",
+            "type": "integer",
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ObservationDistance",
+            "description": "Distance at which the birds or marine mammals were observed.\n\nIn case of the standard 300 m transect used for ship-based sampling of marine mammals and \nbirds in contact with the water:\n- `A` In contact with the water, 0 - 50 m\n- `B` In contact with the water, 50 - 100 m\n- `C` In contact with the water, 100 - 200 m\n- `D` In contact with the water, 200 - 300 m\n- `E` In contact with the water, >300 m, beyond transect\n- `F` Flying, no contact with water\n- `W` In contact with the water, but distance not recorded\n\nFor any other type of distance bin classification, the distance is an integer indicating the \ndistance (m) to middle point of one the distance bins specified in the `DistanceBins`. \nObservations outside this transect are indicated by a `>` sign (e.g. `>1000`).\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 8,
+              "pattern": "[ABCDEFW]|\\>?\\d+(\\.\\d+)?"
+            }
+          },
+          {
+            "name": "LifeStage",
+            "description": "Life stage based on plumage. Uses the [LifeStage](http://vocab.ices.dk/?ref=1715) vocabulary:\n- `A` Adult\n- `I` Immature (not specified)\n  - `1` 1st calendar year (juvenile)\n  - `2` 2nd calendar year\n  - `3` 3rd calendar year\n  - `4` 4th calendar year\n  - `5` 5th calendar year\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 2,
+              "enum": ["A", "I", "1", "2", "3", "4", "5"]
+            }
+          },
+          {
+            "name": "Moult",
+            "description": "Primary moult information, only used for fulmar, auks, divers and seaducks. Uses the\n[Moult](http://vocab.ices.dk/?ref=1720) vocabulary:\n- `X` Active primary moult\n- `Y` No active primary moult\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 2,
+              "enum": ["X", "Y"]
+            }
+          },
+          {
+            "name": "Plumage",
+            "description": "Plumage types. Uses the [Plumage](http://vocab.ices.dk/?ref=1716) vocabulary:\n- `B` Breeding (summer) plumage\n- `T` Transient plumage (moulting between winter & summer plumage or vice-versa)\n- `W` Non-breeding (winter) plumage\n- `L` Light morph (skuas/double light ‘LL’ fulmars)\n- `C` Coloured morph (‘L’, ‘D’ & ‘DD’ fulmars)\n- `I` Intermediate morph (skuas)\n- `D` Dark morph (skuas)\n- `P` Pullus\n\nFor immature auks (guillemot and razorbill):\n- `A1` ½ or less than adult size\n- `A2` Over ½ adult size\n- `A3` About same size as adult\n\nFor immature northern gannets:\n- `G1` Plumage 1\n- `G2` Plumage 2\n- `G3` Plumage 3\n- `G4` Plumage 4\n- `G5` Plumage 5\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 3,
+              "enum": ["B", "T", "W", "L", "C", "I", "D", "P", "A1", "A2", "A3", "G1", "G2", "G3", "G4", "G5"]
+            }
+          },
+          {
+            "name": "Sex",
+            "description": "Sex. Uses the [SEXCO](https://vocab.ices.dk/?CodeID=54287) vocabulary:\n- `F` Female\n- `M` Male \n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 2,
+              "enum": ["F", "M"]
+            }
+          },
+          {
+            "name": "TravelDirection",
+            "description": "Direction in which the bird/cetacean is travelling. Uses the\n[TravelDirection](http://vocab.ices.dk/?ref=1689) vocabulary.\n\nEither absolute, indicated as (inter)cardinal directions:\n- `N` Heading N\n- `NE` Heading NE\n- `E` Heading E\n- `SE` Heading SE\n- `S` Heading S\n- `SW` Heading SW\n- `W` Heading W\n- `NW` Heading NW\n- `U` Flying, no apparent direction\n\nOr relative to the direction of the platform, indicated in degrees with 10° increments.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 3,
+              "enum": ["N", "NE", "E", "SE", "S", "SW", "W", "NW", "U", "0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "110", "120", "130", "140", "150", "160", "170", "180", "190", "200", "210", "220", "230", "240", "250", "260", "270", "280", "290", "300", "310", "320", "330", "340", "350", "360"]
+            }
+          },
+          {
+            "name": "Prey",
+            "description": "Observed prey (type) caught or carried by the bird/cetacean. Uses the\n[PreyType](http://vocab.ices.dk/?ref=1687) vocabulary:\n- `9` Other item\n- `10` Fish, no further details\n- `11` Small fish, unidentified (ca. bill length)\n- `12` Medium fish, unidentified (ca. 2-5x bill length)\n- `13` Marge fish, unidentified (difficult to handle)\n- `14` Feeding sandeel ball at surface\n- `15` Feeding clupeoid ball at surface\n- `16` Feeding unidentified fish ball at surface\n- `17` Feeding capelin ball at surface\n- `20` Gurnard\n- `21` Herring or sprat\n- `22` Sandeel\n- `23` Gadoid fish\n- `24` Flatfish\n- `25` Regurgitated fish after aerial pursuit\n- `26` Salmonid\n- `27` Capelin\n- `30` Small particles, unidentified\n- `31` Large object, unidentified\n- `32` Jellyfish\n- `33` Squid\n- `34` Worm (e.g. Nereis)\n- `35` Barnacles (Balanidae)\n- `36` Oil from oil slick\n- `40` Crustacean, unidentified\n- `41` Swimming crab\n- `42` Starfish\n- `43` Sea urchin\n- `45` Bivalve, unidentified\n- `46` Mussel\n- `47` Whelk eggs capsule\n- `50` Carrion or big unidentified corpse\n- `51` Seal carcass\n- `52` Whale carcass\n- `53` Bird carcass\n- `54` Litter, rubbish\n- `55` Regurgitated unidentified prey after aerial pursuit\n- `56` Bird kill (e.g. bonxie)\n- `57` Excrements (e.g. from whale)\n- `58` Kitchen scraps\n- `59` Bread\n- `60` Fishery waste, unidentified\n- `61` Discarded roundfish\n- `62` Discarded flatfish\n- `63` Discarded offal\n- `64` Discarded benthic invertebrate,unidentified\n- `65` Discarded starfish\n- `66` Discarded crustacean\n- `70` Seaweed as nest material\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 4,
+              "enum": ["9", "10", "11", "12", "13", "14", "15", "16", "17", "20", "21", "22", "23", "24", "25", "26", "27", "30", "31", "32", "33", "34", "35", "36", "40", "41", "42", "43", "45", "46", "47", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "70"]
+            }
+          },
+          {
+            "name": "Association",
+            "description": "Associations between the observed birds/cetaceans and vessels/structures/floating matter.\nUses the [Association](http://vocab.ices.dk/?ref=1718) vocabulary.\nCombine multiple values with `~`. Originally described in [Camphuysen & Garthe \n(2004)](http://www.vliz.be/nl/imis?module=ref&refid=69244) Appendix 1. `MSFA` stands for \nmulti-species feeding association ([Camphuysen & Webb, \n1999](http://www.vliz.be/nl/imis?module=ref&refid=247203)).\n- `10` Associated with fish shoal\n- `11` Associated with cetaceans\n- `12` Associated with front\n- `13` Associated with line in sea\n- `14` Sitting on or near floating wood\n- `15` Associated with floating litter\n- `16` Associated with oil slick\n- `17` Associated with floating seaweed\n- `18` Associated with observation base\n- `19` Sitting on observation base\n- `20` Deliberately approaching observation base\n- `21` Associated with other vessel\n- `22` Associated with or on buoy\n- `23` Associated with offshore platform\n- `24` Sitting on offshore platform\n- `25` Sitting on marking pole or stick\n- `26` Associated with fishing vessel\n- `27` Associated with or on sea ice\n- `28` Associated with land (e.g. colony)\n- `29` Associated with sand banks\n- `50` MSFA participant, no further details\n- `51` MSFA participant, joined by others\n- `52` MSFA participant, joining flock\n- `53` MSFA participant, scrounger type\n- `54` MSFA participant, solitary diver\n- `55` MSFA participant, beater\n- `56` MSFA participant, social feeder\n- `57` Type II MSFA participant\n- `58` Type III MSFA participant\n- `59` Drive hunt MSFA participant\n- `102` On sandbank\n- `110` Inside wind farm\n- `111` Inside wind farm, associated with floating litter\n- `112` Inside wind farm, associated with observation base\n- `113` Inside wind farm, associated with floating wood\n- `114` Inside wind farm, associated with floating sea weed\n- `115` Inside wind farm, associated with platform\n- `116` Sitting on wind turbine (foundation)\n- `117` Flying or swimming near wind turbine (foundation)\n- `200` Flying between (turbine) foundations\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 30,
+              "pattern": "(200|117|116|115|114|113|112|110|102|59|58|57|56|55|54|53|52|51|50|29|28|27|26|25|24|23|22|21|20|19|18|17|16|15|14|13|12|11|10|~)+"
+            }
+          },
+          {
+            "name": "Behaviour",
+            "description": "Indicates what the species was doing when observed. Uses the \n[Behaviour](http://vocab.ices.dk/?ref=1709) vocabulary. Combine multiple values with `~`.\nOriginally described in [Camphuysen & Garthe \n(2004)](http://www.vliz.be/nl/imis?module=ref&refid=69244) Appendix 2.\n- `1` On water/swimming\n- `2` Diving\n- `3` Flushing\n- `4` Flying\n- `5` Completely submerged (marine mammals)\n- `6` Breaking surface (marine mammals)\n- `7` On artificial piece of something (platform, pole…)\n- `30` Holding fish\n- `31` Without fish\n- `32` Feeding young at sea\n- `33` Feeding, method unspecified\n- `34` Wading, filtering or probing\n- `35` Scooping prey from surface\n- `36` Aerial pursuit\n- `37` Skimming\n- `38` Hydroplaning\n- `39` Pattering\n- `40` Scavenging\n- `41` Scavenging at fishing vessel\n- `42` Dipping\n- `43` Surface seizing\n- `44` Surface pecking\n- `45` Deep plunging\n- `46` Shallow plunging\n- `47` Pursuit plunging\n- `48` Pursuit diving, or bottom feeding\n- `49` Actively searching      \n- `60` Resting or apparently asleep\n- `61` Courtship display\n- `62` Courtship feeding\n- `63` Copulating\n- `64` Carrying nest material\n- `65` Guarding chick\n- `66` Preening or bathing\n- `67` Colony rafts\n- `68` Kleptoparasitising\n- `69` Circling high\n- `70` Wheeling or swimming slowly\n- `71` Escape from ship (rooster tail)\n- `72` Swimming fast, not avoiding ship\n- `73` Breaching clear out of the water\n- `74` At the bow of the ship\n- `75` Apparently feeding: herding behaviour\n- `76` Apparently feeding: other behaviour\n- `77` Calf at the tail of adult\n- `78` Calf swimming freely in herd\n- `79` Basking, afloat\n- `80` Spy-hopping\n- `81` Lob-tailing\n- `82` Tail/flipper slapping\n- `83` Approaching ship\n- `84` Only blow visible (whales)\n- `85` Only splashes visible (dolphins)\n- `86` Acrobatic leaps\n- `87` Sexual behaviour\n- `88` Play\n- `89` Haul-out\n- `90` Under attack by kleptoparasite\n- `91` Under attack (as prey) by bird\n- `92` Under attack (as prey) by mar. mammal\n- `93` Escape diving\n- `94` Flushed (disturbance)\n- `95` Injured\n- `96` Entangled in fishing gear or rope\n- `97` Oiled\n- `98` Sick, unwell\n- `99` Dead\n- `100` Carousel feeding (orca)\n- `101` Pod splitting\n- `102` Pod formation\n- `103` Source avoiding behaviour\n- `111` Not foraging\n- `112` Diving (no specification)\n- `113` Active migration\n- `114` Flying off (no specification)\n- `116` Distraction behaviour\n- `121` Milling / Non-directional behaviour\n- `122` Diving (marine mammals)\n- `123` Head out of water (seals)\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 5,
+              "enum": ["1", "2", "3", "4", "5", "6", "7", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "111", "112", "113", "114", "116", "121", "122", "123"]
+            }
+          },
+          {
+            "name": "Notes",
+            "description": "Additional details related to the observation.\n",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "maxLength": 300
+            }
+          }
+        ],
+        "missingValues": ["", "NA"],
+        "primaryKey": "ObservationID",
+        "foreignKeys": [
+          {
+            "fields": "PositionID",
+            "reference": {
+              "resource": "positions",
+              "fields": "PositionID"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
