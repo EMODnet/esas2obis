@@ -12,6 +12,8 @@ output:
     toc_float: yes
 ---
 
+This document describes how (and contains the code to) transform European Seabirds at Sea (ESAS) data to an [OBIS-ENV Darwin Core Archive](https://obis.org/manual/dataformat/#obis-env-data) that can be uploaded to an IPT.
+
 # Setup 
 
 ```{r setup, include = FALSE}
@@ -92,20 +94,27 @@ DBI::dbWriteTable(esas_db, "species", species)
 
 ## Darwin Core mapping
 
-Load Darwin Core transformation SQL files:
+The Darwin Core mapping follows the recommendations of the [OBIS Darwin Core manual](https://obis.org/manual/darwincore/) and is structured as [OBIS-ENV-DATA](https://obis.org/manual/dataformat/#obis-env-data).
+
+Create DwC Event core:
 
 ```{r}
-dwc_event_sql      <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_event.sql")), .con = esas_db)
-dwc_occurrence_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_occurrence.sql")), .con = esas_db)
-dwc_mof_sql        <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_mof.sql")), .con = esas_db)
+dwc_event_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_event.sql")), .con = esas_db)
+dwc_event <- DBI::dbGetQuery(esas_db, dwc_event_sql)
 ```
 
-Query database:
+Create DwC Occurrence extension:
 
 ```{r}
-dwc_event      <- DBI::dbGetQuery(esas_db, dwc_event_sql)
+dwc_occurrence_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_occurrence.sql")), .con = esas_db)
 dwc_occurrence <- DBI::dbGetQuery(esas_db, dwc_occurrence_sql)
-dwc_mof        <- DBI::dbGetQuery(esas_db, dwc_mof_sql)
+```
+
+Create DwC Measurement or fact extension:
+
+```{r}
+dwc_mof_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_mof.sql")), .con = esas_db)
+dwc_mof <- DBI::dbGetQuery(esas_db, dwc_mof_sql)
 ```
 
 ## Write data to CSV
