@@ -74,10 +74,10 @@ Load ESAS species list to assign scientific names to codes:
 species <- readr::read_tsv("https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/vocabularies/species.tsv", col_types = "iccicicc")
 ```
 
-Set limit for number of records (set to `100000000` in production, `NULL` is not supported by SQLite).
+Set filter **TO BE REMOVED HERE AND IN SQL**:
 
 ```{r}
-limit <- 100
+campaign_id <- 110000153
 ```
 
 ## Create database

@@ -29,4 +29,5 @@ FROM
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
 
-LIMIT {limit}
+WHERE
+  c.CampaignID = {campaign_id}

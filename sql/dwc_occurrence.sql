@@ -41,7 +41,14 @@ SELECT
 
 FROM
   observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN campaigns AS c
+    ON s.CampaignID = c.CampaignID
   LEFT JOIN species AS sp
     ON o.SpeciesCode = sp.euring_code
 
-LIMIT {limit}
+WHERE
+  c.CampaignID = {campaign_id}
