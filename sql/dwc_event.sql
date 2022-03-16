@@ -28,3 +28,5 @@ FROM
     ON p.SampleID = s.sampleID
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
+
+LIMIT {limit}

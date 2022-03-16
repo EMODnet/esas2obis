@@ -43,3 +43,5 @@ FROM
   observations AS o
   LEFT JOIN species AS sp
     ON o.SpeciesCode = sp.euring_code
+
+LIMIT {limit}

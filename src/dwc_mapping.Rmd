@@ -74,6 +74,12 @@ Load ESAS species list to assign scientific names to codes:
 species <- readr::read_tsv("https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/vocabularies/species.tsv", col_types = "iccicicc")
 ```
 
+Set limit for number of records (set to `100000000` in production, `NULL` is not supported by SQLite).
+
+```{r}
+limit <- 100
+```
+
 ## Create database
 
 Create a SQLite database with the source data, so it can be queried with SQL in the next steps:
