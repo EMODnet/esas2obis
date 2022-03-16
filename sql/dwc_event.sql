@@ -1,6 +1,72 @@
 /*
 Created by Peter Desmet (INBO)
 */
+
+-- CAMPAIGNS
+SELECT
+-- RECORD-LEVEL
+-- basisOfRecord
+  'HumanObservation' AS basisOfRecord,
+
+-- EVENT
+-- eventID
+  c.CampaignID AS eventID,
+-- parentEventID
+  NULL AS parentEventID,
+-- eventDate
+  date(c.StartDate) || '/' || date(c.EndDate) AS eventDate,
+
+-- LOCATION
+-- decimalLatitude
+  NULL AS decimalLatitude,
+-- decimalLongitude
+  NULL AS decimalLongitude,
+-- geodeticDatum
+  NULL AS geodeticDatum
+
+FROM
+  samples AS s
+  LEFT JOIN campaigns AS c
+    ON s.CampaignID = c.campaignID
+
+WHERE
+  c.CampaignID = {campaign_id}
+
+UNION
+
+-- SAMPLES
+SELECT
+-- RECORD-LEVEL
+-- basisOfRecord
+  'HumanObservation' AS basisOfRecord,
+
+-- EVENT
+-- eventID
+  c.CampaignID || ':' || s.SampleID AS eventID,
+-- parentEventID
+  c.CampaignID AS parentEventID,
+-- eventDate
+  date(s.Date) AS eventDate,
+
+-- LOCATION
+-- decimalLatitude
+  NULL AS decimalLatitude,
+-- decimalLongitude
+  NULL AS decimalLongitude,
+-- geodeticDatum
+  NULL AS geodeticDatum
+
+FROM
+  samples AS s
+  LEFT JOIN campaigns AS c
+    ON s.CampaignID = c.campaignID
+
+WHERE
+  c.CampaignID = {campaign_id}
+
+UNION
+
+-- POSITIONS
 SELECT
 -- RECORD-LEVEL
 -- basisOfRecord
