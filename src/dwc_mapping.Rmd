@@ -85,7 +85,7 @@ limit <- 100
 Create a SQLite database with the source data, so it can be queried with SQL in the next steps:
 
 ```{r}
-esas_db <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
+esas_db <- DBI::dbConnect(RSQLite::SQLite(), ":memory:", extended_types = TRUE)
 DBI::dbWriteTable(esas_db, "campaigns", campaigns)
 DBI::dbWriteTable(esas_db, "samples", samples)
 DBI::dbWriteTable(esas_db, "positions", positions)
