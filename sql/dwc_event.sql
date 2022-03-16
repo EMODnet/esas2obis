@@ -23,8 +23,8 @@ SELECT
   'EPSG:4326' AS geodeticDatum
 
 FROM
-  campaigns AS c
+  positions AS p
   LEFT JOIN samples AS s
-    ON c.CampaignID = s.CampaignID
-  LEFT JOIN positions AS p
-    ON s.SampleID = p.SampleID
+    ON p.SampleID = s.sampleID
+  LEFT JOIN campaigns AS c
+    ON s.CampaignID = c.campaignID
