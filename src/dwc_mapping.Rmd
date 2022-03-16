@@ -46,23 +46,13 @@ library(frictionless)   # To read and write Frictionless Data Packages
 For now, the source data are provided manually. These were converted to a Frictionless Data Package with [frictionless](https://docs.ropensci.org/frictionless):
 
 ```{r eval=FALSE}
-source_data <- frictionless::create_package()
-
-# Assign data resources
 source_data <-
+  frictionless::create_package() %>%
   source_data %>%
   frictionless::add_resource(resource_name = "campaigns", data = here::here("data", "raw", "CAMPAIGNS_BE_ICES_2022.csv"), schema = "https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/table-schemas/campaign.yaml") %>%
   frictionless::add_resource(resource_name = "samples", data = here::here("data", "raw", "SAMPLES_BE_ICES_2022.csv"), schema = "https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/table-schemas/sample.yaml") %>%
   frictionless::add_resource(resource_name = "positions", data = here::here("data", "raw", "POSITIONS_BE_ICES_2022.csv"), schema = "https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/table-schemas/position.yaml") %>%
   frictionless::add_resource(resource_name = "observations", data = here::here("data", "raw", "OBSERVATIONS_BE_ICES_2022.csv"), schema = "https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/table-schemas/observation.yaml")
-
-# Assign species list as extra resource
-source_data <- add_resource(
-  source_data,
-  resource_name = "species",
-  data = readr::read_tsv("https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/vocabularies/species.tsv", col_types = "iccicicc"),
-  delim = "\t"
-)
 
 # Write to disk
 frictionless::write_package(source_data, here::here("data", "raw"))
@@ -76,7 +66,12 @@ campaigns    <- frictionless::read_resource(source_data, "campaigns")
 samples      <- frictionless::read_resource(source_data, "samples")
 positions    <- frictionless::read_resource(source_data, "positions")
 observations <- frictionless::read_resource(source_data, "observations")
-species      <- frictionless::read_resource(source_data, "species")
+```
+
+Load ESAS species list to assign scientific names to codes:
+
+```{r}
+species <- readr::read_tsv("https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/vocabularies/species.tsv", col_types = "iccicicc")
 ```
 
 ## Create database
