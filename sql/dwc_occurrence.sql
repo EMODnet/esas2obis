@@ -51,7 +51,6 @@ FROM
     ON p.SampleID = s.SampleID
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.CampaignID
-
   LEFT JOIN species AS sp
     ON o.SpeciesCode = sp.euring_code
   LEFT JOIN behaviour AS beh
