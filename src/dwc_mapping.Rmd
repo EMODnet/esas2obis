@@ -68,16 +68,19 @@ positions    <- frictionless::read_resource(source_data, "positions")
 observations <- frictionless::read_resource(source_data, "observations")
 ```
 
-Load ESAS species list to assign scientific names to codes:
+## Read code lists
+
+Load ESAS species list from GitHub repository:
 
 ```{r}
 species <- readr::read_tsv("https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/vocabularies/species.tsv", col_types = "iccicicc")
 ```
 
-Set filter **TO BE REMOVED HERE AND IN SQL**:
+Get code lists from ICES vocabularies API:
 
 ```{r}
-campaign_id <- 110000153
+source(here::here("src", "functions", "getCodeList.R"))
+behaviour <- getCodeList("Behaviour")
 ```
 
 ## Create database
@@ -97,11 +100,21 @@ samples$Date <- as.character(samples$Date)
 ```
 
 ```{r}
+# Data
 DBI::dbWriteTable(esas_db, "campaigns", campaigns)
 DBI::dbWriteTable(esas_db, "samples", samples)
 DBI::dbWriteTable(esas_db, "positions", positions)
 DBI::dbWriteTable(esas_db, "observations", observations)
+
+# Code lists
 DBI::dbWriteTable(esas_db, "species", species)
+DBI::dbWriteTable(esas_db, "behaviour", behaviour)
+```
+
+Set filter **TO BE REMOVED HERE AND IN SQL**:
+
+```{r}
+campaign_id <- 110000153
 ```
 
 ## Darwin Core mapping
@@ -132,7 +145,7 @@ dwc_emof <- DBI::dbGetQuery(esas_db, dwc_emof_sql)
 ## Write data to CSV
 
 ```{r}
-write_csv(dwc_event, here("data", "processed", "event.csv"), na = "")
-write_csv(dwc_occurrence, here("data", "processed", "occurrence.csv"), na = "")
-write_csv(dwc_emof, here("data", "processed", "emof.csv"), na = "")
+write_csv(dwc_event, here::here("data", "processed", "event.csv"), na = "")
+write_csv(dwc_occurrence, here::here("data", "processed", "occurrence.csv"), na = "")
+write_csv(dwc_emof, here::here("data", "processed", "emof.csv"), na = "")
 ```

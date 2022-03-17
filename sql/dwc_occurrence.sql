@@ -17,6 +17,7 @@ SELECT
     WHEN o.LifeStage IN ('I', 1, 2, 3, 4, 5) THEN 'immature'
   END AS lifeStage,
 -- behaviour
+  beh.description AS behavior,
 -- occurrenceStatus
   'present' AS occurrenceStatus,
 -- associatedTaxa
@@ -47,8 +48,11 @@ FROM
     ON p.SampleID = s.SampleID
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.CampaignID
+
   LEFT JOIN species AS sp
     ON o.SpeciesCode = sp.euring_code
+  LEFT JOIN behaviour AS beh
+    ON o.Behaviour = beh.Key
 
 WHERE
   c.CampaignID = {campaign_id}
