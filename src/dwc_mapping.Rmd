@@ -24,7 +24,7 @@ Install required libraries (if not yet installed):
 
 ```{r}
 installed <- rownames(installed.packages())
-required <- c("magrittr", "here", "glue", "readr", "DBI", "frictionless")
+required <- c("magrittr", "here", "glue", "readr", "DBI", "frictionless", "icesVocab")
 if (!all(required %in% installed)) {
   install.packages(required[!required %in% installed])
 }
@@ -39,6 +39,7 @@ library(glue)           # To insert variables in strings
 library(readr)          # To write files
 library(DBI)            # To create and query databases
 library(frictionless)   # To read and write Frictionless Data Packages
+library(icesVocab)      # To get code lists
 ```
 
 # Read source data
@@ -79,7 +80,6 @@ species <- readr::read_tsv("https://raw.githubusercontent.com/ices-tools-dev/esa
 Get code lists from ICES vocabularies API:
 
 ```{r}
-source(here::here("src", "functions", "getCodeList.R"))
 behaviour <- getCodeList("Behaviour")
 ```
 
