@@ -79,9 +79,9 @@ species <- readr::read_tsv("https://raw.githubusercontent.com/ices-tools-dev/esa
 
 Get code lists from ICES vocabularies API:
 
-```{r}
 ```{r eval=FALSE}
 behaviour <- getCodeList("Behaviour")
+shipc <- getCodeList("SHIPC")
 ```
 
 Save code lists:
@@ -89,6 +89,7 @@ Save code lists:
 ```{r eval=FALSE}
 readr::write_csv(species, here::here("reference", "species.csv"), na = "")
 readr::write_csv(behaviour, here::here("reference", "behaviour.csv"), na = "")
+readr::write_csv(shipc, here::here("reference", "shipc.csv"), na = "")
 ```
 
 Read code lists:
@@ -96,6 +97,7 @@ Read code lists:
 ```{r}
 species <- readr::read_csv(here::here("reference", "species.csv"), col_types = "c")
 behaviour <- readr::read_csv(here::here("reference", "behaviour.csv"), col_types = "c")
+shipc <- readr::read_csv(here::here("reference", "shipc.csv"), col_types = "c")
 ```
 
 ## Create database
@@ -124,6 +126,7 @@ DBI::dbWriteTable(esas_db, "observations", observations)
 # Code lists
 DBI::dbWriteTable(esas_db, "species", species)
 DBI::dbWriteTable(esas_db, "behaviour", behaviour)
+DBI::dbWriteTable(esas_db, "shipc", shipc)
 ```
 
 Set filter **TO BE REMOVED HERE AND IN SQL**:
@@ -157,7 +160,7 @@ dwc_emof_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_emof.sql"
 dwc_emof <- DBI::dbGetQuery(esas_db, dwc_emof_sql)
 ```
 
-## Write data to CSV
+## Save data to CSV
 
 ```{r}
 write_csv(dwc_event, here::here("data", "processed", "event.csv"), na = "")
