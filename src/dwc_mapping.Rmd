@@ -80,7 +80,22 @@ species <- readr::read_tsv("https://raw.githubusercontent.com/ices-tools-dev/esa
 Get code lists from ICES vocabularies API:
 
 ```{r}
+```{r eval=FALSE}
 behaviour <- getCodeList("Behaviour")
+```
+
+Save code lists:
+
+```{r eval=FALSE}
+readr::write_csv(species, here::here("reference", "species.csv"), na = "")
+readr::write_csv(behaviour, here::here("reference", "behaviour.csv"), na = "")
+```
+
+Read code lists:
+
+```{r}
+species <- readr::read_csv(here::here("reference", "species.csv"), col_types = "c")
+behaviour <- readr::read_csv(here::here("reference", "behaviour.csv"), col_types = "c")
 ```
 
 ## Create database

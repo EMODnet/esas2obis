@@ -1,0 +1,87 @@
+Key,Description,LongDescription,Modified,Deprecated
+0,Unknown,,2021-10-20T09:44:56.227,false
+100,Carousel feeding (orca),,2022-01-10T16:46:10.103,false
+101,Pod splitting,,2022-01-10T16:46:10.11,false
+102,Pod formation,,2022-01-10T16:46:10.117,false
+103,Source avoiding behaviour,,2022-01-10T16:46:10.123,false
+111,Not foraging,,2022-01-10T16:46:10.13,false
+112,Diving (no specification),,2022-01-10T16:46:10.137,false
+113,Active migration,,2022-01-10T16:46:10.15,false
+114,Flying off (no specification),,2022-01-10T16:46:10.157,false
+115,On water/swimming,,2022-01-24T10:29:20.48,false
+116,Distraction behaviour,,2022-01-10T16:46:10.16,false
+117,Flying (no specification),,2022-01-24T10:30:12.087,false
+118,Submerged,,2022-01-24T10:31:56.067,false
+119,Surfacing,,2022-01-24T10:32:22.09,false
+120,"On artificial piece of something (platform, pole)",,2022-01-24T10:33:07.507,false
+121,Milling/Non-directional behaviour,,2022-01-10T16:46:10.167,false
+122,Diving (marine mammals),,2022-01-10T16:46:10.173,false
+123,Head out of water (seals),,2022-01-10T16:46:10.18,false
+124,Not recorded,,2021-10-20T10:09:18.707,false
+127,Travelling,,2021-10-20T10:13:28.51,false
+128,Feeding/foraging,,2021-11-23T11:29:18.95,false
+129,Cooperative foraging,,2021-10-20T10:14:36.963,false
+130,Logging/resting,,2021-10-20T10:16:05.857,false
+131,Vessel avoidance,,2021-10-20T10:15:56.043,false
+132,Bowriding,,2021-10-20T10:16:54.733,false
+135,Flushing,,2021-10-20T10:19:41.907,false
+30,Holding or carrying fish,"Carrying fish towards colony (e.g. terns, auks)",2022-01-17T09:20:37.433,false
+31,Without fish,"Colony flights, not carrying prey (e.g. terns, auks) used in combination with #30",2022-01-17T09:21:44.71,false
+32,Feeding young at sea,Code for adult birds presenting prey to attended chicks (e.g. auks) or juveniles (e.g. terns),2022-01-17T09:22:57.857,false
+33,"Feeding, method unspecified",,2022-01-10T16:46:09.68,false
+34,"Wading, filtering or probing",For shallow areas such as the Wadden Sea where foraging waders may occur even within transect,2022-01-17T09:24:39.85,false
+35,Scooping prey from surface,"Swimming birds, scooping up small prey from just below the surface, common in pelicans and Northern Gannets",2022-01-17T09:25:08.423,false
+36,Aerial pursuit,Skuas or gulls in aerial pursuit to kleptoparasitise or kill their target. To be used in combination with codes #90 and #91 for the victim. Sea also #68 for “non-aerial” kleptoparasitism.,2022-01-17T09:26:46.2,false
+37,Skimming,"Low flight over the water surface, touching the surface with the beak (e.g. skimmers, drinking terns)",2022-01-17T09:27:57.987,false
+38,Hydroplaning,"Low flight over the water, filtering surface layers (e.g. prions)",2022-01-17T09:28:33.91,false
+39,Pattering,"Low flight over the water, zig-zag course usually, tapping the surface with feet while still airborne (e.g. storm petrels)",2022-01-17T09:29:18.89,false
+40,Scaveging,"Swimming at the surface, handling carrion, corpse or large fish (e.g. Northern Fulmar, Great Skua, large gulls)",2022-01-17T09:30:41.38,false
+41,Scaveging at fishing vessel,"Foraging at fishing vessel, deploying any method to actually obtain discarded fish and offal; storm-petrels in the wake of trawlers picking up small morsels should be excluded.",2022-01-17T09:31:32.7,false
+42,Dipping,"Aerial seabirds (e.g. skuas, small gulls, terns) making repeated dives while hardly touching the water (remain airborne) and picking up small prey",2022-01-17T09:32:24.677,false
+43,Surface seizing,"Swimming birds seizing floating (large) prey (e.g. Northern Fulmar, large gulls)",2022-01-17T09:33:07.753,false
+44,Surface pecking,"Swimming birds pecking at small prey (e.g. Northern Fulmar, phalaropes, small skuas, small gulls)",2022-01-17T09:34:35.067,false
+45,Deep pluging,Aerial seabirds diving into the sea and completely disappearing under water (e.g. Northern Gannets). See also #46,2022-01-17T09:36:07.763,false
+46,Shallow pluging,Aerial seabirds diving into the sea and partly disappearing under water (e.g. terns). See also #42 and #46,2022-01-17T09:36:30.447,false
+47,Pursuit pluging,Aerial seabirds plunging into the water and continuing with an underwater pursuit (e.g. shearwaters),2022-01-17T09:37:21.52,false
+48,"Pursuit diving, or bottom feeding","Swimming seabirds that perform deep dives and are known to search for prey in an underwater pursuit (divers, grebes, seaduck, auks) or search for prey at the bottom (e.g. Common Eider, scoters)",2022-01-17T09:49:20.88,false
+49,Actively searching,"Persistently circling aerial seabirds (usually peering down), or swimming birds frequently (and undisturbed by observation platform) peering underwater for prey",2022-01-17T09:50:14.32,false
+60,Resting or apparently asleep,"Sleeping seabirds at sea, or resting birds around feeding frenzies (e.g. fishing vessels or recently collapsed MSFA’s)",2022-01-17T09:51:20.573,false
+61,Courtship display,"Aerial displays (e.g. terns) or courtship behaviour on water or while seated on floating matter (buoys, driftwood)",2022-01-17T09:51:53.717,false
+62,Courtship feeding,Display fish presented during courtship display at sea (e.g. terns),2022-01-17T09:52:15.283,false
+63,Copulating,Examples: Atlantic Puffins copulate at sea; male scoters may persistently follow solitary females at sea,2022-01-17T09:53:03.78,false
+64,Carrying nest material,Flying with seaweed or other material; not to be confused with entangled birds with nylon line around the beak (#96),2022-01-17T09:53:31.69,false
+65,Guarding chick,Reserved for auks attending recently fledged chicks at sea,2022-01-17T09:53:54.13,false
+66,Preening or bathing,,2022-01-10T16:46:09.843,false
+67,Colony rafts,Reserved for the large flocks of birds “rafting” at sea near breeding colonies engaged in multiple behaviours including maintenance,2022-01-17T09:54:41.03,false
+68,Kleptoparasitising,"Reserved for kleptoparasites that steal prey not during an aerial pursuit, but otherwise (e.g. Black-legged Kittiwakes stealing prey from surfacing Atlantic Puffins). Compare with #36 for aerial pursuit.",2022-01-17T09:55:56.347,false
+69,Circling high,High circling seabirds (mainly gulls),2022-01-17T09:56:14.55,false
+70,Cetaceans: wheeling or swimming slowly,"Slow movement, no white crests",2022-01-17T09:57:15.363,false
+71,Ceteceans: Escape from ship (rooster tail),Quick escape movements away from observation platform; splashes,2022-01-17T09:57:42.037,false
+72,"Cetaceans: Swimming fast, not avoiding ship",Fast movements seemingly unaffected by observation platform; splashes,2022-01-17T09:58:09.863,false
+73,Cetaceans: Breaching clear out of the water,"Vertical leap, sometimes clear of the water",2022-01-17T09:58:33.5,false
+74,Cetaceans: At the bow of the ship,Bow riding dolphins,2022-01-17T10:00:51.077,false
+75,Cetaceans: Apparently feeding - herding behaviour,Group feeding behaviour where more individuals try to herd prey towards the water surface or concentrate prey in an U-shaped move around fish shoals,2022-01-17T10:01:34.87,false
+76,Cetaceans: Apparently feeding - other behaviour,"Other feeding behaviour, not specified, including lunge-feeding baleen whales",2022-01-17T10:02:04.497,false
+77,Cetaceans: Calf at the tail of adult,Immature whales or dolphins constantly staying close to the side of an adult,2022-01-17T10:37:56.7,false
+78,Cetaceans: Calf swimming freely in herd,"Immature whales or dolphins anywhere in the herd, except close to the side of an adult",2022-01-17T10:38:39.847,false
+79,"Cetaceans: Basking, afloat","Constantly visible marine mammals, often with dorsal fin exposed, floating at the sea surface",2022-01-17T10:39:22.42,false
+80,Cetaceans: Spy-hopping,"Head sticks out the water (including the eyes), apparently to look around. Also to be used for seals where appropriate",2022-01-17T10:39:53.75,false
+81,Cetaceans: Lob-tailing,Code for cetaceans showing flukes while diving,2022-01-17T10:40:24.183,false
+82,Cetaceans: Tail/flipper slapping,Cetaceans smashing tail on water surface or waving flippers or tail above surface,2022-01-17T10:40:56.32,false
+83,Cetaceans: Approaching ship,"Marine mammals approaching the observation vessel (including wake and stern), not bow riding",2022-01-17T10:42:06.62,false
+84,Cetaceans: Only blow visible (whales),"Usually unidentified whale, of which no more than a blow was visible",2022-01-17T10:42:38.77,false
+85,Cetaceans: Only splashes visible (dolphins),"Usually unidentified marine mammals, of which no more than splashes at the surface were visible",2022-01-17T10:43:04.8,false
+86,Cetaceans: Acrobatic leaps,"Marine mammals (mostly dolphins) acrobatically leaping out of the water in any direction, often landing with large splashes (see also #73)",2022-01-17T10:43:34.69,false
+87,Cetaceans: Sexual behaviour,Any sexual behaviour (copulations) observed by marine mammals,2022-01-17T10:44:04.73,false
+88,Cetaceans: Play,"Any behaviour observed by marine mammals that could be play, such as interactions with floating material (driftwood or seaweed)",2022-01-17T10:44:52.34,false
+89,Haul-out (pinnipeds),Resting seals on rocks or sandbanks,2022-01-17T10:45:24.953,false
+90,Under attack by kleptoparasite,"Bird (e.g. Northern Gannet, tern, or gull) under attack by kleptoparasite (e.g. skua, gull or frigate bird) in an aerial pursuit, or when handling prey at the surface",2022-01-17T10:46:45.52,false
+91,Under attack (as prey) by bird,Bird chased by potential predator,2022-01-17T10:47:11.05,false
+92,Under attack (as prey) by marine mammal,Bird attacked following underwater assault by marine mammal,2022-01-17T10:47:38.673,false
+93,Escape diving,"Mainly used for moulting seaduck, unable to fly, escaping from approaching observation platform",2022-01-17T10:48:09.923,false
+94,Flushed (disturbance),,2022-01-10T16:46:10.067,false
+95,Injured,"Animals with clear injuries such as bleeding wounds, broken wings or fins",2022-01-17T10:49:08.663,false
+96,Entagled in fishing gear or rope,"Animals entangled in ropes, lines, netting or other materials (even if capable to fly or swim)",2022-01-17T10:49:44.027,false
+97,Oiled,"Animals contaminated with mineral oil, or other lipophilic substances damaging the plumage/coat",2022-01-17T10:52:01.033,false
+98,"Sick, unwell","Weakened individuals, not behaving as normal, healthy animals would do, but without obvious injuries",2022-01-17T10:51:39.583,false
+99,Dead,Any floating corpse of a bird or marine mammal (by default recorded as “out of transect“),2022-01-17T11:17:01.657,false
