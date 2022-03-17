@@ -2,6 +2,9 @@
 Created by Peter Desmet (INBO)
 */
 SELECT
+-- eventID
+  p.positionID AS eventID,
+
 -- OCCURRENCE
 -- occurrenceID
   o.ObservationID AS occurrenceID,
