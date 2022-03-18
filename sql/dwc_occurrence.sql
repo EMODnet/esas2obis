@@ -48,4 +48,4 @@ FROM
   LEFT JOIN behaviour
     ON o.Behaviour = behaviour.Key
 WHERE
-  c.CampaignID = {campaign_id}
+  c.CampaignID IN ({campaign_id*})

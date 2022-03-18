@@ -130,7 +130,7 @@ DBI::dbWriteTable(esas_db, "behaviour", behaviour)
 Set filter: **TODO**: remove for production use.
 
 ```{r}
-campaign_id <- 110000153
+campaign_id <- c(110000153)
 ```
 
 ## Darwin Core mapping

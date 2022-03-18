@@ -21,7 +21,7 @@ FROM
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
 WHERE
-  c.CampaignID = {campaign_id}
+  c.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -44,7 +44,7 @@ FROM
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
 WHERE
-  c.CampaignID = {campaign_id}
+  c.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -69,4 +69,4 @@ FROM
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
 WHERE
-  c.CampaignID = {campaign_id}
+  c.CampaignID IN ({campaign_id*})

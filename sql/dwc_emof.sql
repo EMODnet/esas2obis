@@ -19,7 +19,7 @@ FROM
     ON s.PlatformCode = shipc.Key
 WHERE
   s.PlatformCode IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -40,7 +40,7 @@ FROM
     ON s.PlatformClass = platformclass.Key
 WHERE
   s.PlatformClass IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -61,7 +61,7 @@ FROM
     ON s.PlatformSide = platformside.Key
 WHERE
   s.PlatformSide IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -80,7 +80,7 @@ FROM
   samples AS s
 WHERE
   s.PlatformHeight IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -99,7 +99,7 @@ FROM
   samples AS s
 WHERE
   s.TransectWidth IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -120,7 +120,7 @@ FROM
     ON s.SamplingMethod = bdcountmethod.Key
 WHERE
   s.SamplingMethod IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -139,7 +139,7 @@ FROM
   samples AS s
 WHERE
   s.PrimarySampling IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -160,7 +160,7 @@ FROM
     ON s.TargetTaxa = targettaxa.Key
 WHERE
   s.TargetTaxa IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -179,7 +179,7 @@ FROM
   samples AS s
 WHERE
   s.DistanceBins IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -200,7 +200,7 @@ FROM
     ON s.UseOfBinoculars = useofbinoculars.Key
 WHERE
   s.UseOfBinoculars IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -219,7 +219,7 @@ FROM
   samples AS s
 WHERE
   s.NumberOfObservers IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -240,7 +240,7 @@ FROM
     ON p.SampleID = s.SampleID
 WHERE
   p.Distance IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -261,7 +261,7 @@ FROM
     ON p.SampleID = s.SampleID
 WHERE
   p.Area IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -284,7 +284,7 @@ FROM
     ON p.WindForce = beaufort.Key
 WHERE
   p.WindForce IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -307,7 +307,7 @@ FROM
     ON p.Visibility = visibility.Key
 WHERE
   p.Visibility IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -330,7 +330,7 @@ FROM
     ON p.Glare = glare.Key
 WHERE
   p.Glare IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -351,7 +351,7 @@ FROM
     ON p.SampleID = s.SampleID
 WHERE
   p.SunAngle IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -374,7 +374,7 @@ FROM
     ON p.CloudCover = cloudcover.Key
 WHERE
   p.CloudCover IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -397,7 +397,7 @@ FROM
     ON p.Precipitation = precipitation.Key
 WHERE
   p.Precipitation IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -418,7 +418,7 @@ FROM
     ON p.SampleID = s.SampleID
 WHERE
   p.IceCover IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -441,7 +441,7 @@ FROM
     ON p.ObservationConditions = sightability.Key
 WHERE
   p.ObservationConditions IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -464,7 +464,7 @@ FROM
     ON p.SampleID = s.SampleID
 WHERE
   o.GroupID IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -487,7 +487,7 @@ FROM
     ON p.SampleID = s.SampleID
 WHERE
   o.Transect IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -510,7 +510,7 @@ FROM
     ON p.SampleID = s.SampleID
 WHERE
   o.Count IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -535,7 +535,7 @@ FROM
     ON o.ObservationDistance = observationdistance.Key
 WHERE
   o.ObservationDistance IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -560,7 +560,7 @@ FROM
     ON o.LifeStage = lifestage.Key
 WHERE
   o.LifeStage IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -585,7 +585,7 @@ FROM
     ON o.Moult = moult.Key
 WHERE
   o.Moult IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -610,7 +610,7 @@ FROM
     ON o.Plumage = plumage.Key
 WHERE
   o.Plumage IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -635,7 +635,7 @@ FROM
     ON o.Sex = sex.Key
 WHERE
   o.Sex IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -660,7 +660,7 @@ FROM
     ON o.TravelDirection = traveldirection.Key
 WHERE
   o.TravelDirection IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -685,7 +685,7 @@ FROM
     ON o.Prey = preytype.Key
 WHERE
   o.Prey IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -710,7 +710,7 @@ FROM
     ON o.Association = association.Key
 WHERE
   o.Association IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -735,4 +735,4 @@ FROM
     ON o.Behaviour = behaviour.Key
 WHERE
   o.Behaviour IS NOT NULL
-  AND s.CampaignID = {campaign_id}
+  AND s.CampaignID IN ({campaign_id*})
