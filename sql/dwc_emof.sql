@@ -564,6 +564,56 @@ WHERE
 
 UNION
 
+/* OBSERVATION: MOULT */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'moult'                               AS measurementType,
+  'http://vocab.ices.dk/?ref=1720'      AS measurementTypeID,
+  moult.Description                     AS measurementValue,
+  moult.Key                             AS measurementValueID,  -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN moult
+    ON o.Moult = moult.Key
+WHERE
+  o.Moult IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* OBSERVATION: PLUMAGE */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'plumage'                             AS measurementType,
+  'http://vocab.ices.dk/?ref=1716'      AS measurementTypeID,
+  plumage.Description                   AS measurementValue,
+  plumage.Key                           AS measurementValueID,  -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN plumage
+    ON o.Plumage = plumage.Key
+WHERE
+  o.Plumage IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
 /* OBSERVATION: SEX */
 
 SELECT
