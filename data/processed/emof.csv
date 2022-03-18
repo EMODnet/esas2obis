@@ -1,2 +1,2 @@
-eventID,measurementType,measurementTypeID,measurementValue,measurementValueID,measurementUnit,measurementUnitID
-110000153:110000153,platform,http://vocab.nerc.ac.uk/collection/C17/current/,BELGICA,http://vocab.nerc.ac.uk/collection/C17/current/11BE,,
+eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurementValueID,measurementUnit,measurementUnitID
+110000153:110000153,,platform,http://vocab.nerc.ac.uk/collection/C17/current/,BELGICA,http://vocab.nerc.ac.uk/collection/C17/current/11BE,,

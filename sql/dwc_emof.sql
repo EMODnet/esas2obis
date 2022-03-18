@@ -1,11 +1,12 @@
 /*
 Created by Peter Desmet (INBO)
 */
+-- SAMPLE: PLATFORM
 SELECT
 -- eventID
   c.CampaignID || ':' || s.SampleID AS eventID,
--- measurementID
 -- occurrenceID
+  NULL AS occurrenceID,
 -- measurementType
   'platform' AS measurementType,
 -- measurementTypeID
