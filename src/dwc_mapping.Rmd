@@ -78,6 +78,8 @@ glare <- getCodeList("Glare")
 cloudcover <- getCodeList("CloudCover")
 precipitation <- getCodeList("Precipitation")
 sightability <- getCodeList("Sightability")
+lifestage <- getCodeList("LifeStage")
+sex <- getCodeList("SEXCO")
 behaviour <- getCodeList("Behaviour")
 ```
 
@@ -108,6 +110,8 @@ DBI::dbWriteTable(esas_db, "glare", glare)
 DBI::dbWriteTable(esas_db, "cloudcover", cloudcover)
 DBI::dbWriteTable(esas_db, "precipitation", precipitation)
 DBI::dbWriteTable(esas_db, "sightability", sightability)
+DBI::dbWriteTable(esas_db, "lifestage", lifestage)
+DBI::dbWriteTable(esas_db, "sex", sex)
 DBI::dbWriteTable(esas_db, "behaviour", behaviour)
 ```
 

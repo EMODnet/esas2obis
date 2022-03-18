@@ -488,3 +488,76 @@ FROM
 WHERE
   o.Transect IS NOT NULL
   AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* OBSERVATION: INDIVIDUAL COUNT */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'individual count'                    AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  o.Count                               AS measurementValue,
+  NULL                                  AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+WHERE
+  o.Count IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* OBSERVATION: LIFE STAGE */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'life stage'                          AS measurementType,
+  'http://vocab.ices.dk/?ref=1715'      AS measurementTypeID,
+  lifestage.Description                 AS measurementValue,
+  lifestage.Key                         AS measurementValueID,  -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN lifestage
+    ON o.LifeStage = lifestage.Key
+WHERE
+  o.LifeStage IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* OBSERVATION: SEX */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'sex'                                 AS measurementType,
+  'http://vocab.ices.dk/?ref=45'        AS measurementTypeID,
+  sex.Description                       AS measurementValue,
+  sex.Key                               AS measurementValueID,  -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN sex
+    ON o.LifeStage = sex.Key
+WHERE
+  o.Sex IS NOT NULL
+  AND s.CampaignID = {campaign_id}

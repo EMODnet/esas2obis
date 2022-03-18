@@ -6,19 +6,24 @@ SELECT
 -- OCCURRENCE
   c.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
 -- recordedBy: observer name(s) not available
+  o.Count                               AS individualCount, -- Also in EMOF
   CASE
+    -- http://vocab.nerc.ac.uk/collection/S10/current/
     WHEN o.Sex = 'F' THEN 'female'
     WHEN o.Sex = 'M' THEN 'male'
-  END                                   AS sex, -- http://vocab.nerc.ac.uk/collection/S10/current/
+    -- All other values are ignored, but are typically not used by ESAS
+  END                                   AS sex, -- Also in EMOF with orig values
   CASE
+    -- http://vocab.nerc.ac.uk/collection/S11/current/
     WHEN o.LifeStage = 'A' THEN 'adult'
     WHEN o.LifeStage IN ('I', 1, 2, 3, 4, 5) THEN 'immature'
-  END                                   AS lifeStage, -- http://vocab.nerc.ac.uk/collection/S11/current/
+  END                                   AS lifeStage, -- Also in EMOF with orig values
   beh.description                       AS behavior,
   'present'                             AS occurrenceStatus,
   CASE
     WHEN o.Association = '10' THEN 'Pisces'
     WHEN o.Association = '10' THEN 'Cetacea'
+    -- All other associations are non biological
   END                                   AS associatedTaxa,
   o.Notes                               AS occurrenceRemarks,
 -- IDENTIFICATION
