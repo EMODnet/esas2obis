@@ -2,9 +2,9 @@
 Created by Peter Desmet (INBO)
 */
 SELECT
-  p.positionID                          AS eventID,
+  c.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
 -- OCCURRENCE
-  o.ObservationID                       AS occurrenceID,
+  c.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
 -- recordedBy: observer name(s) not available
   CASE
     WHEN o.Sex = 'F' THEN 'female'
