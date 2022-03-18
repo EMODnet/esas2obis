@@ -375,3 +375,70 @@ FROM
 WHERE
   p.CloudCover IS NOT NULL
   AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* POSITION: PRECIPITATION */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  NULL                                  AS occurrenceID,
+  'precipitation'                       AS measurementType,
+  'http://vocab.ices.dk/?ref=1707'      AS measurementTypeID,
+  precipitation.Description             AS measurementValue,
+  precipitation.Key                     AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  positions AS p
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN precipitation
+    ON p.Precipitation = precipitation.Key
+WHERE
+  p.Precipitation IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* POSITION: ICE COVER */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  NULL                                  AS occurrenceID,
+  'ice cover'                           AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  p.IceCover                            AS measurementValue,
+  NULL                                  AS measurementValueID,
+  'percent'                             AS measurementUnit,
+  'http://vocab.nerc.ac.uk/collection/P06/current/UPCT' AS measurementUnitID
+FROM
+  positions AS p
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+WHERE
+  p.IceCover IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* POSITION: OBSERVATION CONDITIONS */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  NULL                                  AS occurrenceID,
+  'observation conditions'              AS measurementType,
+  'http://vocab.ices.dk/?ref=1704'      AS measurementTypeID,
+  sightability.Description              AS measurementValue,
+  sightability.Key                      AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  positions AS p
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN sightability
+    ON p.ObservationConditions = sightability.Key
+WHERE
+  p.ObservationConditions IS NOT NULL
+  AND s.CampaignID = {campaign_id}

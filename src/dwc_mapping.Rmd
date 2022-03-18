@@ -76,6 +76,8 @@ beaufort <- getCodeList("Beaufort")
 visibility <- getCodeList("Visibility")
 glare <- getCodeList("Glare")
 cloudcover <- getCodeList("CloudCover")
+precipitation <- getCodeList("Precipitation")
+sightability <- getCodeList("Sightability")
 behaviour <- getCodeList("Behaviour")
 ```
 
@@ -104,6 +106,8 @@ DBI::dbWriteTable(esas_db, "beaufort", beaufort)
 DBI::dbWriteTable(esas_db, "visibility", visibility)
 DBI::dbWriteTable(esas_db, "glare", glare)
 DBI::dbWriteTable(esas_db, "cloudcover", cloudcover)
+DBI::dbWriteTable(esas_db, "precipitation", precipitation)
+DBI::dbWriteTable(esas_db, "sightability", sightability)
 DBI::dbWriteTable(esas_db, "behaviour", behaviour)
 ```
 
