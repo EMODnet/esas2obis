@@ -138,7 +138,7 @@ SELECT
 FROM
   samples AS s
 WHERE
-  s.TransectWidth IS NOT NULL
+  s.PrimarySampling IS NOT NULL
   AND s.CampaignID = {campaign_id}
 
 UNION
@@ -441,4 +441,50 @@ FROM
     ON p.ObservationConditions = sightability.Key
 WHERE
   p.ObservationConditions IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* OBSERVATION: GROUP IDENTIFIER */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'group identifier'                    AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  o.GroupID                             AS measurementValue,
+  NULL                                  AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+WHERE
+  o.GroupID IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* OBSERVATION: TRANSECT */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'in transect'                         AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  o.Transect                            AS measurementValue,
+  NULL                                  AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+WHERE
+  o.Transect IS NOT NULL
   AND s.CampaignID = {campaign_id}
