@@ -45,4 +45,3 @@ src/*.pdf
 
 # Data
 data/raw/*
-!data/raw/datapackage.json

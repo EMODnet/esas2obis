@@ -24,7 +24,7 @@ Install required libraries (if not yet installed):
 
 ```{r}
 installed <- rownames(installed.packages())
-required <- c("magrittr", "here", "glue", "readr", "DBI", "frictionless", "icesVocab")
+required <- c("magrittr", "here", "glue", "readr", "DBI", "icesVocab")
 if (!all(required %in% installed)) {
   install.packages(required[!required %in% installed])
 }
@@ -38,35 +38,21 @@ library(here)           # To find files
 library(glue)           # To insert variables in strings
 library(readr)          # To write files
 library(DBI)            # To create and query databases
-library(frictionless)   # To read and write Frictionless Data Packages
 library(icesVocab)      # To get code lists
 ```
 
 # Read source data
 
-For now, the source data are provided manually. These were converted to a Frictionless Data Package with [frictionless](https://docs.ropensci.org/frictionless):
-
-```{r eval=FALSE}
-source_data <-
-  frictionless::create_package() %>%
-  source_data %>%
-  frictionless::add_resource(resource_name = "campaigns", data = here::here("data", "raw", "CAMPAIGNS_BE_ICES_2022.csv"), schema = "https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/table-schemas/campaign.yaml") %>%
-  frictionless::add_resource(resource_name = "samples", data = here::here("data", "raw", "SAMPLES_BE_ICES_2022.csv"), schema = "https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/table-schemas/sample.yaml") %>%
-  frictionless::add_resource(resource_name = "positions", data = here::here("data", "raw", "POSITIONS_BE_ICES_2022.csv"), schema = "https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/table-schemas/position.yaml") %>%
-  frictionless::add_resource(resource_name = "observations", data = here::here("data", "raw", "OBSERVATIONS_BE_ICES_2022.csv"), schema = "https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/table-schemas/observation.yaml")
-
-# Write to disk
-frictionless::write_package(source_data, here::here("data", "raw"))
-```
+For now, the source data were provided manually and stored in `data/raw`.
 
 Read source files:
 
 ```{r}
-source_data  <- frictionless::read_package(here::here("data", "raw", "datapackage.json"))
-campaigns    <- frictionless::read_resource(source_data, "campaigns")
-samples      <- frictionless::read_resource(source_data, "samples")
-positions    <- frictionless::read_resource(source_data, "positions")
-observations <- frictionless::read_resource(source_data, "observations")
+# All columns are read as characters to easy import into SQLite: https://stackoverflow.com/a/13462536/2463806
+campaigns <- readr::read_csv(here::here("data", "raw", "CAMPAIGNS_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
+samples <- readr::read_csv(here::here("data", "raw", "SAMPLES_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
+positions <- readr::read_csv(here::here("data", "raw", "POSITIONS_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
+observations <- readr::read_csv(here::here("data", "raw", "OBSERVATIONS_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
 ```
 
 ## Read code lists
