@@ -83,6 +83,9 @@ lifestage <- getCodeList("LifeStage")
 moult <- getCodeList("Moult")
 plumage <- getCodeList("Plumage")
 sex <- getCodeList("SEXCO")
+traveldirection <- getCodeList("TravelDirection")
+preytype <- getCodeList("PreyType")
+association <- getCodeList("Association")
 behaviour <- getCodeList("Behaviour")
 ```
 
@@ -118,6 +121,9 @@ DBI::dbWriteTable(esas_db, "lifestage", lifestage)
 DBI::dbWriteTable(esas_db, "moult", moult)
 DBI::dbWriteTable(esas_db, "plumage", plumage)
 DBI::dbWriteTable(esas_db, "sex", sex)
+DBI::dbWriteTable(esas_db, "traveldirection", traveldirection)
+DBI::dbWriteTable(esas_db, "preytype", preytype)
+DBI::dbWriteTable(esas_db, "association", association)
 DBI::dbWriteTable(esas_db, "behaviour", behaviour)
 ```
 

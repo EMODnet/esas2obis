@@ -12,27 +12,27 @@ SELECT
     WHEN o.Sex = 'F' THEN 'female'
     WHEN o.Sex = 'M' THEN 'male'
     -- All other values are ignored, but are typically not used by ESAS
-  END                                   AS sex, -- Also in EMOF with orig values
+  END                                   AS sex, -- Also in EMOF with orig vocab
   CASE
     -- http://vocab.nerc.ac.uk/collection/S11/current/
     WHEN o.LifeStage = 'A' THEN 'adult'
     WHEN o.LifeStage IN ('I', 1, 2, 3, 4, 5) THEN 'immature'
-  END                                   AS lifeStage, -- Also in EMOF with orig values
-  beh.description                       AS behavior,
+  END                                   AS lifeStage, -- Also in EMOF with orig vocab
+  behaviour.Description                 AS behavior, -- Also in EMOF
   'present'                             AS occurrenceStatus,
   CASE
     WHEN o.Association = '10' THEN 'Pisces'
     WHEN o.Association = '10' THEN 'Cetacea'
     -- All other associations are non biological
-  END                                   AS associatedTaxa,
+  END                                   AS associatedTaxa, -- Also in EMOF with orig vocab
   o.Notes                               AS occurrenceRemarks,
 -- IDENTIFICATION
 -- identifiedBy: observer name(s) not available
 -- TAXON
   CASE
-    WHEN sp.aphia_id IS NOT NULL THEN 'urn:lsid:marinespecies.org:taxname:' || sp.aphia_id
+    WHEN species.aphia_id IS NOT NULL THEN 'urn:lsid:marinespecies.org:taxname:' || species.aphia_id
   END                                   AS scientificNameID,
-  sp.euring_scientific_name             AS scientificName,
+  species.euring_scientific_name        AS scientificName,
   'Animalia'                            AS kingdom
 -- taxonRank: not available
 FROM
@@ -43,9 +43,9 @@ FROM
     ON p.SampleID = s.SampleID
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.CampaignID
-  LEFT JOIN species AS sp
-    ON o.SpeciesCode = sp.euring_code
-  LEFT JOIN behaviour AS beh
-    ON o.Behaviour = beh.Key
+  LEFT JOIN species
+    ON o.SpeciesCode = species.euring_code
+  LEFT JOIN behaviour
+    ON o.Behaviour = behaviour.Key
 WHERE
   c.CampaignID = {campaign_id}

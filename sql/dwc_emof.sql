@@ -547,7 +547,7 @@ SELECT
   'life stage'                          AS measurementType,
   'http://vocab.ices.dk/?ref=1715'      AS measurementTypeID,
   lifestage.Description                 AS measurementValue,
-  lifestage.Key                         AS measurementValueID,  -- TODO
+  lifestage.Key                         AS measurementValueID, -- TODO
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -572,7 +572,7 @@ SELECT
   'moult'                               AS measurementType,
   'http://vocab.ices.dk/?ref=1720'      AS measurementTypeID,
   moult.Description                     AS measurementValue,
-  moult.Key                             AS measurementValueID,  -- TODO
+  moult.Key                             AS measurementValueID, -- TODO
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -597,7 +597,7 @@ SELECT
   'plumage'                             AS measurementType,
   'http://vocab.ices.dk/?ref=1716'      AS measurementTypeID,
   plumage.Description                   AS measurementValue,
-  plumage.Key                           AS measurementValueID,  -- TODO
+  plumage.Key                           AS measurementValueID, -- TODO
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -622,7 +622,7 @@ SELECT
   'sex'                                 AS measurementType,
   'http://vocab.ices.dk/?ref=45'        AS measurementTypeID,
   sex.Description                       AS measurementValue,
-  sex.Key                               AS measurementValueID,  -- TODO
+  sex.Key                               AS measurementValueID, -- TODO
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -635,4 +635,104 @@ FROM
     ON o.Sex = sex.Key
 WHERE
   o.Sex IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* OBSERVATION: TRAVEL DIRECTION */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'travel direction'                    AS measurementType,
+  'http://vocab.ices.dk/?ref=1689'      AS measurementTypeID,
+  traveldirection.Description           AS measurementValue,
+  traveldirection.Key                   AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN traveldirection
+    ON o.TravelDirection = traveldirection.Key
+WHERE
+  o.TravelDirection IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* OBSERVATION: PREY */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'prey'                                AS measurementType,
+  'http://vocab.ices.dk/?ref=1687'      AS measurementTypeID,
+  preytype.Description                  AS measurementValue,
+  preytype.Key                          AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN preytype
+    ON o.Prey = preytype.Key
+WHERE
+  o.Prey IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* OBSERVATION: ASSOCIATION */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'association'                         AS measurementType,
+  'http://vocab.ices.dk/?ref=1718'      AS measurementTypeID,
+  association.Description               AS measurementValue,
+  association.Key                       AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN association
+    ON o.Association = association.Key
+WHERE
+  o.Association IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* OBSERVATION: BEHAVIOUR */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'behaviour'                           AS measurementType,
+  'http://vocab.ices.dk/?ref=1709'      AS measurementTypeID,
+  behaviour.Description                 AS measurementValue,
+  behaviour.Key                         AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN behaviour
+    ON o.Behaviour = behaviour.Key
+WHERE
+  o.Behaviour IS NOT NULL
   AND s.CampaignID = {campaign_id}
