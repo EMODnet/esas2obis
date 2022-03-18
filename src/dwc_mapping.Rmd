@@ -72,6 +72,8 @@ platformside <- getCodeList("PlatformSide")
 bdcountmethod <- getCodeList("BD_CountMethod")
 targettaxa <- getCodeList("TargetTaxa")
 useofbinoculars <- getCodeList("UseOfBinoculars")
+beaufort <- getCodeList("Beaufort")
+visibility <- getCodeList("Visibility")
 behaviour <- getCodeList("Behaviour")
 ```
 
@@ -96,6 +98,8 @@ DBI::dbWriteTable(esas_db, "platformside", platformside)
 DBI::dbWriteTable(esas_db, "bdcountmethod", bdcountmethod)
 DBI::dbWriteTable(esas_db, "targettaxa", targettaxa)
 DBI::dbWriteTable(esas_db, "useofbinoculars", useofbinoculars)
+DBI::dbWriteTable(esas_db, "beaufort", beaufort)
+DBI::dbWriteTable(esas_db, "visibility", visibility)
 DBI::dbWriteTable(esas_db, "behaviour", behaviour)
 ```
 

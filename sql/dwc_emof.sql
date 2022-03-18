@@ -262,3 +262,50 @@ FROM
 WHERE
   p.Area IS NOT NULL
   AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* POSITION: WINDFORCE */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  NULL                                  AS occurrenceID,
+  'wind force'                          AS measurementType,
+  'http://vocab.ices.dk/?ref=1705'      AS measurementTypeID,
+  beaufort.Description                  AS measurementValue,
+  beaufort.Key                          AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  positions AS p
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN beaufort
+    ON p.WindForce = beaufort.Key
+WHERE
+  p.WindForce IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* POSITION: VISIBILITY */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  NULL                                  AS occurrenceID,
+  'visibility'                          AS measurementType,
+  'http://vocab.ices.dk/?ref=1708'      AS measurementTypeID,
+  visibility.Description                AS measurementValue,
+  visibility.Key                        AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  positions AS p
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN visibility
+    ON p.Visibility = visibility.Key
+WHERE
+  p.Visibility IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
