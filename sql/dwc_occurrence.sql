@@ -28,6 +28,8 @@ SELECT
     WHEN o.Association = '10' THEN 'Pisces'
     WHEN o.Association = '10' THEN 'Cetacea'
   END AS associatedTaxa,
+-- occurrenceRemarks
+  o.Notes AS occurrenceRemarks,
 
 -- IDENTIFICATION
 -- identifiedBy: observer name(s) not available

@@ -15,6 +15,8 @@ SELECT
   NULL AS parentEventID,
 -- eventDate
   date(c.StartDate) || '/' || date(c.EndDate) AS eventDate,
+-- eventRemarks
+  c.Notes AS eventRemarks,
 
 -- LOCATION
 -- decimalLatitude
@@ -47,6 +49,8 @@ SELECT
   c.CampaignID AS parentEventID,
 -- eventDate
   date(s.Date) AS eventDate,
+-- eventRemarks
+  s.Notes AS eventRemarks,
 
 -- LOCATION
 -- decimalLatitude
@@ -79,6 +83,8 @@ SELECT
   c.CampaignID || ':' || s.SampleID AS parentEventID,
 -- eventDate: p.Time is in UTC
   date(s.Date) || 'T' || time(p.Time) || 'Z' AS eventDate,
+-- eventRemarks
+  NULL AS eventRemarks,
 
 -- LOCATION
 -- decimalLatitude
