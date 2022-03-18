@@ -92,3 +92,61 @@ FROM
 WHERE
   s.PlatformSide IS NOT NULL
   AND c.CampaignID = {campaign_id}
+
+UNION
+
+/* SAMPLE: PLATFORM HEIGHT */
+
+SELECT
+-- eventID
+  c.CampaignID || ':' || s.SampleID AS eventID,
+-- occurrenceID
+  NULL AS occurrenceID,
+-- measurementType
+  'platform height' AS measurementType,
+-- measurementTypeID
+  NULL AS measurementTypeID, -- TODO
+-- measurementValue
+  s.PlatformHeight AS measurementValue,
+-- measurementValueID
+  NULL AS measurementValueID,
+-- measurementUnit
+  'm' as measurementUnit,
+-- measurementUnitID
+  'http://vocab.nerc.ac.uk/collection/P06/current/ULAA' as measurementUnitID
+FROM
+  samples AS s
+  LEFT JOIN campaigns AS c
+    ON s.CampaignID = c.campaignID
+WHERE
+  s.PlatformHeight IS NOT NULL
+  AND c.CampaignID = {campaign_id}
+
+UNION
+
+/* SAMPLE: TRANSECT WIDTH */
+
+SELECT
+-- eventID
+  c.CampaignID || ':' || s.SampleID AS eventID,
+-- occurrenceID
+  NULL AS occurrenceID,
+-- measurementType
+  'transect width' AS measurementType,
+-- measurementTypeID
+  NULL AS measurementTypeID, -- TODO
+-- measurementValue
+  s.TransectWidth AS measurementValue,
+-- measurementValueID
+  NULL AS measurementValueID,
+-- measurementUnit
+  'm' as measurementUnit,
+-- measurementUnitID
+  'http://vocab.nerc.ac.uk/collection/P06/current/ULAA' as measurementUnitID
+FROM
+  samples AS s
+  LEFT JOIN campaigns AS c
+    ON s.CampaignID = c.campaignID
+WHERE
+  s.TransectWidth IS NOT NULL
+  AND c.CampaignID = {campaign_id}
