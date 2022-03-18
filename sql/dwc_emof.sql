@@ -1,7 +1,9 @@
 /*
 Created by Peter Desmet (INBO)
 */
--- SAMPLE: PLATFORM
+
+/* SAMPLE: PLATFORM CODE */
+
 SELECT
 -- eventID
   c.CampaignID || ':' || s.SampleID AS eventID,
@@ -19,14 +21,12 @@ SELECT
   NULL as measurementUnit,
 -- measurementUnitID
   NULL as measurementUnitID
-
 FROM
   samples AS s
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
   LEFT JOIN shipc AS shipc
     ON s.PlatformCode = shipc.Key
-
 WHERE
   c.CampaignID = {campaign_id}
 

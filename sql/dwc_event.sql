@@ -2,12 +2,12 @@
 Created by Peter Desmet (INBO)
 */
 
--- CAMPAIGNS
+/* CAMPAIGNS */
+
 SELECT
 -- RECORD-LEVEL
 -- basisOfRecord
   'HumanObservation' AS basisOfRecord,
-
 -- EVENT
 -- eventID
   c.CampaignID AS eventID,
@@ -17,7 +17,6 @@ SELECT
   date(c.StartDate) || '/' || date(c.EndDate) AS eventDate,
 -- eventRemarks
   c.Notes AS eventRemarks,
-
 -- LOCATION
 -- decimalLatitude
   NULL AS decimalLatitude,
@@ -25,23 +24,21 @@ SELECT
   NULL AS decimalLongitude,
 -- geodeticDatum
   NULL AS geodeticDatum
-
 FROM
   samples AS s
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
-
 WHERE
   c.CampaignID = {campaign_id}
 
 UNION
 
--- SAMPLES
+/* SAMPLES */
+
 SELECT
 -- RECORD-LEVEL
 -- basisOfRecord
   'HumanObservation' AS basisOfRecord,
-
 -- EVENT
 -- eventID
   c.CampaignID || ':' || s.SampleID AS eventID,
@@ -51,7 +48,6 @@ SELECT
   date(s.Date) AS eventDate,
 -- eventRemarks
   s.Notes AS eventRemarks,
-
 -- LOCATION
 -- decimalLatitude
   NULL AS decimalLatitude,
@@ -59,23 +55,21 @@ SELECT
   NULL AS decimalLongitude,
 -- geodeticDatum
   NULL AS geodeticDatum
-
 FROM
   samples AS s
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
-
 WHERE
   c.CampaignID = {campaign_id}
 
 UNION
 
--- POSITIONS
+/* POSITIONS */
+
 SELECT
 -- RECORD-LEVEL
 -- basisOfRecord
   'HumanObservation' AS basisOfRecord,
-
 -- EVENT
 -- eventID
   c.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
@@ -85,7 +79,6 @@ SELECT
   date(s.Date) || 'T' || time(p.Time) || 'Z' AS eventDate,
 -- eventRemarks
   NULL AS eventRemarks,
-
 -- LOCATION
 -- decimalLatitude
   p.Latitude AS decimalLatitude,
@@ -93,13 +86,11 @@ SELECT
   p.Longitude AS decimalLongitude,
 -- geodeticDatum
   'EPSG:4326' AS geodeticDatum
-
 FROM
   positions AS p
   LEFT JOIN samples AS s
     ON p.SampleID = s.sampleID
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
-
 WHERE
   c.CampaignID = {campaign_id}

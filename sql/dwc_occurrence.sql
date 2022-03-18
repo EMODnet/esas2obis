@@ -4,7 +4,6 @@ Created by Peter Desmet (INBO)
 SELECT
 -- eventID
   p.positionID AS eventID,
-
 -- OCCURRENCE
 -- occurrenceID
   o.ObservationID AS occurrenceID,
@@ -30,10 +29,8 @@ SELECT
   END AS associatedTaxa,
 -- occurrenceRemarks
   o.Notes AS occurrenceRemarks,
-
 -- IDENTIFICATION
 -- identifiedBy: observer name(s) not available
-
 -- TAXON
 -- scientificNameID
   CASE
@@ -44,7 +41,6 @@ SELECT
 -- kingdom
   'Animalia' AS kingdom
 -- taxonRank: not available
-
 FROM
   observations AS o
   LEFT JOIN positions AS p
@@ -57,6 +53,5 @@ FROM
     ON o.SpeciesCode = sp.euring_code
   LEFT JOIN behaviour AS beh
     ON o.Behaviour = beh.Key
-
 WHERE
   c.CampaignID = {campaign_id}
