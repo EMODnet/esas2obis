@@ -2,13 +2,24 @@
 Created by Peter Desmet (INBO)
 */
 
+/* RECORD-LEVEL */
+
+SELECT
+  'Event'                               AS type,
+  'https://creativecommons.org/licenses/by/4.0/' AS license,
+  NULL                                  AS rightsHolder,
+  NULL                                  AS datasetID,
+  'ICES'                                AS institutionCode,
+  'ESAS'                                AS collectionCode,
+  'European Seabirds at Sea'            AS datasetName,
+  NULL                                  AS ownerInstitutionCode,
+  'HumanObservation'                    AS basisOfRecord,
+  *
+FROM (
+
 /* CAMPAIGNS */
 
 SELECT
--- RECORD-LEVEL
-  NULL                                  AS rightsHolder,
-  NULL                                  AS institutionCode,
-  'HumanObservation'                    AS basisOfRecord,
 -- EVENT
   c.CampaignID                          AS eventID,
   NULL                                  AS parentEventID,
@@ -30,10 +41,6 @@ UNION
 /* SAMPLES */
 
 SELECT
--- RECORD-LEVEL
-  NULL                                  AS rightsHolder,
-  NULL                                  AS institutionCode,
-  'HumanObservation'                    AS basisOfRecord,
 -- EVENT
   c.CampaignID || ':' || s.SampleID     AS eventID,
   c.CampaignID                          AS parentEventID,
@@ -55,10 +62,6 @@ UNION
 /* POSITIONS */
 
 SELECT
--- RECORD-LEVEL
-  NULL                                  AS rightsHolder,
-  NULL                                  AS institutionCode,
-  'HumanObservation'                    AS basisOfRecord,
 -- EVENT
   c.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   c.CampaignID || ':' || s.SampleID     AS parentEventID,
@@ -76,3 +79,4 @@ FROM
     ON s.CampaignID = c.campaignID
 WHERE
   c.CampaignID IN ({campaign_id*})
+)
