@@ -23,7 +23,7 @@ SELECT
   NULL as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN shipc AS shipc
+  LEFT JOIN shipc
     ON s.PlatformCode = shipc.Key
 WHERE
   s.PlatformCode IS NOT NULL
@@ -52,7 +52,7 @@ SELECT
   NULL as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN platformclass AS platformclass
+  LEFT JOIN platformclass
     ON s.PlatformClass = platformclass.Key
 WHERE
   s.PlatformClass IS NOT NULL
@@ -81,7 +81,7 @@ SELECT
   NULL as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN platformside AS platformside
+  LEFT JOIN platformside
     ON s.PlatformSide = platformside.Key
 WHERE
   s.PlatformSide IS NOT NULL
@@ -164,7 +164,7 @@ SELECT
   NULL as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN bdcountmethod AS bdcountmethod
+  LEFT JOIN bdcountmethod
     ON s.SamplingMethod = bdcountmethod.Key
 WHERE
   s.SamplingMethod IS NOT NULL
@@ -220,7 +220,7 @@ SELECT
   NULL as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN targettaxa AS targettaxa
+  LEFT JOIN targettaxa
     ON s.TargetTaxa = targettaxa.Key
 WHERE
   s.TargetTaxa IS NOT NULL
