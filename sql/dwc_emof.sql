@@ -28,11 +28,13 @@ FROM
   LEFT JOIN shipc AS shipc
     ON s.PlatformCode = shipc.Key
 WHERE
-  c.CampaignID = {campaign_id}
+  s.PlatformCode IS NOT NULL
+  AND c.CampaignID = {campaign_id}
 
 UNION
 
 /* SAMPLE: PLATFORM CLASS */
+
 SELECT
 -- eventID
   c.CampaignID || ':' || s.SampleID AS eventID,
@@ -57,4 +59,5 @@ FROM
   LEFT JOIN platformclass AS platformclass
     ON s.PlatformClass = platformclass.Key
 WHERE
-  c.CampaignID = {campaign_id}
+  s.PlatformClass IS NOT NULL
+  AND c.CampaignID = {campaign_id}
