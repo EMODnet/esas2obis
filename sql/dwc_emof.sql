@@ -18,9 +18,9 @@ SELECT
 -- measurementValueID
   'http://vocab.nerc.ac.uk/collection/C17/current/' || shipc.Key AS measurementValueID,
 -- measurementUnit
-  NULL as measurementUnit,
+  NULL AS measurementUnit,
 -- measurementUnitID
-  NULL as measurementUnitID
+  NULL AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN shipc
@@ -47,9 +47,9 @@ SELECT
 -- measurementValueID
   platformclass.Key AS measurementValueID, -- TODO
 -- measurementUnit
-  NULL as measurementUnit,
+  NULL AS measurementUnit,
 -- measurementUnitID
-  NULL as measurementUnitID
+  NULL AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN platformclass
@@ -76,9 +76,9 @@ SELECT
 -- measurementValueID
   platformside.Key AS measurementValueID, -- TODO
 -- measurementUnit
-  NULL as measurementUnit,
+  NULL AS measurementUnit,
 -- measurementUnitID
-  NULL as measurementUnitID
+  NULL AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN platformside
@@ -105,9 +105,9 @@ SELECT
 -- measurementValueID
   NULL AS measurementValueID,
 -- measurementUnit
-  'm' as measurementUnit,
+  'm' AS measurementUnit,
 -- measurementUnitID
-  'http://vocab.nerc.ac.uk/collection/P06/current/ULAA' as measurementUnitID
+  'http://vocab.nerc.ac.uk/collection/P06/current/ULAA' AS measurementUnitID
 FROM
   samples AS s
 WHERE
@@ -132,9 +132,9 @@ SELECT
 -- measurementValueID
   NULL AS measurementValueID,
 -- measurementUnit
-  'm' as measurementUnit,
+  'm' AS measurementUnit,
 -- measurementUnitID
-  'http://vocab.nerc.ac.uk/collection/P06/current/ULAA' as measurementUnitID
+  'http://vocab.nerc.ac.uk/collection/P06/current/ULAA' AS measurementUnitID
 FROM
   samples AS s
 WHERE
@@ -159,9 +159,9 @@ SELECT
 -- measurementValueID
   bdcountmethod.Key AS measurementValueID, -- TODO
 -- measurementUnit
-  NULL as measurementUnit,
+  NULL AS measurementUnit,
 -- measurementUnitID
-  NULL as measurementUnitID
+  NULL AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN bdcountmethod
@@ -188,9 +188,9 @@ SELECT
 -- measurementValueID
   NULL AS measurementValueID,
 -- measurementUnit
-  NULL measurementUnit,
+  NULL AS measurementUnit,
 -- measurementUnitID
-  NULL as measurementUnitID
+  NULL AS measurementUnitID
 FROM
   samples AS s
 WHERE
@@ -215,9 +215,9 @@ SELECT
 -- measurementValueID
   targettaxa.Key AS measurementValueID,
 -- measurementUnit
-  NULL measurementUnit,
+  NULL AS measurementUnit,
 -- measurementUnitID
-  NULL as measurementUnitID
+  NULL AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN targettaxa
@@ -244,9 +244,9 @@ SELECT
 -- measurementValueID
   NULL AS measurementValueID,
 -- measurementUnit
-  NULL measurementUnit,
+  NULL AS measurementUnit,
 -- measurementUnitID
-  NULL as measurementUnitID
+  NULL AS measurementUnitID
 FROM
   samples AS s
 WHERE
