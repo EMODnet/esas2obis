@@ -5,22 +5,14 @@ Created by Peter Desmet (INBO)
 /* SAMPLE: PLATFORM CODE */
 
 SELECT
--- eventID
-  s.CampaignID || ':' || s.SampleID AS eventID,
--- occurrenceID
-  NULL AS occurrenceID,
--- measurementType
-  'platform code' AS measurementType,
--- measurementTypeID
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'platform code'                       AS measurementType,
   'http://vocab.nerc.ac.uk/collection/C17/current/' AS measurementTypeID,
--- measurementValue
-  shipc.Description AS measurementValue,
--- measurementValueID
+  shipc.Description                     AS measurementValue,
   'http://vocab.nerc.ac.uk/collection/C17/current/' || shipc.Key AS measurementValueID,
--- measurementUnit
-  NULL AS measurementUnit,
--- measurementUnitID
-  NULL AS measurementUnitID
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN shipc
@@ -34,22 +26,14 @@ UNION
 /* SAMPLE: PLATFORM CLASS */
 
 SELECT
--- eventID
-  s.CampaignID || ':' || s.SampleID AS eventID,
--- occurrenceID
-  NULL AS occurrenceID,
--- measurementType
-  'platform class' AS measurementType,
--- measurementTypeID
-  'http://vocab.ices.dk/?ref=311' AS measurementTypeID,
--- measurementValue
-  platformclass.Description AS measurementValue,
--- measurementValueID
-  platformclass.Key AS measurementValueID, -- TODO
--- measurementUnit
-  NULL AS measurementUnit,
--- measurementUnitID
-  NULL AS measurementUnitID
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'platform class'                      AS measurementType,
+  'http://vocab.ices.dk/?ref=311'       AS measurementTypeID,
+  platformclass.Description             AS measurementValue,
+  platformclass.Key                     AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN platformclass
@@ -63,22 +47,14 @@ UNION
 /* SAMPLE: PLATFORM SIDE */
 
 SELECT
--- eventID
-  s.CampaignID || ':' || s.SampleID AS eventID,
--- occurrenceID
-  NULL AS occurrenceID,
--- measurementType
-  'platform side' AS measurementType,
--- measurementTypeID
-  'http://vocab.ices.dk/?ref=1688' AS measurementTypeID,
--- measurementValue
-  platformside.Description AS measurementValue,
--- measurementValueID
-  platformside.Key AS measurementValueID, -- TODO
--- measurementUnit
-  NULL AS measurementUnit,
--- measurementUnitID
-  NULL AS measurementUnitID
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'platform side'                       AS measurementType,
+  'http://vocab.ices.dk/?ref=1688'      AS measurementTypeID,
+  platformside.Description              AS measurementValue,
+  platformside.Key                      AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN platformside
@@ -92,21 +68,13 @@ UNION
 /* SAMPLE: PLATFORM HEIGHT */
 
 SELECT
--- eventID
-  s.CampaignID || ':' || s.SampleID AS eventID,
--- occurrenceID
-  NULL AS occurrenceID,
--- measurementType
-  'platform height' AS measurementType,
--- measurementTypeID
-  NULL AS measurementTypeID, -- TODO
--- measurementValue
-  s.PlatformHeight AS measurementValue,
--- measurementValueID
-  NULL AS measurementValueID,
--- measurementUnit
-  'm' AS measurementUnit,
--- measurementUnitID
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'platform height'                     AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  s.PlatformHeight                      AS measurementValue,
+  NULL                                  AS measurementValueID,
+  'm'                                   AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/ULAA' AS measurementUnitID
 FROM
   samples AS s
@@ -119,21 +87,13 @@ UNION
 /* SAMPLE: TRANSECT WIDTH */
 
 SELECT
--- eventID
-  s.CampaignID || ':' || s.SampleID AS eventID,
--- occurrenceID
-  NULL AS occurrenceID,
--- measurementType
-  'transect width' AS measurementType,
--- measurementTypeID
-  NULL AS measurementTypeID, -- TODO
--- measurementValue
-  s.TransectWidth AS measurementValue,
--- measurementValueID
-  NULL AS measurementValueID,
--- measurementUnit
-  'm' AS measurementUnit,
--- measurementUnitID
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'transect width'                      AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  s.TransectWidth                       AS measurementValue,
+  NULL                                  AS measurementValueID,
+  'm'                                   AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/ULAA' AS measurementUnitID
 FROM
   samples AS s
@@ -146,22 +106,14 @@ UNION
 /* SAMPLE: SAMPLING METHOD */
 
 SELECT
--- eventID
-  s.CampaignID || ':' || s.SampleID AS eventID,
--- occurrenceID
-  NULL AS occurrenceID,
--- measurementType
-  'sampling method' AS measurementType,
--- measurementTypeID
-  'http://vocab.ices.dk/?ref=1440' AS measurementTypeID,
--- measurementValue
-  bdcountmethod.Description AS measurementValue,
--- measurementValueID
-  bdcountmethod.Key AS measurementValueID, -- TODO
--- measurementUnit
-  NULL AS measurementUnit,
--- measurementUnitID
-  NULL AS measurementUnitID
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'sampling method'                     AS measurementType,
+  'http://vocab.ices.dk/?ref=1440'      AS measurementTypeID,
+  bdcountmethod.Description             AS measurementValue,
+  bdcountmethod.Key                     AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN bdcountmethod
@@ -175,22 +127,14 @@ UNION
 /* SAMPLE: PRIMARY SAMPLING */
 
 SELECT
--- eventID
-  s.CampaignID || ':' || s.SampleID AS eventID,
--- occurrenceID
-  NULL AS occurrenceID,
--- measurementType
-  'primary sampling' AS measurementType,
--- measurementTypeID
-  NULL AS measurementTypeID, -- TODO
--- measurementValue
-  s.PrimarySampling AS measurementValue,
--- measurementValueID
-  NULL AS measurementValueID,
--- measurementUnit
-  NULL AS measurementUnit,
--- measurementUnitID
-  NULL AS measurementUnitID
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'primary sampling'                    AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  s.PrimarySampling                     AS measurementValue,
+  NULL                                  AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
 FROM
   samples AS s
 WHERE
@@ -202,22 +146,14 @@ UNION
 /* SAMPLE: TARGET TAXA */
 
 SELECT
--- eventID
-  s.CampaignID || ':' || s.SampleID AS eventID,
--- occurrenceID
-  NULL AS occurrenceID,
--- measurementType
-  'target taxa' AS measurementType,
--- measurementTypeID
-  'http://vocab.ices.dk/?ref=1713' AS measurementTypeID,
--- measurementValue
-  targettaxa.Description AS measurementValue,
--- measurementValueID
-  targettaxa.Key AS measurementValueID,
--- measurementUnit
-  NULL AS measurementUnit,
--- measurementUnitID
-  NULL AS measurementUnitID
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'target taxa'                         AS measurementType,
+  'http://vocab.ices.dk/?ref=1713'      AS measurementTypeID,
+  targettaxa.Description                AS measurementValue,
+  targettaxa.Key                        AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN targettaxa
@@ -231,22 +167,14 @@ UNION
 /* SAMPLE: DISTANCE BINS */
 
 SELECT
--- eventID
-  s.CampaignID || ':' || s.SampleID AS eventID,
--- occurrenceID
-  NULL AS occurrenceID,
--- measurementType
-  'distance bins' AS measurementType,
--- measurementTypeID
-  NULL AS measurementTypeID, -- TODO
--- measurementValue
-  s.DistanceBins AS measurementValue,
--- measurementValueID
-  NULL AS measurementValueID,
--- measurementUnit
-  NULL AS measurementUnit,
--- measurementUnitID
-  NULL AS measurementUnitID
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'distance bins'                       AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  s.DistanceBins                        AS measurementValue,
+  NULL                                  AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
 FROM
   samples AS s
 WHERE
@@ -258,22 +186,14 @@ UNION
 /* SAMPLE: USE OF BINOCULARS */
 
 SELECT
--- eventID
-  s.CampaignID || ':' || s.SampleID AS eventID,
--- occurrenceID
-  NULL AS occurrenceID,
--- measurementType
-  'use of binoculars' AS measurementType,
--- measurementTypeID
-  'http://vocab.ices.dk/?ref=1719' AS measurementTypeID,
--- measurementValue
-  useofbinoculars.Description AS measurementValue,
--- measurementValueID
-  useofbinoculars.Key AS measurementValueID, -- TODO
--- measurementUnit
-  NULL measurementUnit,
--- measurementUnitID
-  NULL as measurementUnitID
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'use of binoculars'                   AS measurementType,
+  'http://vocab.ices.dk/?ref=1719'      AS measurementTypeID,
+  useofbinoculars.Description           AS measurementValue,
+  useofbinoculars.Key                   AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
 FROM
   samples AS s
   LEFT JOIN useofbinoculars

@@ -6,24 +6,16 @@ Created by Peter Desmet (INBO)
 
 SELECT
 -- RECORD-LEVEL
--- basisOfRecord
-  'HumanObservation' AS basisOfRecord,
+  'HumanObservation'                    AS basisOfRecord,
 -- EVENT
--- eventID
-  c.CampaignID AS eventID,
--- parentEventID
-  NULL AS parentEventID,
--- eventDate
+  c.CampaignID                          AS eventID,
+  NULL                                  AS parentEventID,
   date(c.StartDate) || '/' || date(c.EndDate) AS eventDate,
--- eventRemarks
-  c.Notes AS eventRemarks,
+  c.Notes                               AS eventRemarks,
 -- LOCATION
--- decimalLatitude
-  NULL AS decimalLatitude,
--- decimalLongitude
-  NULL AS decimalLongitude,
--- geodeticDatum
-  NULL AS geodeticDatum
+  NULL                                  AS decimalLatitude,
+  NULL                                  AS decimalLongitude,
+  NULL                                  AS geodeticDatum
 FROM
   samples AS s
   LEFT JOIN campaigns AS c
@@ -37,24 +29,16 @@ UNION
 
 SELECT
 -- RECORD-LEVEL
--- basisOfRecord
-  'HumanObservation' AS basisOfRecord,
+  'HumanObservation'                    AS basisOfRecord,
 -- EVENT
--- eventID
-  c.CampaignID || ':' || s.SampleID AS eventID,
--- parentEventID
-  c.CampaignID AS parentEventID,
--- eventDate
-  date(s.Date) AS eventDate,
--- eventRemarks
-  s.Notes AS eventRemarks,
+  c.CampaignID || ':' || s.SampleID     AS eventID,
+  c.CampaignID                          AS parentEventID,
+  date(s.Date)                          AS eventDate,
+  s.Notes                               AS eventRemarks,
 -- LOCATION
--- decimalLatitude
-  NULL AS decimalLatitude,
--- decimalLongitude
-  NULL AS decimalLongitude,
--- geodeticDatum
-  NULL AS geodeticDatum
+  NULL                                  AS decimalLatitude,
+  NULL                                  AS decimalLongitude,
+  NULL                                  AS geodeticDatum
 FROM
   samples AS s
   LEFT JOIN campaigns AS c
@@ -68,24 +52,16 @@ UNION
 
 SELECT
 -- RECORD-LEVEL
--- basisOfRecord
-  'HumanObservation' AS basisOfRecord,
+  'HumanObservation'                    AS basisOfRecord,
 -- EVENT
--- eventID
   c.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
--- parentEventID
-  c.CampaignID || ':' || s.SampleID AS parentEventID,
--- eventDate: p.Time is in UTC
-  date(s.Date) || 'T' || time(p.Time) || 'Z' AS eventDate,
--- eventRemarks
-  NULL AS eventRemarks,
+  c.CampaignID || ':' || s.SampleID     AS parentEventID,
+  date(s.Date) || 'T' || time(p.Time) || 'Z' AS eventDate, -- p.Time is in UTC
+  NULL                                  AS eventRemarks,
 -- LOCATION
--- decimalLatitude
-  p.Latitude AS decimalLatitude,
--- decimalLongitude
-  p.Longitude AS decimalLongitude,
--- geodeticDatum
-  'EPSG:4326' AS geodeticDatum
+  p.Latitude                            AS decimalLatitude,
+  p.Longitude                           AS decimalLongitude,
+  'EPSG:4326'                           AS geodeticDatum
 FROM
   positions AS p
   LEFT JOIN samples AS s
