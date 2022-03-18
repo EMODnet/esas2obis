@@ -74,6 +74,8 @@ targettaxa <- getCodeList("TargetTaxa")
 useofbinoculars <- getCodeList("UseOfBinoculars")
 beaufort <- getCodeList("Beaufort")
 visibility <- getCodeList("Visibility")
+glare <- getCodeList("Glare")
+cloudcover <- getCodeList("CloudCover")
 behaviour <- getCodeList("Behaviour")
 ```
 
@@ -100,6 +102,8 @@ DBI::dbWriteTable(esas_db, "targettaxa", targettaxa)
 DBI::dbWriteTable(esas_db, "useofbinoculars", useofbinoculars)
 DBI::dbWriteTable(esas_db, "beaufort", beaufort)
 DBI::dbWriteTable(esas_db, "visibility", visibility)
+DBI::dbWriteTable(esas_db, "glare", glare)
+DBI::dbWriteTable(esas_db, "cloudcover", cloudcover)
 DBI::dbWriteTable(esas_db, "behaviour", behaviour)
 ```
 

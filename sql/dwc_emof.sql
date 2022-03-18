@@ -273,7 +273,7 @@ SELECT
   'wind force'                          AS measurementType,
   'http://vocab.ices.dk/?ref=1705'      AS measurementTypeID,
   beaufort.Description                  AS measurementValue,
-  beaufort.Key                          AS measurementValueID,
+  beaufort.Key                          AS measurementValueID, -- TODO
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -296,7 +296,7 @@ SELECT
   'visibility'                          AS measurementType,
   'http://vocab.ices.dk/?ref=1708'      AS measurementTypeID,
   visibility.Description                AS measurementValue,
-  visibility.Key                        AS measurementValueID,
+  visibility.Key                        AS measurementValueID, -- TODO
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -309,3 +309,69 @@ WHERE
   p.Visibility IS NOT NULL
   AND s.CampaignID = {campaign_id}
 
+UNION
+
+/* POSITION: GLARE */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  NULL                                  AS occurrenceID,
+  'glare'                               AS measurementType,
+  'http://vocab.ices.dk/?ref=1717'      AS measurementTypeID,
+  glare.Description                     AS measurementValue,
+  glare.Key                             AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  positions AS p
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN glare
+    ON p.Glare = glare.Key
+WHERE
+  p.Glare IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* POSITION: SUN ANGLE */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  NULL                                  AS occurrenceID,
+  'sun angle'                           AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  p.SunAngle                            AS measurementValue,
+  NULL                                  AS measurementValueID,
+  'degrees'                             AS measurementUnit,
+  'http://vocab.nerc.ac.uk/collection/P06/current/UAAA' AS measurementUnitID
+FROM
+  positions AS p
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+WHERE
+  p.SunAngle IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* POSITION: CLOUD COVER */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  NULL                                  AS occurrenceID,
+  'cloud cover'                         AS measurementType,
+  'http://vocab.ices.dk/?ref=1706'      AS measurementTypeID,
+  cloudcover.Description                AS measurementValue,
+  cloudcover.Key                        AS measurementValueID, -- TODO
+  'octas'                               AS measurementUnit,
+  NULL                                  AS measurementUnitID -- TODO
+FROM
+  positions AS p
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN cloudcover
+    ON p.CloudCover = cloudcover.Key
+WHERE
+  p.CloudCover IS NOT NULL
+  AND s.CampaignID = {campaign_id}
