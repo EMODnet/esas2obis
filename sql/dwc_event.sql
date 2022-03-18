@@ -78,7 +78,7 @@ SELECT
 -- parentEventID
   c.CampaignID || ':' || s.SampleID AS parentEventID,
 -- eventDate: p.Time is in UTC
-  date(s.Date) || 'T' || time(p.Time, 'unixepoch') || 'Z' AS eventDate,
+  date(s.Date) || 'T' || time(p.Time) || 'Z' AS eventDate,
 
 -- LOCATION
 -- decimalLatitude

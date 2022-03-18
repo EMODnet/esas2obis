@@ -48,7 +48,7 @@ For now, the source data were provided manually and stored in `data/raw`.
 Read source files:
 
 ```{r}
-# All columns are read as characters to easy import into SQLite: https://stackoverflow.com/a/13462536/2463806
+# All columns are read as characters for easier import into SQLite: https://stackoverflow.com/a/13462536/2463806
 campaigns <- readr::read_csv(here::here("data", "raw", "CAMPAIGNS_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
 samples <- readr::read_csv(here::here("data", "raw", "SAMPLES_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
 positions <- readr::read_csv(here::here("data", "raw", "POSITIONS_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
@@ -81,6 +81,7 @@ readr::write_csv(shipc, here::here("reference", "shipc.csv"), na = "")
 Read code lists:
 
 ```{r}
+# All columns are read as characters for easier import into SQLite: https://stackoverflow.com/a/13462536/2463806
 species <- readr::read_csv(here::here("reference", "species.csv"), col_types = cols(.default = "c"))
 behaviour <- readr::read_csv(here::here("reference", "behaviour.csv"), col_types = cols(.default = "c"))
 shipc <- readr::read_csv(here::here("reference", "shipc.csv"), col_types = cols(.default = "c"))
@@ -92,15 +93,6 @@ Create a SQLite database with the source data, so it can be queried with SQL in 
 
 ```{r}
 esas_db <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
-```
-
-Convert dates to characters, to avoid issues [when reading from SQLite](https://stackoverflow.com/a/13462536/2463806):
-
-```{r}
-campaigns$StartDate <- as.character(campaigns$StartDate)
-campaigns$EndDate <- as.character(campaigns$EndDate)
-samples$Date <- as.character(samples$Date)
-```
 
 ```{r}
 # Data
