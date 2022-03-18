@@ -61,3 +61,34 @@ FROM
 WHERE
   s.PlatformClass IS NOT NULL
   AND c.CampaignID = {campaign_id}
+
+UNION
+
+/* SAMPLE: PLATFORM SIDE */
+
+SELECT
+-- eventID
+  c.CampaignID || ':' || s.SampleID AS eventID,
+-- occurrenceID
+  NULL AS occurrenceID,
+-- measurementType
+  'platform side' AS measurementType,
+-- measurementTypeID
+  'http://vocab.ices.dk/?ref=1688' AS measurementTypeID,
+-- measurementValue
+  platformside.Description AS measurementValue,
+-- measurementValueID
+  NULL AS measurementValueID, -- TODO
+-- measurementUnit
+  NULL as measurementUnit,
+-- measurementUnitID
+  NULL as measurementUnitID
+FROM
+  samples AS s
+  LEFT JOIN campaigns AS c
+    ON s.CampaignID = c.campaignID
+  LEFT JOIN platformside AS platformside
+    ON s.PlatformSide = platformside.Key
+WHERE
+  s.PlatformSide IS NOT NULL
+  AND c.CampaignID = {campaign_id}
