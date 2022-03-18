@@ -70,6 +70,7 @@ shipc <- getCodeList("SHIPC")
 platformclass <- getCodeList(URLencode("Platform Class"))
 platformside <- getCodeList("PlatformSide")
 bdcountmethod <- getCodeList("BD_CountMethod")
+targettaxa <- getCodeList("TargetTaxa")
 behaviour <- getCodeList("Behaviour")
 ```
 
@@ -92,6 +93,7 @@ DBI::dbWriteTable(esas_db, "shipc", shipc)
 DBI::dbWriteTable(esas_db, "platformclass", platformclass)
 DBI::dbWriteTable(esas_db, "platformside", platformside)
 DBI::dbWriteTable(esas_db, "bdcountmethod", bdcountmethod)
+DBI::dbWriteTable(esas_db, "targettaxa", targettaxa)
 DBI::dbWriteTable(esas_db, "behaviour", behaviour)
 ```
 

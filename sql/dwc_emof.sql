@@ -169,3 +169,59 @@ FROM
 WHERE
   s.SamplingMethod IS NOT NULL
   AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* SAMPLE: PRIMARY SAMPLING */
+
+SELECT
+-- eventID
+  s.CampaignID || ':' || s.SampleID AS eventID,
+-- occurrenceID
+  NULL AS occurrenceID,
+-- measurementType
+  'primary sampling' AS measurementType,
+-- measurementTypeID
+  NULL AS measurementTypeID, -- TODO
+-- measurementValue
+  s.PrimarySampling AS measurementValue,
+-- measurementValueID
+  NULL AS measurementValueID,
+-- measurementUnit
+  NULL measurementUnit,
+-- measurementUnitID
+  NULL as measurementUnitID
+FROM
+  samples AS s
+WHERE
+  s.TransectWidth IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* SAMPLE: TARGET TAXA */
+
+SELECT
+-- eventID
+  s.CampaignID || ':' || s.SampleID AS eventID,
+-- occurrenceID
+  NULL AS occurrenceID,
+-- measurementType
+  'target taxa' AS measurementType,
+-- measurementTypeID
+  'http://vocab.ices.dk/?ref=1713' AS measurementTypeID,
+-- measurementValue
+  targettaxa.Description AS measurementValue,
+-- measurementValueID
+  targettaxa.Key AS measurementValueID,
+-- measurementUnit
+  NULL measurementUnit,
+-- measurementUnitID
+  NULL as measurementUnitID
+FROM
+  samples AS s
+  LEFT JOIN targettaxa AS targettaxa
+    ON s.TargetTaxa = targettaxa.Key
+WHERE
+  s.TargetTaxa IS NOT NULL
+  AND s.CampaignID = {campaign_id}
