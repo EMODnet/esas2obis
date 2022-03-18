@@ -221,3 +221,24 @@ WHERE
   s.NumberOfObservers IS NOT NULL
   AND s.CampaignID = {campaign_id}
 
+UNION
+
+/* POSITION: DISTANCE */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  NULL                                  AS occurrenceID,
+  'distance'                            AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  p.Distance                            AS measurementValue,
+  NULL                                  AS measurementValueID,
+  'km'                                  AS measurementUnit,
+  'http://vocab.nerc.ac.uk/collection/P06/current/ULKM' AS measurementUnitID
+FROM
+  positions AS p
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+WHERE
+  p.Distance IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
