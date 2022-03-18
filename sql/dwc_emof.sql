@@ -201,3 +201,23 @@ FROM
 WHERE
   s.UseOfBinoculars IS NOT NULL
   AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* SAMPLE: NUMBER OF OBSERVERS */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID     AS eventID,
+  NULL                                  AS occurrenceID,
+  'number of observers'                 AS measurementType,
+  NULL                                  AS measurementTypeID, -- TODO
+  s.NumberOfObservers                   AS measurementValue,
+  NULL                                  AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  samples AS s
+WHERE
+  s.NumberOfObservers IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
