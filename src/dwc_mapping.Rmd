@@ -43,7 +43,7 @@ library(icesVocab)      # To get code lists
 
 # Read source data
 
-For now, the source data were provided manually and stored in `data/raw`.
+For now, the source data were provided manually and stored in `data/raw`. **TODO**: replace with querying from ESAS endpoint.
 
 Read source files:
 
@@ -89,25 +89,24 @@ shipc <- readr::read_csv(here::here("reference", "shipc.csv"), col_types = cols(
 
 ## Create database
 
-Create a SQLite database with the source data, so it can be queried with SQL in the next steps:
+Create a SQLite database with the source data and code lists, so it can be queried with SQL in the next steps:
 
 ```{r}
 esas_db <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
 
-```{r}
-# Data
+# Import data
 DBI::dbWriteTable(esas_db, "campaigns", campaigns)
 DBI::dbWriteTable(esas_db, "samples", samples)
 DBI::dbWriteTable(esas_db, "positions", positions)
 DBI::dbWriteTable(esas_db, "observations", observations)
 
-# Code lists
+# Import code lists
 DBI::dbWriteTable(esas_db, "species", species)
 DBI::dbWriteTable(esas_db, "behaviour", behaviour)
 DBI::dbWriteTable(esas_db, "shipc", shipc)
 ```
 
-Set filter **TO BE REMOVED HERE AND IN SQL**:
+Set filter: **TODO**: remove for production use.
 
 ```{r}
 campaign_id <- 110000153
