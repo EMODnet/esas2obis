@@ -22,7 +22,7 @@ SELECT
   'present'                             AS occurrenceStatus,
   CASE
     WHEN o.Association = '10' THEN 'Pisces'
-    WHEN o.Association = '10' THEN 'Cetacea'
+    WHEN o.Association = '11' THEN 'Cetacea'
     -- All other associations are non biological
   END                                   AS associatedTaxa, -- Also in EMOF with orig vocab
   o.Notes                               AS occurrenceRemarks,
