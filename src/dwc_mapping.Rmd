@@ -69,6 +69,7 @@ Get code lists from ICES vocabularies API:
 shipc <- getCodeList("SHIPC")
 platformclass <- getCodeList(URLencode("Platform Class"))
 platformside <- getCodeList("PlatformSide")
+bdcountmethod <- getCodeList("BD_CountMethod")
 behaviour <- getCodeList("Behaviour")
 ```
 
@@ -90,6 +91,7 @@ DBI::dbWriteTable(esas_db, "species", species)
 DBI::dbWriteTable(esas_db, "shipc", shipc)
 DBI::dbWriteTable(esas_db, "platformclass", platformclass)
 DBI::dbWriteTable(esas_db, "platformside", platformside)
+DBI::dbWriteTable(esas_db, "bdcountmethod", bdcountmethod)
 DBI::dbWriteTable(esas_db, "behaviour", behaviour)
 ```
 

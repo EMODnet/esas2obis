@@ -47,7 +47,7 @@ SELECT
 -- measurementValue
   platformclass.Description AS measurementValue,
 -- measurementValueID
-  NULL AS measurementValueID, -- TODO
+  platformclass.Key AS measurementValueID, -- TODO
 -- measurementUnit
   NULL as measurementUnit,
 -- measurementUnitID
@@ -78,7 +78,7 @@ SELECT
 -- measurementValue
   platformside.Description AS measurementValue,
 -- measurementValueID
-  NULL AS measurementValueID, -- TODO
+  platformside.Key AS measurementValueID, -- TODO
 -- measurementUnit
   NULL as measurementUnit,
 -- measurementUnitID
@@ -149,4 +149,35 @@ FROM
     ON s.CampaignID = c.campaignID
 WHERE
   s.TransectWidth IS NOT NULL
+  AND c.CampaignID = {campaign_id}
+
+UNION
+
+/* SAMPLE: SAMPLING METHOD */
+
+SELECT
+-- eventID
+  c.CampaignID || ':' || s.SampleID AS eventID,
+-- occurrenceID
+  NULL AS occurrenceID,
+-- measurementType
+  'sampling method' AS measurementType,
+-- measurementTypeID
+  'http://vocab.ices.dk/?ref=1440' AS measurementTypeID,
+-- measurementValue
+  bdcountmethod.Description AS measurementValue,
+-- measurementValueID
+  bdcountmethod.Key AS measurementValueID, -- TODO
+-- measurementUnit
+  NULL as measurementUnit,
+-- measurementUnitID
+  NULL as measurementUnitID
+FROM
+  samples AS s
+  LEFT JOIN campaigns AS c
+    ON s.CampaignID = c.campaignID
+  LEFT JOIN bdcountmethod AS bdcountmethod
+    ON s.SamplingMethod = bdcountmethod.Key
+WHERE
+  s.SamplingMethod IS NOT NULL
   AND c.CampaignID = {campaign_id}
