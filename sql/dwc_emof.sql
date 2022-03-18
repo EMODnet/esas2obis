@@ -6,7 +6,7 @@ Created by Peter Desmet (INBO)
 
 SELECT
 -- eventID
-  c.CampaignID || ':' || s.SampleID AS eventID,
+  s.CampaignID || ':' || s.SampleID AS eventID,
 -- occurrenceID
   NULL AS occurrenceID,
 -- measurementType
@@ -23,13 +23,11 @@ SELECT
   NULL as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN campaigns AS c
-    ON s.CampaignID = c.campaignID
   LEFT JOIN shipc AS shipc
     ON s.PlatformCode = shipc.Key
 WHERE
   s.PlatformCode IS NOT NULL
-  AND c.CampaignID = {campaign_id}
+  AND s.CampaignID = {campaign_id}
 
 UNION
 
@@ -37,7 +35,7 @@ UNION
 
 SELECT
 -- eventID
-  c.CampaignID || ':' || s.SampleID AS eventID,
+  s.CampaignID || ':' || s.SampleID AS eventID,
 -- occurrenceID
   NULL AS occurrenceID,
 -- measurementType
@@ -54,13 +52,11 @@ SELECT
   NULL as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN campaigns AS c
-    ON s.CampaignID = c.campaignID
   LEFT JOIN platformclass AS platformclass
     ON s.PlatformClass = platformclass.Key
 WHERE
   s.PlatformClass IS NOT NULL
-  AND c.CampaignID = {campaign_id}
+  AND s.CampaignID = {campaign_id}
 
 UNION
 
@@ -68,7 +64,7 @@ UNION
 
 SELECT
 -- eventID
-  c.CampaignID || ':' || s.SampleID AS eventID,
+  s.CampaignID || ':' || s.SampleID AS eventID,
 -- occurrenceID
   NULL AS occurrenceID,
 -- measurementType
@@ -85,13 +81,11 @@ SELECT
   NULL as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN campaigns AS c
-    ON s.CampaignID = c.campaignID
   LEFT JOIN platformside AS platformside
     ON s.PlatformSide = platformside.Key
 WHERE
   s.PlatformSide IS NOT NULL
-  AND c.CampaignID = {campaign_id}
+  AND s.CampaignID = {campaign_id}
 
 UNION
 
@@ -99,7 +93,7 @@ UNION
 
 SELECT
 -- eventID
-  c.CampaignID || ':' || s.SampleID AS eventID,
+  s.CampaignID || ':' || s.SampleID AS eventID,
 -- occurrenceID
   NULL AS occurrenceID,
 -- measurementType
@@ -116,11 +110,9 @@ SELECT
   'http://vocab.nerc.ac.uk/collection/P06/current/ULAA' as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN campaigns AS c
-    ON s.CampaignID = c.campaignID
 WHERE
   s.PlatformHeight IS NOT NULL
-  AND c.CampaignID = {campaign_id}
+  AND s.CampaignID = {campaign_id}
 
 UNION
 
@@ -128,7 +120,7 @@ UNION
 
 SELECT
 -- eventID
-  c.CampaignID || ':' || s.SampleID AS eventID,
+  s.CampaignID || ':' || s.SampleID AS eventID,
 -- occurrenceID
   NULL AS occurrenceID,
 -- measurementType
@@ -145,11 +137,9 @@ SELECT
   'http://vocab.nerc.ac.uk/collection/P06/current/ULAA' as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN campaigns AS c
-    ON s.CampaignID = c.campaignID
 WHERE
   s.TransectWidth IS NOT NULL
-  AND c.CampaignID = {campaign_id}
+  AND s.CampaignID = {campaign_id}
 
 UNION
 
@@ -157,7 +147,7 @@ UNION
 
 SELECT
 -- eventID
-  c.CampaignID || ':' || s.SampleID AS eventID,
+  s.CampaignID || ':' || s.SampleID AS eventID,
 -- occurrenceID
   NULL AS occurrenceID,
 -- measurementType
@@ -174,10 +164,8 @@ SELECT
   NULL as measurementUnitID
 FROM
   samples AS s
-  LEFT JOIN campaigns AS c
-    ON s.CampaignID = c.campaignID
   LEFT JOIN bdcountmethod AS bdcountmethod
     ON s.SamplingMethod = bdcountmethod.Key
 WHERE
   s.SamplingMethod IS NOT NULL
-  AND c.CampaignID = {campaign_id}
+  AND s.CampaignID = {campaign_id}
