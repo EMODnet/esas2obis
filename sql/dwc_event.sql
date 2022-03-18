@@ -6,6 +6,8 @@ Created by Peter Desmet (INBO)
 
 SELECT
 -- RECORD-LEVEL
+  NULL                                  AS rightsHolder,
+  NULL                                  AS institutionCode,
   'HumanObservation'                    AS basisOfRecord,
 -- EVENT
   c.CampaignID                          AS eventID,
@@ -29,6 +31,8 @@ UNION
 
 SELECT
 -- RECORD-LEVEL
+  NULL                                  AS rightsHolder,
+  NULL                                  AS institutionCode,
   'HumanObservation'                    AS basisOfRecord,
 -- EVENT
   c.CampaignID || ':' || s.SampleID     AS eventID,
@@ -52,6 +56,8 @@ UNION
 
 SELECT
 -- RECORD-LEVEL
+  NULL                                  AS rightsHolder,
+  NULL                                  AS institutionCode,
   'HumanObservation'                    AS basisOfRecord,
 -- EVENT
   c.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
