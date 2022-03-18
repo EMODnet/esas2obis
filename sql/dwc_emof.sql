@@ -514,6 +514,31 @@ WHERE
 
 UNION
 
+/* OBSERVATION: OBSERVATION DISTANCE */
+
+SELECT
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  'observation distance'                AS measurementType,
+  'https://vocab.ices.dk/?ref=1714'     AS measurementTypeID,
+  observationdistance.Description       AS measurementValue,
+  observationdistance.Key               AS measurementValueID, -- TODO
+  NULL                                  AS measurementUnit,
+  NULL                                  AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN observationdistance
+    ON o.ObservationDistance = observationdistance.Key
+WHERE
+  o.ObservationDistance IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
 /* OBSERVATION: LIFE STAGE */
 
 SELECT
@@ -557,7 +582,7 @@ FROM
   LEFT JOIN samples AS s
     ON p.SampleID = s.SampleID
   LEFT JOIN sex
-    ON o.LifeStage = sex.Key
+    ON o.Sex = sex.Key
 WHERE
   o.Sex IS NOT NULL
   AND s.CampaignID = {campaign_id}
