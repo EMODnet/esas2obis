@@ -225,3 +225,59 @@ FROM
 WHERE
   s.TargetTaxa IS NOT NULL
   AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* SAMPLE: DISTANCE BINS */
+
+SELECT
+-- eventID
+  s.CampaignID || ':' || s.SampleID AS eventID,
+-- occurrenceID
+  NULL AS occurrenceID,
+-- measurementType
+  'distance bins' AS measurementType,
+-- measurementTypeID
+  NULL AS measurementTypeID, -- TODO
+-- measurementValue
+  s.DistanceBins AS measurementValue,
+-- measurementValueID
+  NULL AS measurementValueID,
+-- measurementUnit
+  NULL measurementUnit,
+-- measurementUnitID
+  NULL as measurementUnitID
+FROM
+  samples AS s
+WHERE
+  s.DistanceBins IS NOT NULL
+  AND s.CampaignID = {campaign_id}
+
+UNION
+
+/* SAMPLE: USE OF BINOCULARS */
+
+SELECT
+-- eventID
+  s.CampaignID || ':' || s.SampleID AS eventID,
+-- occurrenceID
+  NULL AS occurrenceID,
+-- measurementType
+  'use of binoculars' AS measurementType,
+-- measurementTypeID
+  'http://vocab.ices.dk/?ref=1719' AS measurementTypeID,
+-- measurementValue
+  useofbinoculars.Description AS measurementValue,
+-- measurementValueID
+  useofbinoculars.Key AS measurementValueID, -- TODO
+-- measurementUnit
+  NULL measurementUnit,
+-- measurementUnitID
+  NULL as measurementUnitID
+FROM
+  samples AS s
+  LEFT JOIN useofbinoculars
+    ON s.UseOfBinoculars = useofbinoculars.Key
+WHERE
+  s.UseOfBinoculars IS NOT NULL
+  AND s.CampaignID = {campaign_id}

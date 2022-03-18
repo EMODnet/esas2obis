@@ -1,7 +1,9 @@
 eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurementValueID,measurementUnit,measurementUnitID
+110000153:110000153,,distance bins,,0|50|100|200|300,,,
 110000153:110000153,,platform class,http://vocab.ices.dk/?ref=311,30: Ship,30,,
 110000153:110000153,,platform code,http://vocab.nerc.ac.uk/collection/C17/current/,BELGICA,http://vocab.nerc.ac.uk/collection/C17/current/11BE,,
 110000153:110000153,,primary sampling,,TRUE,,,
 110000153:110000153,,sampling method,http://vocab.ices.dk/?ref=1440,Full ship-based transect method with snapshot for flying birds,1,,
 110000153:110000153,,target taxa,http://vocab.ices.dk/?ref=1713,All species recorded (standard),1,,
 110000153:110000153,,transect width,,300,,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA
+110000153:110000153,,use of binoculars,http://vocab.ices.dk/?ref=1719,"Binoculars used extensively for scanning ahead and to the side, naked eye used for close observations (e.g. for cetacean monitoring)",3,,
