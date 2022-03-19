@@ -1,5 +1,7 @@
 # ESAS2OBIS
 
+[![funding](https://img.shields.io/static/v1?label=funded+by&message=EMODnet+Biology&labelColor=1872b1&color=f6b142)](https://www.emodnet-biology.eu/)
+
 ## Rationale
 
 This repository contains the functionality to standardize the data of the [European Seabirds at Sea](http://esas.ices.dk/) to a [Darwin Core Archive](https://obis.org/manual/dataformat/#dwca) that can be harvested by [OBIS](http://www.obis.org).
