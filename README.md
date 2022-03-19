@@ -2,7 +2,7 @@
 
 ## Rationale
 
-This repository contains the functionality to standardize the data of the [European Seabirds at Sea](http://esas.ices.dk/) to a [Darwin Core Archive](https://www.gbif.org/dataset-classes) that can be harvested by [OBIS](http://www.obis.org).
+This repository contains the functionality to standardize the data of the [European Seabirds at Sea](http://esas.ices.dk/) to a [Darwin Core Archive](https://obis.org/manual/dataformat/#dwca) that can be harvested by [OBIS](http://www.obis.org).
 
 ## Workflow
 
