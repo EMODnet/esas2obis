@@ -29,9 +29,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'platform class'                      AS measurementType,
-  'http://vocab.ices.dk/?ref=311'       AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/Platform%20Class' AS measurementTypeID,
   platformclass.Description             AS measurementValue,
-  platformclass.Key                     AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/Platform%20Class/' || platformclass.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -50,9 +50,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'platform side'                       AS measurementType,
-  'http://vocab.ices.dk/?ref=1688'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/PlatformSide' AS measurementTypeID,
   platformside.Description              AS measurementValue,
-  platformside.Key                      AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/PlatformSide/' || platformside.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -109,9 +109,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'sampling method'                     AS measurementType,
-  'http://vocab.ices.dk/?ref=1440'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/BD_CountMethod' AS measurementTypeID,
   bdcountmethod.Description             AS measurementValue,
-  bdcountmethod.Key                     AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/BD_CountMethod/' || bdcountmethod.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -149,9 +149,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'target taxa'                         AS measurementType,
-  'http://vocab.ices.dk/?ref=1713'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/TargetTaxa' AS measurementTypeID,
   targettaxa.Description                AS measurementValue,
-  targettaxa.Key                        AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/TargetTaxa/' || targettaxa.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -189,9 +189,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'use of binoculars'                   AS measurementType,
-  'http://vocab.ices.dk/?ref=1719'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/UseOfBinoculars' AS measurementTypeID,
   useofbinoculars.Description           AS measurementValue,
-  useofbinoculars.Key                   AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/UseOfBinoculars/' || useofbinoculars.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -271,9 +271,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'wind force'                          AS measurementType,
-  'http://vocab.ices.dk/?ref=1705'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/Beaufort' AS measurementTypeID,
   beaufort.Description                  AS measurementValue,
-  beaufort.Key                          AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/Beaufort/' || beaufort.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -294,9 +294,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'visibility'                          AS measurementType,
-  'http://vocab.ices.dk/?ref=1708'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/Visibility' AS measurementTypeID,
   visibility.Description                AS measurementValue,
-  visibility.Key                        AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/Visibility/' || visibility.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -317,9 +317,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'glare'                               AS measurementType,
-  'http://vocab.ices.dk/?ref=1717'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/Glare' AS measurementTypeID,
   glare.Description                     AS measurementValue,
-  glare.Key                             AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/Glare/' || glare.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -361,9 +361,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'cloud cover'                         AS measurementType,
-  'http://vocab.ices.dk/?ref=1706'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/CloudCover' AS measurementTypeID,
   cloudcover.Description                AS measurementValue,
-  cloudcover.Key                        AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/CloudCover/' || cloudcover.Key AS measurementValueID,
   'octas'                               AS measurementUnit,
   NULL                                  AS measurementUnitID -- TODO
 FROM
@@ -384,9 +384,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'precipitation'                       AS measurementType,
-  'http://vocab.ices.dk/?ref=1707'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/Precipitation' AS measurementTypeID,
   precipitation.Description             AS measurementValue,
-  precipitation.Key                     AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/Precipitation/' || precipitation.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -428,9 +428,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'observation conditions'              AS measurementType,
-  'http://vocab.ices.dk/?ref=1704'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/Sightability' AS measurementTypeID,
   sightability.Description              AS measurementValue,
-  sightability.Key                      AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/Sightability/' || sightability.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -520,9 +520,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
   'observation distance'                AS measurementType,
-  'https://vocab.ices.dk/?ref=1714'     AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/ObservationDistance' AS measurementTypeID,
   observationdistance.Description       AS measurementValue,
-  observationdistance.Key               AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/ObservationDistance/' || observationdistance.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -545,9 +545,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
   'life stage'                          AS measurementType,
-  'http://vocab.ices.dk/?ref=1715'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/LifeStage' AS measurementTypeID,
   lifestage.Description                 AS measurementValue,
-  lifestage.Key                         AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/LifeStage/' || lifestage.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -570,9 +570,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
   'moult'                               AS measurementType,
-  'http://vocab.ices.dk/?ref=1720'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/Moult' AS measurementTypeID,
   moult.Description                     AS measurementValue,
-  moult.Key                             AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/Moult/' || moult.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -595,9 +595,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
   'plumage'                             AS measurementType,
-  'http://vocab.ices.dk/?ref=1716'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/Plumage' AS measurementTypeID,
   plumage.Description                   AS measurementValue,
-  plumage.Key                           AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/Plumage/' || plumage.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -620,9 +620,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
   'sex'                                 AS measurementType,
-  'http://vocab.ices.dk/?ref=45'        AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/SEXCO' AS measurementTypeID,
   sex.Description                       AS measurementValue,
-  sex.Key                               AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/SEXCO/' || sex.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -645,9 +645,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
   'travel direction'                    AS measurementType,
-  'http://vocab.ices.dk/?ref=1689'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/TravelDirection' AS measurementTypeID,
   traveldirection.Description           AS measurementValue,
-  traveldirection.Key                   AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/TravelDirection/' || traveldirection.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -670,9 +670,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
   'prey'                                AS measurementType,
-  'http://vocab.ices.dk/?ref=1687'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/PreyType' AS measurementTypeID,
   preytype.Description                  AS measurementValue,
-  preytype.Key                          AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/PreyType/' || preytype.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -695,9 +695,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
   'association'                         AS measurementType,
-  'http://vocab.ices.dk/?ref=1718'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/Association' AS measurementTypeID,
   association.Description               AS measurementValue,
-  association.Key                       AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/Association/' || association.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
@@ -720,9 +720,9 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
   'behaviour'                           AS measurementType,
-  'http://vocab.ices.dk/?ref=1709'      AS measurementTypeID,
+  'https://vocab.ices.dk/services/rdf/collection/Behaviour' AS measurementTypeID,
   behaviour.Description                 AS measurementValue,
-  behaviour.Key                         AS measurementValueID, -- TODO
+  'https://vocab.ices.dk/services/rdf/collection/Behaviour/' || behaviour.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   NULL                                  AS measurementUnitID
 FROM
