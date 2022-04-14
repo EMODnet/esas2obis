@@ -65,7 +65,7 @@ species <- readr::read_tsv("https://raw.githubusercontent.com/ices-tools-dev/esa
 
 Get code lists from ICES vocabularies API:
 
-```{r eval=FALSE}
+```{r}
 shipc <- getCodeList("SHIPC")
 platformclass <- getCodeList(URLencode("Platform Class"))
 platformside <- getCodeList("PlatformSide")
@@ -94,37 +94,37 @@ behaviour <- getCodeList("Behaviour")
 Create a SQLite database with the source data and code lists, so it can be queried with SQL in the next steps:
 
 ```{r}
-esas_db <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
+db <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
 
 # Import data
-DBI::dbWriteTable(esas_db, "campaigns", campaigns)
-DBI::dbWriteTable(esas_db, "samples", samples)
-DBI::dbWriteTable(esas_db, "positions", positions)
-DBI::dbWriteTable(esas_db, "observations", observations)
+DBI::dbWriteTable(db, "campaigns", campaigns)
+DBI::dbWriteTable(db, "samples", samples)
+DBI::dbWriteTable(db, "positions", positions)
+DBI::dbWriteTable(db, "observations", observations)
 
 # Import code lists
-DBI::dbWriteTable(esas_db, "species", species)
-DBI::dbWriteTable(esas_db, "shipc", shipc)
-DBI::dbWriteTable(esas_db, "platformclass", platformclass)
-DBI::dbWriteTable(esas_db, "platformside", platformside)
-DBI::dbWriteTable(esas_db, "bdcountmethod", bdcountmethod)
-DBI::dbWriteTable(esas_db, "targettaxa", targettaxa)
-DBI::dbWriteTable(esas_db, "useofbinoculars", useofbinoculars)
-DBI::dbWriteTable(esas_db, "beaufort", beaufort)
-DBI::dbWriteTable(esas_db, "visibility", visibility)
-DBI::dbWriteTable(esas_db, "glare", glare)
-DBI::dbWriteTable(esas_db, "cloudcover", cloudcover)
-DBI::dbWriteTable(esas_db, "precipitation", precipitation)
-DBI::dbWriteTable(esas_db, "sightability", sightability)
-DBI::dbWriteTable(esas_db, "observationdistance", observationdistance)
-DBI::dbWriteTable(esas_db, "lifestage", lifestage)
-DBI::dbWriteTable(esas_db, "moult", moult)
-DBI::dbWriteTable(esas_db, "plumage", plumage)
-DBI::dbWriteTable(esas_db, "sex", sex)
-DBI::dbWriteTable(esas_db, "traveldirection", traveldirection)
-DBI::dbWriteTable(esas_db, "preytype", preytype)
-DBI::dbWriteTable(esas_db, "association", association)
-DBI::dbWriteTable(esas_db, "behaviour", behaviour)
+DBI::dbWriteTable(db, "species", species)
+DBI::dbWriteTable(db, "shipc", shipc)
+DBI::dbWriteTable(db, "platformclass", platformclass)
+DBI::dbWriteTable(db, "platformside", platformside)
+DBI::dbWriteTable(db, "bdcountmethod", bdcountmethod)
+DBI::dbWriteTable(db, "targettaxa", targettaxa)
+DBI::dbWriteTable(db, "useofbinoculars", useofbinoculars)
+DBI::dbWriteTable(db, "beaufort", beaufort)
+DBI::dbWriteTable(db, "visibility", visibility)
+DBI::dbWriteTable(db, "glare", glare)
+DBI::dbWriteTable(db, "cloudcover", cloudcover)
+DBI::dbWriteTable(db, "precipitation", precipitation)
+DBI::dbWriteTable(db, "sightability", sightability)
+DBI::dbWriteTable(db, "observationdistance", observationdistance)
+DBI::dbWriteTable(db, "lifestage", lifestage)
+DBI::dbWriteTable(db, "moult", moult)
+DBI::dbWriteTable(db, "plumage", plumage)
+DBI::dbWriteTable(db, "sex", sex)
+DBI::dbWriteTable(db, "traveldirection", traveldirection)
+DBI::dbWriteTable(db, "preytype", preytype)
+DBI::dbWriteTable(db, "association", association)
+DBI::dbWriteTable(db, "behaviour", behaviour)
 ```
 
 Set filter: **TODO**: remove for production use.
@@ -140,22 +140,22 @@ The Darwin Core mapping follows the recommendations of the [OBIS Darwin Core man
 Create [Event](https://rs.gbif.org/core/dwc_event_2022-02-02.xml) core:
 
 ```{r}
-dwc_event_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_event.sql")), .con = esas_db)
-dwc_event <- DBI::dbGetQuery(esas_db, dwc_event_sql)
+dwc_event_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_event.sql")), .con = db)
+dwc_event <- DBI::dbGetQuery(db, dwc_event_sql)
 ```
 
 Create [Occurrence](https://rs.gbif.org/core/dwc_occurrence_2022-02-02.xml) extension:
 
 ```{r}
-dwc_occurrence_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_occurrence.sql")), .con = esas_db)
-dwc_occurrence <- DBI::dbGetQuery(esas_db, dwc_occurrence_sql)
+dwc_occurrence_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_occurrence.sql")), .con = db)
+dwc_occurrence <- DBI::dbGetQuery(db, dwc_occurrence_sql)
 ```
 
 Create [Extended Measurement Or Facts](https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml) extension:
 
 ```{r}
-dwc_emof_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_emof.sql")), .con = esas_db)
-dwc_emof <- DBI::dbGetQuery(esas_db, dwc_emof_sql)
+dwc_emof_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_emof.sql")), .con = db)
+dwc_emof <- DBI::dbGetQuery(db, dwc_emof_sql)
 ```
 
 ## Save data to CSV
