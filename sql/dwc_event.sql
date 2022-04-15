@@ -11,7 +11,7 @@ SELECT
   NULL                                  AS datasetID,
   'ICES'                                AS institutionCode,
   'ESAS'                                AS collectionCode,
-  'European Seabirds at Sea'            AS datasetName,
+  'European Seabirds at Sea (ESAS)'     AS datasetName,
   NULL                                  AS ownerInstitutionCode,
   'HumanObservation'                    AS basisOfRecord,
   *
