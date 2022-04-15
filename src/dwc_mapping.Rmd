@@ -94,37 +94,37 @@ behaviour <- getCodeList("Behaviour")
 Create a SQLite database with the source data and code lists, so it can be queried with SQL in the next steps:
 
 ```{r}
-db <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
+con <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
 
 # Import data
-DBI::dbWriteTable(db, "campaigns", campaigns)
-DBI::dbWriteTable(db, "samples", samples)
-DBI::dbWriteTable(db, "positions", positions)
-DBI::dbWriteTable(db, "observations", observations)
+DBI::dbWriteTable(con, "campaigns", campaigns)
+DBI::dbWriteTable(con, "samples", samples)
+DBI::dbWriteTable(con, "positions", positions)
+DBI::dbWriteTable(con, "observations", observations)
 
 # Import code lists
-DBI::dbWriteTable(db, "species", species)
-DBI::dbWriteTable(db, "shipc", shipc)
-DBI::dbWriteTable(db, "platformclass", platformclass)
-DBI::dbWriteTable(db, "platformside", platformside)
-DBI::dbWriteTable(db, "bdcountmethod", bdcountmethod)
-DBI::dbWriteTable(db, "targettaxa", targettaxa)
-DBI::dbWriteTable(db, "useofbinoculars", useofbinoculars)
-DBI::dbWriteTable(db, "beaufort", beaufort)
-DBI::dbWriteTable(db, "visibility", visibility)
-DBI::dbWriteTable(db, "glare", glare)
-DBI::dbWriteTable(db, "cloudcover", cloudcover)
-DBI::dbWriteTable(db, "precipitation", precipitation)
-DBI::dbWriteTable(db, "sightability", sightability)
-DBI::dbWriteTable(db, "observationdistance", observationdistance)
-DBI::dbWriteTable(db, "lifestage", lifestage)
-DBI::dbWriteTable(db, "moult", moult)
-DBI::dbWriteTable(db, "plumage", plumage)
-DBI::dbWriteTable(db, "sex", sex)
-DBI::dbWriteTable(db, "traveldirection", traveldirection)
-DBI::dbWriteTable(db, "preytype", preytype)
-DBI::dbWriteTable(db, "association", association)
-DBI::dbWriteTable(db, "behaviour", behaviour)
+DBI::dbWriteTable(con, "species", species)
+DBI::dbWriteTable(con, "shipc", shipc)
+DBI::dbWriteTable(con, "platformclass", platformclass)
+DBI::dbWriteTable(con, "platformside", platformside)
+DBI::dbWriteTable(con, "bdcountmethod", bdcountmethod)
+DBI::dbWriteTable(con, "targettaxa", targettaxa)
+DBI::dbWriteTable(con, "useofbinoculars", useofbinoculars)
+DBI::dbWriteTable(con, "beaufort", beaufort)
+DBI::dbWriteTable(con, "visibility", visibility)
+DBI::dbWriteTable(con, "glare", glare)
+DBI::dbWriteTable(con, "cloudcover", cloudcover)
+DBI::dbWriteTable(con, "precipitation", precipitation)
+DBI::dbWriteTable(con, "sightability", sightability)
+DBI::dbWriteTable(con, "observationdistance", observationdistance)
+DBI::dbWriteTable(con, "lifestage", lifestage)
+DBI::dbWriteTable(con, "moult", moult)
+DBI::dbWriteTable(con, "plumage", plumage)
+DBI::dbWriteTable(con, "sex", sex)
+DBI::dbWriteTable(con, "traveldirection", traveldirection)
+DBI::dbWriteTable(con, "preytype", preytype)
+DBI::dbWriteTable(con, "association", association)
+DBI::dbWriteTable(con, "behaviour", behaviour)
 ```
 
 Set filter: **TODO**: remove for production use.
@@ -140,22 +140,22 @@ The Darwin Core mapping follows the recommendations of the [OBIS Darwin Core man
 Create [Event](https://rs.gbif.org/core/dwc_event_2022-02-02.xml) core:
 
 ```{r}
-dwc_event_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_event.sql")), .con = db)
-dwc_event <- DBI::dbGetQuery(db, dwc_event_sql)
+dwc_event_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_event.sql")), .con = con)
+dwc_event <- DBI::dbGetQuery(con, dwc_event_sql)
 ```
 
 Create [Occurrence](https://rs.gbif.org/core/dwc_occurrence_2022-02-02.xml) extension:
 
 ```{r}
-dwc_occurrence_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_occurrence.sql")), .con = db)
-dwc_occurrence <- DBI::dbGetQuery(db, dwc_occurrence_sql)
+dwc_occurrence_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_occurrence.sql")), .con = con)
+dwc_occurrence <- DBI::dbGetQuery(con, dwc_occurrence_sql)
 ```
 
 Create [Extended Measurement Or Facts](https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml) extension:
 
 ```{r}
-dwc_emof_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_emof.sql")), .con = db)
-dwc_emof <- DBI::dbGetQuery(db, dwc_emof_sql)
+dwc_emof_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_emof.sql")), .con = con)
+dwc_emof <- DBI::dbGetQuery(con, dwc_emof_sql)
 ```
 
 ## Save data to CSV
