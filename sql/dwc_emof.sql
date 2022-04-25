@@ -111,7 +111,7 @@ SELECT
   s.CampaignID || ':' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'sampling method'                     AS measurementType,
-  NULL                                  AS measurementTypeID,
+  'http://vocab.nerc.ac.uk/collection/P01/current/SAMPPROT/' AS measurementTypeID,
   bdcountmethod.Description             AS measurementValue,
   'https://vocab.ices.dk/services/rdf/collection/BD_CountMethod/' || bdcountmethod.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
