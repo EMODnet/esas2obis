@@ -369,7 +369,7 @@ SELECT
   s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'cloud cover'                         AS measurementType,
-  'https://vocab.ices.dk/services/rdf/collection/CloudCover' AS measurementTypeID,
+  'http://vocab.nerc.ac.uk/collection/P02/current/CHEX/' AS measurementTypeID,
   cloudcover.Description                AS measurementValue,
   'https://vocab.ices.dk/services/rdf/collection/CloudCover/' || cloudcover.Key AS measurementValueID,
   'okta'                                AS measurementUnit,
