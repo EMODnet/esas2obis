@@ -5,7 +5,6 @@ Created by Peter Desmet (INBO)
 /* RECORD-LEVEL */
 
 SELECT
-  'Event'                               AS type,
   'ICES'                                AS institutionCode,
   'ESAS'                                AS collectionCode,
   'https://esas.ices.dk'                AS datasetID,
@@ -13,12 +12,16 @@ SELECT
   'https://creativecommons.org/licenses/by/4.0/' AS license,
   NULL                                  AS rightsHolder,
   'HumanObservation'                    AS basisOfRecord,
+  -- Type is set to specific values, rather than 'Event' for all
+  -- See https://github.com/iobis/env-data/issues/4#issuecomment-331807994
   *
 FROM (
 
 /* CAMPAIGNS */
 
 SELECT
+-- RECORD-LEVEL
+  'cruise'                              AS type,
 -- EVENT
   c.CampaignID                          AS eventID,
   NULL                                  AS parentEventID,
@@ -40,6 +43,8 @@ UNION
 /* SAMPLES */
 
 SELECT
+-- RECORD-LEVEL
+  'sample'                              AS type,
 -- EVENT
   c.CampaignID || ':' || s.SampleID     AS eventID,
   c.CampaignID                          AS parentEventID,
@@ -61,6 +66,8 @@ UNION
 /* POSITIONS */
 
 SELECT
+-- RECORD-LEVEL
+  'subSample'                           AS type,
 -- EVENT
   c.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
   c.CampaignID || ':' || s.SampleID     AS parentEventID,
