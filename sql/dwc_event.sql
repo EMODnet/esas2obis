@@ -6,12 +6,12 @@ Created by Peter Desmet (INBO)
 
 SELECT
   'Event'                               AS type,
-  'https://creativecommons.org/licenses/by/4.0/' AS license,
-  NULL                                  AS rightsHolder,
-  NULL                                  AS datasetID,
   'ICES'                                AS institutionCode,
   'ESAS'                                AS collectionCode,
+  'https://esas.ices.dk'                AS datasetID,
   'European Seabirds at Sea (ESAS)'     AS datasetName,
+  'https://creativecommons.org/licenses/by/4.0/' AS license,
+  NULL                                  AS rightsHolder,
   'HumanObservation'                    AS basisOfRecord,
   *
 FROM (
