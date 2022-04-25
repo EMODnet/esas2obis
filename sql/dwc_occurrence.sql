@@ -49,3 +49,5 @@ FROM
     ON o.Behaviour = behaviour.Key
 WHERE
   c.CampaignID IN ({campaign_id*})
+ORDER BY
+  c.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID -- occurrenceID

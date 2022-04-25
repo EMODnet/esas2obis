@@ -86,3 +86,5 @@ FROM
 WHERE
   c.CampaignID IN ({campaign_id*})
 )
+ORDER BY
+  eventID
