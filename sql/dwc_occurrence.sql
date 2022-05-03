@@ -3,6 +3,8 @@ Created by Peter Desmet (INBO)
 */
 SELECT
   c.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+-- RECORD-LEVEL
+  'HumanObservation'                    AS basisOfRecord,
 -- OCCURRENCE
   c.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
 -- recordedBy: observer name(s) not available

@@ -11,7 +11,6 @@ SELECT
   'European Seabirds At Sea (ESAS)'     AS datasetName,
   'https://creativecommons.org/licenses/by/4.0/' AS license,
   NULL                                  AS rightsHolder,
-  'HumanObservation'                    AS basisOfRecord,
   -- Type is set to specific values, rather than 'Event' for all
   -- See https://github.com/iobis/env-data/issues/4#issuecomment-331807994
   *
