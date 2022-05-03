@@ -8,7 +8,7 @@ SELECT
   'ICES'                                AS institutionCode,
   'ESAS'                                AS collectionCode,
   'https://esas.ices.dk'                AS datasetID,
-  'European Seabirds at Sea (ESAS)'     AS datasetName,
+  'European Seabirds At Sea (ESAS)'     AS datasetName,
   'https://creativecommons.org/licenses/by/4.0/' AS license,
   NULL                                  AS rightsHolder,
   'HumanObservation'                    AS basisOfRecord,
