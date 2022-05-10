@@ -36,6 +36,7 @@ Load libraries:
 library(magrittr)       # To use pipes
 library(here)           # To find files
 library(glue)           # To insert variables in strings
+library(jsonlite)       # To read JSON
 library(readr)          # To write files
 library(DBI)            # To create and query databases
 library(icesVocab)      # To get code lists
@@ -43,16 +44,29 @@ library(icesVocab)      # To get code lists
 
 # Read source data
 
-For now, the source data were provided manually and stored in `data/raw`. **TODO**: replace with querying from ESAS endpoint.
-
-Read source files:
+Read public data from the [ESAS web services](https://esas.ices.dk/webservices):
 
 ```{r}
-# All columns are read as characters for easier import into SQLite: https://stackoverflow.com/a/13462536/2463806
-campaigns <- readr::read_csv(here::here("data", "raw", "CAMPAIGNS_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
-samples <- readr::read_csv(here::here("data", "raw", "SAMPLES_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
-positions <- readr::read_csv(here::here("data", "raw", "POSITIONS_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
-observations <- readr::read_csv(here::here("data", "raw", "OBSERVATIONS_BE_ICES_2022.csv"), col_types = cols(.default = "c"))
+# Note that fromJSON will return the data as a data frame (simplifyDataframe = TRUE)
+campaigns <- fromJSON("https://esas.ices.dk/api/getCampaignRecords")
+samples <- fromJSON("https://esas.ices.dk/api/getSampleRecords")
+positions <- fromJSON("https://esas.ices.dk/api/getPositionRecords")
+observations <- fromJSON("https://esas.ices.dk/api/getObservationRecords")
+```
+
+Set all columns to character to avoid date interpretation issues in SQLite (see https://stackoverflow.com/a/13462536/2463806)
+
+```{r}
+campaigns <- mutate(campaigns, across(everything(), as.character))
+samples <- mutate(samples, across(everything(), as.character))
+positions <- mutate(positions, across(everything(), as.character))
+observations <- mutate(observations, across(everything(), as.character))
+```
+
+Restrict campaigns to public ones:
+
+```{r}
+campaigns <- campaigns %>% filter(dataAccess == "Public")
 ```
 
 ## Read code lists
