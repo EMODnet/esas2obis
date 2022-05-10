@@ -29,7 +29,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004708,110000153:110000153:110004708:1100031823,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004708,110000153:110000153:110004708:1100031823,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,2nd calendar year,https://vocab.ices.dk/services/rdf/collection/LifeStage/2,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004708,110000153:110000153:110004708:1100031823,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004709,,area,,0.642,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004709,,area,,0.64,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004709,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.14,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004709,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004709,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -92,7 +92,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004709,110000153:110000153:110004709:1100031836,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004709,110000153:110000153:110004709:1100031836,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004709,110000153:110000153:110004709:1100031836,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Transient plumage (moulting between winter & summer plumage or vice-versa),https://vocab.ices.dk/services/rdf/collection/Plumage/T,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004710,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004710,,area,,1.22,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004710,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004710,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004710,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -177,7 +177,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004710,110000153:110000153:110004710:1100031858,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004710,110000153:110000153:110004710:1100031858,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004710,110000153:110000153:110004710:1100031858,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Transient plumage (moulting between winter & summer plumage or vice-versa),https://vocab.ices.dk/services/rdf/collection/Plumage/T,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004711,,area,,0.612,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004711,,area,,0.61,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004711,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.04,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004711,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004711,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -268,7 +268,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004712,110000153:110000153:110004712:1100031883,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004712,110000153:110000153:110004712:1100031883,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,11,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004712,110000153:110000153:110004712:1100031883,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,50-100,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/B,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
-110000153:110000153:110004713,,area,,0.951,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004713,,area,,0.95,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004713,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.17,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004713,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004713,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -374,7 +374,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004714,110000153:110000153:110004714:1100031904,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004714,110000153:110000153:110004714:1100031904,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,50-100,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/B,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004714,110000153:110000153:110004714:1100031904,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004715,,area,,1.044,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004715,,area,,1.04,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004715,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.48,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004715,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004715,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -428,7 +428,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004715,110000153:110000153:110004715:1100031915,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004715,110000153:110000153:110004715:1100031915,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,200-300,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/D,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004715,110000153:110000153:110004715:1100031915,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004716,,area,,1.176,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004716,,area,,1.18,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004716,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.92,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004716,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004716,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -459,7 +459,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004716,110000153:110000153:110004716:1100031921,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004716,110000153:110000153:110004716:1100031921,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,2nd calendar year,https://vocab.ices.dk/services/rdf/collection/LifeStage/2,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004716,110000153:110000153:110004716:1100031921,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,0-50,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/A,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
-110000153:110000153:110004717,,area,,1.176,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004717,,area,,1.18,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004717,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.92,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004717,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004717,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -558,7 +558,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004717,110000153:110000153:110004717:1100031946,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004717,110000153:110000153:110004717:1100031946,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,6,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004717,110000153:110000153:110004717:1100031946,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,200-300,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/D,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
-110000153:110000153:110004718,,area,,0.825,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004718,,area,,0.82,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004718,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.75,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004718,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004718,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -576,7 +576,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004718,110000153:110000153:110004718:1100031950,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004718,110000153:110000153:110004718:1100031950,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,8,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004718,110000153:110000153:110004718:1100031950,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,0-50,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/A,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
-110000153:110000153:110004719,,area,,1.095,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004719,,area,,1.09,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004719,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.65,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004719,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004719,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -601,7 +601,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004719,110000153:110000153:110004719:1100031955,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004719,110000153:110000153:110004719:1100031955,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004719,110000153:110000153:110004719:1100031955,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004720,,area,,1.095,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004720,,area,,1.09,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004720,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.65,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004720,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004720,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -680,7 +680,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004720,110000153:110000153:110004720:1100031974,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004720,110000153:110000153:110004720:1100031974,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004720,110000153:110000153:110004720:1100031974,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004721,,area,,1.176,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004721,,area,,1.18,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004721,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.92,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004721,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004721,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -715,7 +715,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004721,110000153:110000153:110004721:1100031981,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004721,110000153:110000153:110004721:1100031981,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,13,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004721,110000153:110000153:110004721:1100031981,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,100-200,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/C,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
-110000153:110000153:110004722,,area,,0.117,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004722,,area,,0.12,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004722,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,0.39,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004722,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004722,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -734,7 +734,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004722,110000153:110000153:110004722:1100031984,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004722,110000153:110000153:110004722:1100031984,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004722,110000153:110000153:110004722:1100031984,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Transient plumage (moulting between winter & summer plumage or vice-versa),https://vocab.ices.dk/services/rdf/collection/Plumage/T,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004723,,area,,0.825,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004723,,area,,0.82,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004723,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.75,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004723,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004723,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -784,7 +784,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004723,110000153:110000153:110004723:1100031994,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004723,110000153:110000153:110004723:1100031994,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,200-300,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/D,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004723,110000153:110000153:110004723:1100031994,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004724,,area,,1.071,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004724,,area,,1.07,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004724,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.57,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004724,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004724,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -834,7 +834,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004724,110000153:110000153:110004724:1100032006,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004724,110000153:110000153:110004724:1100032006,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,2nd calendar year,https://vocab.ices.dk/services/rdf/collection/LifeStage/2,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004724,110000153:110000153:110004724:1100032006,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004725,,area,,1.071,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004725,,area,,1.07,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004725,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.57,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004725,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004725,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -881,7 +881,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004725,110000153:110000153:110004725:1100032015,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004725,110000153:110000153:110004725:1100032015,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,0-50,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/A,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004725,110000153:110000153:110004725:1100032015,sex,http://vocab.nerc.ac.uk/collection/S10/current/,Male,http://vocab.nerc.ac.uk/collection/S10/current/S103/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004726,,area,,1.071,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004726,,area,,1.07,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004726,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.57,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004726,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004726,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -962,7 +962,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004726,110000153:110000153:110004726:1100032035,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004726,110000153:110000153:110004726:1100032035,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004726,110000153:110000153:110004726:1100032035,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,>300,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/E,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
-110000153:110000153:110004727,,area,,1.071,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004727,,area,,1.07,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004727,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.57,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004727,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004727,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -970,7 +970,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004727,110000153:110000153:110004727:1100032036,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004727,110000153:110000153:110004727:1100032036,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004727,110000153:110000153:110004727:1100032036,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,>300,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/E,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
-110000153:110000153:110004728,,area,,0.858,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004728,,area,,0.86,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004728,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.86,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004728,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004728,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -979,7 +979,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004728,110000153:110000153:110004728:1100032037,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004728,110000153:110000153:110004728:1100032037,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,100-200,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/C,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004728,110000153:110000153:110004728:1100032037,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Transient plumage (moulting between winter & summer plumage or vice-versa),https://vocab.ices.dk/services/rdf/collection/Plumage/T,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004729,,area,,0.642,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004729,,area,,0.64,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004729,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.14,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004729,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004729,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1074,7 +1074,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004730,110000153:110000153:110004730:1100032063,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004730,110000153:110000153:110004730:1100032063,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,9,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004730,110000153:110000153:110004730:1100032063,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,0-50,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/A,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
-110000153:110000153:110004731,,area,,1.101,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004731,,area,,1.1,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004731,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.67,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004731,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004731,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1097,7 +1097,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004731,110000153:110000153:110004731:1100032068,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004731,110000153:110000153:110004731:1100032068,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,2nd calendar year,https://vocab.ices.dk/services/rdf/collection/LifeStage/2,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004731,110000153:110000153:110004731:1100032068,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004732,,area,,0.771,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004732,,area,,0.77,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004732,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.57,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004732,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004732,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1120,7 +1120,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004732,110000153:110000153:110004732:1100032073,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004732,110000153:110000153:110004732:1100032073,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,2nd calendar year,https://vocab.ices.dk/services/rdf/collection/LifeStage/2,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004732,110000153:110000153:110004732:1100032073,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,200-300,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/D,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
-110000153:110000153:110004733,,area,,0.429,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004733,,area,,0.43,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004733,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,1.43,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004733,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004733,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1128,7 +1128,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004733,110000153:110000153:110004733:1100032074,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004733,110000153:110000153:110004733:1100032074,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,7,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004733,110000153:110000153:110004733:1100032074,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,50-100,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/B,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
-110000153:110000153:110004734,,area,,0.939,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004734,,area,,0.94,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004734,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.13,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004734,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004734,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1164,7 +1164,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004734,110000153:110000153:110004734:1100032082,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004734,110000153:110000153:110004734:1100032082,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004734,110000153:110000153:110004734:1100032082,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004735,,area,,0.564,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004735,,area,,0.56,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004735,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,1.88,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004735,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004735,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1172,7 +1172,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004735,110000153:110000153:110004735:1100032083,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004735,110000153:110000153:110004735:1100032083,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,2,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004735,110000153:110000153:110004735:1100032083,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004736,,area,,0.543,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004736,,area,,0.54,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004736,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,1.81,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004736,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004736,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1181,7 +1181,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004736,110000153:110000153:110004736:1100032084,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004736,110000153:110000153:110004736:1100032084,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,2nd calendar year,https://vocab.ices.dk/services/rdf/collection/LifeStage/2,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004736,110000153:110000153:110004736:1100032084,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004737,,area,,0.765,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004737,,area,,0.76,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004737,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.55,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004737,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004737,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1208,7 +1208,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004737,110000153:110000153:110004737:1100032091,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,2,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004737,110000153:110000153:110004737:1100032091,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,>300,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/E,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004737,110000153:110000153:110004737:1100032091,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Transient plumage (moulting between winter & summer plumage or vice-versa),https://vocab.ices.dk/services/rdf/collection/Plumage/T,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004738,,area,,0.999,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004738,,area,,1,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004738,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.33,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004738,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004738,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1273,7 +1273,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004738,110000153:110000153:110004738:1100032103,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004738,110000153:110000153:110004738:1100032103,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,50-100,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/B,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004738,110000153:110000153:110004738:1100032103,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Transient plumage (moulting between winter & summer plumage or vice-versa),https://vocab.ices.dk/services/rdf/collection/Plumage/T,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004739,,area,,0.999,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004739,,area,,1,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004739,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.33,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004739,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004739,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1310,7 +1310,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004739,110000153:110000153:110004739:1100032112,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004739,110000153:110000153:110004739:1100032112,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004739,110000153:110000153:110004739:1100032112,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004740,,area,,0.699,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004740,,area,,0.7,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004740,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.33,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004740,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004740,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1341,12 +1341,12 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004740,110000153:110000153:110004740:1100032120,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004740,110000153:110000153:110004740:1100032120,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,100-200,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/C,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004740,110000153:110000153:110004740:1100032120,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Transient plumage (moulting between winter & summer plumage or vice-versa),https://vocab.ices.dk/services/rdf/collection/Plumage/T,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004741,,area,,0.195,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004741,,area,,0.2,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004741,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,0.65,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004741,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004741,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004741,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
-110000153:110000153:110004742,,area,,1.212,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004742,,area,,1.21,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004742,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.04,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004742,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004742,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1384,7 +1384,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004742,110000153:110000153:110004742:1100032127,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004742,110000153:110000153:110004742:1100032127,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004742,110000153:110000153:110004742:1100032127,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004743,,area,,1.212,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004743,,area,,1.21,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004743,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.04,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004743,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004743,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1403,7 +1403,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004743,110000153:110000153:110004743:1100032130,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004743,110000153:110000153:110004743:1100032130,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004743,110000153:110000153:110004743:1100032130,travel direction,https://vocab.ices.dk/services/rdf/collection/TravelDirection,45,https://vocab.ices.dk/services/rdf/collection/TravelDirection/NE,degrees,https://vocab.nerc.ac.uk/collection/P06/current/UAAA/
-110000153:110000153:110004744,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004744,,area,,1.22,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004744,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004744,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004744,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1471,7 +1471,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004744,110000153:110000153:110004744:1100032145,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004744,110000153:110000153:110004744:1100032145,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004744,110000153:110000153:110004744:1100032145,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004745,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004745,,area,,1.22,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004745,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004745,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004745,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1519,7 +1519,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004745,110000153:110000153:110004745:1100032155,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004745,110000153:110000153:110004745:1100032155,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,"Flying, no contact with water",https://vocab.ices.dk/services/rdf/collection/ObservationDistance/F,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004745,110000153:110000153:110004745:1100032155,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004746,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004746,,area,,1.22,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004746,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004746,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004746,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1541,7 +1541,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004746,110000153:110000153:110004746:1100032159,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004746,110000153:110000153:110004746:1100032159,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,200-300,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/D,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004746,110000153:110000153:110004746:1100032159,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004747,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004747,,area,,1.22,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004747,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004747,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004747,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1581,7 +1581,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004747,110000153:110000153:110004747:1100032167,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153:110000153:110004747,110000153:110000153:110004747:1100032167,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,100-200,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/C,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004747,110000153:110000153:110004747:1100032167,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004748,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004748,,area,,1.22,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004748,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004748,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004748,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
@@ -1702,7 +1702,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004748,110000153:110000153:110004748:1100032192,life stage,http://vocab.nerc.ac.uk/collection/S11/current/,Adult,http://vocab.nerc.ac.uk/collection/S11/current/S1116/,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004748,110000153:110000153:110004748:1100032192,observation distance,https://vocab.ices.dk/services/rdf/collection/ObservationDistance,200-300,https://vocab.ices.dk/services/rdf/collection/ObservationDistance/D,m,http://vocab.nerc.ac.uk/collection/P06/current/ULAA/
 110000153:110000153:110004748,110000153:110000153:110004748:1100032192,plumage,https://vocab.ices.dk/services/rdf/collection/Plumage,Non-breeding (winter) plumage,https://vocab.ices.dk/services/rdf/collection/Plumage/W,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153:110004749,,area,,0.489,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
+110000153:110000153:110004749,,area,,0.49,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153:110000153:110004749,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,1.63,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004749,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004749,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
