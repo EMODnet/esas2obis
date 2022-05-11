@@ -45,3 +45,4 @@ src/*.pdf
 
 # Data
 data/raw/*
+data/processed/*
