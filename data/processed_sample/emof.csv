@@ -1,6 +1,6 @@
 eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurementValueID,measurementUnit,measurementUnitID
 110000153:110000153,,distance bins,,0|50|100|200|300,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
-110000153:110000153,,platform class,https://vocab.ices.dk/services/rdf/collection/Platform%20Class,30: Ship,https://vocab.ices.dk/services/rdf/collection/Platform%20Class/30,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
+110000153:110000153,,platform class,https://vocab.ices.dk/services/rdf/collection/Platform%20Class,Ship,https://vocab.ices.dk/services/rdf/collection/Platform%20Class/30,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153,,platform code,http://vocab.nerc.ac.uk/collection/C17/current/,BELGICA,http://vocab.nerc.ac.uk/collection/C17/current/11BE,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153,,primary sampling,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153,,sampling method,http://vocab.nerc.ac.uk/collection/P01/current/SAMPPROT/,Full ship-based transect method with snapshot for flying birds,https://vocab.ices.dk/services/rdf/collection/BD_CountMethod/1,,https://vocab.nerc.ac.uk/collection/P06/current/XXXX/

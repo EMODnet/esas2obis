@@ -31,7 +31,7 @@ SELECT
   NULL                                  AS occurrenceID,
   'platform class'                      AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Platform%20Class' AS measurementTypeID,
-  platformclass.Description             AS measurementValue,
+  substr(platformclass.Description, instr(platformclass.Description, ':') + 2, length(platformclass.Description)) AS measurementValue, -- Values written as "30: Ship", return "Ship"
   'https://vocab.ices.dk/services/rdf/collection/Platform%20Class/' || platformclass.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
