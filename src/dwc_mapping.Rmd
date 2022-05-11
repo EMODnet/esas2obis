@@ -24,7 +24,7 @@ Install required libraries (if not yet installed):
 
 ```{r}
 installed <- rownames(installed.packages())
-required <- c("magrittr", "here", "glue", "jsonlite", "readr", "DBI", "icesVocab")
+required <- c("magrittr", "here", "glue", "dplyr", "jsonlite", "readr", "DBI", "icesVocab")
 if (!all(required %in% installed)) {
   install.packages(required[!required %in% installed])
 }
@@ -36,6 +36,7 @@ Load libraries:
 library(magrittr)       # To use pipes
 library(here)           # To find files
 library(glue)           # To insert variables in strings
+library(dplyr)          # To transform data
 library(jsonlite)       # To read JSON
 library(readr)          # To write files
 library(DBI)            # To create and query databases
