@@ -24,7 +24,7 @@ Install required libraries (if not yet installed):
 
 ```{r}
 installed <- rownames(installed.packages())
-required <- c("magrittr", "here", "glue", "readr", "DBI", "icesVocab")
+required <- c("magrittr", "here", "glue", "jsonlite", "readr", "DBI", "icesVocab")
 if (!all(required %in% installed)) {
   install.packages(required[!required %in% installed])
 }
@@ -141,12 +141,6 @@ DBI::dbWriteTable(con, "association", association)
 DBI::dbWriteTable(con, "behaviour", behaviour)
 ```
 
-Set filter: **TODO**: remove for production use.
-
-```{r}
-campaign_id <- c(110000153)
-```
-
 ## Darwin Core mapping
 
 The Darwin Core mapping follows the recommendations of the [OBIS Darwin Core manual](https://obis.org/manual/darwincore/) and is structured as [OBIS-ENV-DATA](https://obis.org/manual/dataformat/#obis-env-data).
@@ -174,8 +168,24 @@ dwc_emof <- DBI::dbGetQuery(con, dwc_emof_sql)
 
 ## Save data to CSV
 
+All data, to be used for IPT upload:
+
 ```{r}
 write_csv(dwc_event, here::here("data", "processed", "event.csv"), na = "")
 write_csv(dwc_occurrence, here::here("data", "processed", "occurrence.csv"), na = "")
 write_csv(dwc_emof, here::here("data", "processed", "emof.csv"), na = "")
+```
+
+Sample of the data, to be used in git to notice mapping issues:
+
+```{r}
+campaign_id <- "110000153"
+
+dwc_event_sample <- dwc_event %>% filter(grepl(campaign_id, eventID))
+dwc_occurrence_sample <- dwc_occurrence %>% filter(grepl(campaign_id, eventID))
+dwc_emof_sample <- dwc_emof %>% filter(grepl(campaign_id, eventID))
+
+write_csv(dwc_event_sample, here::here("data", "processed_sample", "event.csv"), na = "")
+write_csv(dwc_occurrence_sample, here::here("data", "processed_sample", "occurrence.csv"), na = "")
+write_csv(dwc_emof_sample, here::here("data", "processed_sample", "emof.csv"), na = "")
 ```

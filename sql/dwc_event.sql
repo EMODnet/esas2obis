@@ -34,8 +34,6 @@ FROM
   samples AS s
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
-WHERE
-  c.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -57,8 +55,6 @@ FROM
   samples AS s
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
-WHERE
-  c.CampaignID IN ({campaign_id*})
 
 UNION
 
@@ -82,8 +78,6 @@ FROM
     ON p.SampleID = s.sampleID
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
-WHERE
-  c.CampaignID IN ({campaign_id*})
 )
 ORDER BY
   eventID
