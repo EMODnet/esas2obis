@@ -24,7 +24,7 @@ Install required libraries (if not yet installed):
 
 ```{r}
 installed <- rownames(installed.packages())
-required <- c("magrittr", "here", "glue", "jsonlite", "readr", "DBI", "icesVocab")
+required <- c("magrittr", "here", "glue", "jsonlite", "readr", "tidyr", "DBI", "icesVocab")
 if (!all(required %in% installed)) {
   install.packages(required[!required %in% installed])
 }
@@ -38,6 +38,7 @@ library(here)           # To find files
 library(glue)           # To insert variables in strings
 library(jsonlite)       # To read JSON
 library(readr)          # To write files
+library(tidyr)          # To tidy data
 library(DBI)            # To create and query databases
 library(icesVocab)      # To get code lists
 ```
@@ -67,6 +68,20 @@ Restrict campaigns to public ones:
 
 ```{r}
 campaigns <- campaigns %>% filter(dataAccess == "Public")
+```
+
+Separate `~` delimited values in `association` and `behaviour` into multiple rows:
+
+```{r}
+# obs | association  ->  obs | association
+# 1   | A~B              1   | A
+#                        1   | B
+
+observations <- tidyr::separate_rows(
+  observations,
+  association, behaviour, # This column names are case sensitive
+  sep = "~"
+)
 ```
 
 ## Read code lists
