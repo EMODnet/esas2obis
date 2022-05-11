@@ -8,7 +8,7 @@ This repository contains the functionality to standardize the data of the [Europ
 
 ## Workflow
 
-[source data](data/raw) → Darwin Core [mapping script](src/dwc_mapping.Rmd) using [SQL](SQL) → generated [Darwin Core files](data/processed)
+[ESAS web services](https://esas.ices.dk/webservices) → Darwin Core [mapping script](src/dwc_mapping.Rmd) using [SQL](SQL) → generated [Darwin Core files](data/processed)
 
 ## Published dataset
 
