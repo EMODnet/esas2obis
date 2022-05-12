@@ -186,7 +186,7 @@ eventID,basisOfRecord,occurrenceID,individualCount,sex,lifeStage,behavior,occurr
 110000153:110000153:110004724,HumanObservation,110000153:110000153:110004724:1100032004,2,,adult,,present,,,urn:lsid:marinespecies.org:taxname:137138,Larus argentatus,Animalia
 110000153:110000153:110004724,HumanObservation,110000153:110000153:110004724:1100032005,1,,immature,,present,,,urn:lsid:marinespecies.org:taxname:137188,Gavia stellata,Animalia
 110000153:110000153:110004724,HumanObservation,110000153:110000153:110004724:1100032006,1,,immature,,present,,,urn:lsid:marinespecies.org:taxname:137149,Larus ridibundus,Animalia
-110000153:110000153:110004725,HumanObservation,110000153:110000153:110004725:1100032007,1,,immature,Scaveging,present,,,urn:lsid:marinespecies.org:taxname:137146,Larus marinus,Animalia
+110000153:110000153:110004725,HumanObservation,110000153:110000153:110004725:1100032007,1,,immature,Scavenging,present,,,urn:lsid:marinespecies.org:taxname:137146,Larus marinus,Animalia
 110000153:110000153:110004725,HumanObservation,110000153:110000153:110004725:1100032008,1,,,Dead,present,,,urn:lsid:marinespecies.org:taxname:137128,Alca torda,Animalia
 110000153:110000153:110004725,HumanObservation,110000153:110000153:110004725:1100032009,1,,adult,,present,,,urn:lsid:marinespecies.org:taxname:137188,Gavia stellata,Animalia
 110000153:110000153:110004725,HumanObservation,110000153:110000153:110004725:1100032010,1,,adult,,present,,,urn:lsid:marinespecies.org:taxname:137141,Larus canus,Animalia
