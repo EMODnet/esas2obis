@@ -839,7 +839,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153:110000153:110004725,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
 110000153:110000153:110004725,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153:110000153:110004725,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
-110000153:110000153:110004725,110000153:110000153:110004725:1100032007,behaviour,https://vocab.ices.dk/services/rdf/collection/Behaviour,Scaveging,https://vocab.ices.dk/services/rdf/collection/Behaviour/40,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
+110000153:110000153:110004725,110000153:110000153:110004725:1100032007,behaviour,https://vocab.ices.dk/services/rdf/collection/Behaviour,Scavenging,https://vocab.ices.dk/services/rdf/collection/Behaviour/40,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004725,110000153:110000153:110004725:1100032007,group identifier,,11,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004725,110000153:110000153:110004725:1100032007,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153:110000153:110004725,110000153:110000153:110004725:1100032007,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
