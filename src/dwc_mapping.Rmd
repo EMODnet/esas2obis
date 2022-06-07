@@ -72,12 +72,6 @@ campaigns <- campaigns %>% filter(dataAccess == "Public")
 
 ## Read code lists
 
-Load ESAS species list from GitHub repository:
-
-```{r}
-species <- readr::read_tsv("https://raw.githubusercontent.com/ices-tools-dev/esas/main/_data/vocabularies/species.tsv", col_types = "iccicicc")
-```
-
 Get code lists from ICES vocabularies API:
 
 ```{r}
@@ -118,7 +112,6 @@ DBI::dbWriteTable(con, "positions", positions)
 DBI::dbWriteTable(con, "observations", observations)
 
 # Import code lists
-DBI::dbWriteTable(con, "species", species)
 DBI::dbWriteTable(con, "shipc", shipc)
 DBI::dbWriteTable(con, "platformclass", platformclass)
 DBI::dbWriteTable(con, "platformside", platformside)

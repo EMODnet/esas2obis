@@ -31,10 +31,8 @@ SELECT
 -- IDENTIFICATION
 -- identifiedBy: observer name(s) not available
 -- TAXON
-  CASE
-    WHEN species.aphia_id IS NOT NULL THEN 'urn:lsid:marinespecies.org:taxname:' || species.aphia_id
-  END                                   AS scientificNameID,
-  species.euring_scientific_name        AS scientificName,
+  'urn:lsid:marinespecies.org:taxname:' || o.wormsAphiaID AS scientificNameID,
+  o.speciesScientificName               AS scientificName,
   'Animalia'                            AS kingdom
 -- taxonRank: not available
 FROM
@@ -45,8 +43,6 @@ FROM
     ON p.SampleID = s.SampleID
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.CampaignID
-  LEFT JOIN species
-    ON o.SpeciesCode = species.euring_code
   LEFT JOIN behaviour
     ON o.Behaviour = behaviour.Key
 ORDER BY
