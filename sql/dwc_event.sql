@@ -31,9 +31,7 @@ SELECT
   NULL                                  AS decimalLongitude,
   NULL                                  AS geodeticDatum
 FROM
-  samples AS s
-  LEFT JOIN campaigns AS c
-    ON s.CampaignID = c.campaignID
+  campaigns AS c
 
 UNION
 
