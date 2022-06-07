@@ -10,7 +10,6 @@ SELECT
   'https://esas.ices.dk'                AS datasetID,
   'European Seabirds At Sea (ESAS)'     AS datasetName,
   'https://creativecommons.org/licenses/by/4.0/' AS license,
-  NULL                                  AS rightsHolder,
   -- Type is set to specific values, rather than 'Event' for all
   -- See https://github.com/iobis/env-data/issues/4#issuecomment-331807994
   *
@@ -20,6 +19,7 @@ FROM (
 
 SELECT
 -- RECORD-LEVEL
+  edmo.Description                      AS rightsHolder,
   'cruise'                              AS type,
 -- EVENT
   c.CampaignID                          AS eventID,
@@ -32,6 +32,8 @@ SELECT
   NULL                                  AS geodeticDatum
 FROM
   campaigns AS c
+  LEFT JOIN edmo
+    ON c.DataRightsHolder = edmo.Key
 
 UNION
 
@@ -39,6 +41,7 @@ UNION
 
 SELECT
 -- RECORD-LEVEL
+  edmo.Description                      AS rightsHolder,
   'sample'                              AS type,
 -- EVENT
   c.CampaignID || ':' || s.SampleID     AS eventID,
@@ -53,6 +56,8 @@ FROM
   samples AS s
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
+  LEFT JOIN edmo
+    ON c.DataRightsHolder = edmo.Key
 
 UNION
 
@@ -60,6 +65,7 @@ UNION
 
 SELECT
 -- RECORD-LEVEL
+  edmo.Description                      AS rightsHolder,
   'subSample'                           AS type,
 -- EVENT
   c.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
@@ -76,6 +82,8 @@ FROM
     ON p.SampleID = s.sampleID
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
+  LEFT JOIN edmo
+    ON c.DataRightsHolder = edmo.Key
 )
 ORDER BY
   eventID

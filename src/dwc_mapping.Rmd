@@ -75,6 +75,7 @@ campaigns <- campaigns %>% filter(dataAccess == "Public")
 Get code lists from ICES vocabularies API:
 
 ```{r}
+edmo <- getCodeList("EDMO")
 shipc <- getCodeList("SHIPC")
 platformclass <- getCodeList(URLencode("Platform Class"))
 platformside <- getCodeList("PlatformSide")
@@ -112,6 +113,7 @@ DBI::dbWriteTable(con, "positions", positions)
 DBI::dbWriteTable(con, "observations", observations)
 
 # Import code lists
+DBI::dbWriteTable(con, "edmo", edmo)
 DBI::dbWriteTable(con, "shipc", shipc)
 DBI::dbWriteTable(con, "platformclass", platformclass)
 DBI::dbWriteTable(con, "platformside", platformside)
