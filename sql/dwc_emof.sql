@@ -282,7 +282,7 @@ SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'visibility'                          AS measurementType,
-  'https://vocab.ices.dk/services/rdf/collection/Visibility' AS measurementTypeID,
+  'http://vocab.nerc.ac.uk/collection/S06/current/S0600244/' AS measurementTypeID,
   CASE
     WHEN visibility.Key = 'A' THEN '0-1'
     WHEN visibility.Key = 'B' THEN '1-5'
