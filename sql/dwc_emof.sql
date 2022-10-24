@@ -7,7 +7,7 @@ See https://github.com/inbo/esas2obis/issues/10 for mapping decisions
 /* SAMPLE: PLATFORM CODE */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'platform code'                       AS measurementType,
   'http://vocab.nerc.ac.uk/collection/C17/current/' AS measurementTypeID,
@@ -27,7 +27,7 @@ UNION
 /* SAMPLE: PLATFORM CLASS */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'platform class'                      AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Platform%20Class' AS measurementTypeID,
@@ -47,7 +47,7 @@ UNION
 /* SAMPLE: PLATFORM SIDE */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'platform side'                       AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/PlatformSide' AS measurementTypeID,
@@ -67,7 +67,7 @@ UNION
 /* SAMPLE: PLATFORM HEIGHT */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'platform height'                     AS measurementType,
   NULL                                  AS measurementTypeID,
@@ -85,7 +85,7 @@ UNION
 /* SAMPLE: TRANSECT WIDTH */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'transect width'                      AS measurementType,
   NULL                                  AS measurementTypeID,
@@ -103,7 +103,7 @@ UNION
 /* SAMPLE: SAMPLING METHOD */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'sampling method'                     AS measurementType,
   'http://vocab.nerc.ac.uk/collection/P01/current/SAMPPROT/' AS measurementTypeID,
@@ -123,7 +123,7 @@ UNION
 /* SAMPLE: PRIMARY SAMPLING */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'primary sampling'                    AS measurementType,
   NULL                                  AS measurementTypeID,
@@ -141,7 +141,7 @@ UNION
 /* SAMPLE: TARGET TAXA */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'target taxa'                         AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/TargetTaxa' AS measurementTypeID,
@@ -161,7 +161,7 @@ UNION
 /* SAMPLE: DISTANCE BINS */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'distance bins'                       AS measurementType,
   NULL                                  AS measurementTypeID,
@@ -179,7 +179,7 @@ UNION
 /* SAMPLE: USE OF BINOCULARS */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'use of binoculars'                   AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/UseOfBinoculars' AS measurementTypeID,
@@ -199,7 +199,7 @@ UNION
 /* SAMPLE: NUMBER OF OBSERVERS */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID     AS eventID,
+  s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'number of observers'                 AS measurementType,
   NULL                                  AS measurementTypeID,
@@ -217,7 +217,7 @@ UNION
 /* POSITION: DISTANCE */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'distance'                            AS measurementType,
   'http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/' AS measurementTypeID,
@@ -237,7 +237,7 @@ UNION
 /* POSITION: AREA */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'area'                                AS measurementType,
   NULL                                  AS measurementTypeID,
@@ -257,7 +257,7 @@ UNION
 /* POSITION: WINDFORCE */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'wind force'                          AS measurementType,
   'http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/' AS measurementTypeID,
@@ -279,7 +279,7 @@ UNION
 /* POSITION: VISIBILITY */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'visibility'                          AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Visibility' AS measurementTypeID,
@@ -307,7 +307,7 @@ UNION
 /* POSITION: GLARE */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'glare'                               AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Glare' AS measurementTypeID,
@@ -329,7 +329,7 @@ UNION
 /* POSITION: SUN ANGLE */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'sun angle'                           AS measurementType,
   NULL                                  AS measurementTypeID,
@@ -349,7 +349,7 @@ UNION
 /* POSITION: CLOUD COVER */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'cloud cover'                         AS measurementType,
   'http://vocab.nerc.ac.uk/collection/P02/current/CHEX/' AS measurementTypeID,
@@ -371,7 +371,7 @@ UNION
 /* POSITION: PRECIPITATION */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'precipitation'                       AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Precipitation' AS measurementTypeID,
@@ -393,7 +393,7 @@ UNION
 /* POSITION: ICE COVER */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'ice cover'                           AS measurementType,
   'http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/' AS measurementTypeID,
@@ -413,7 +413,7 @@ UNION
 /* POSITION: OBSERVATION CONDITIONS */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'observation conditions'              AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Sightability' AS measurementTypeID,
@@ -435,8 +435,8 @@ UNION
 /* OBSERVATION: GROUP IDENTIFIER */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'group identifier'                    AS measurementType,
   NULL                                  AS measurementTypeID,
   o.GroupID                             AS measurementValue,
@@ -457,8 +457,8 @@ UNION
 /* OBSERVATION: TRANSECT */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'in transect'                         AS measurementType,
   NULL                                  AS measurementTypeID,
   o.Transect                            AS measurementValue,
@@ -479,8 +479,8 @@ UNION
 /* OBSERVATION: INDIVIDUAL COUNT */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'individual count'                    AS measurementType,
   'http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/' AS measurementTypeID,
   o.Count                               AS measurementValue,
@@ -501,8 +501,8 @@ UNION
 /* OBSERVATION: OBSERVATION DISTANCE */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'observation distance'                AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/ObservationDistance' AS measurementTypeID,
   CASE
@@ -546,8 +546,8 @@ UNION
 /* OBSERVATION: LIFE STAGE */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'life stage'                          AS measurementType,
   'http://vocab.nerc.ac.uk/collection/S11/current/' AS measurementTypeID,
   lifestage.Description                 AS measurementValue,
@@ -578,8 +578,8 @@ UNION
 /* OBSERVATION: MOULT */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'moult'                               AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Moult' AS measurementTypeID,
   moult.Description                     AS measurementValue,
@@ -602,8 +602,8 @@ UNION
 /* OBSERVATION: PLUMAGE */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'plumage'                             AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Plumage' AS measurementTypeID,
   plumage.Description                   AS measurementValue,
@@ -626,8 +626,8 @@ UNION
 /* OBSERVATION: SEX */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'sex'                                 AS measurementType,
   'http://vocab.nerc.ac.uk/collection/S10/current/' AS measurementTypeID,
   sex.Description                       AS measurementValue,
@@ -653,8 +653,8 @@ UNION
 /* OBSERVATION: TRAVEL DIRECTION */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'travel direction'                    AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/TravelDirection' AS measurementTypeID,
   CASE
@@ -694,8 +694,8 @@ UNION
 /* OBSERVATION: PREY */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'prey'                                AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/PreyType' AS measurementTypeID,
   preytype.Description                  AS measurementValue,
@@ -718,8 +718,8 @@ UNION
 /* OBSERVATION: ASSOCIATION */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'association'                         AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Association' AS measurementTypeID,
   association.Description               AS measurementValue,
@@ -742,8 +742,8 @@ UNION
 /* OBSERVATION: BEHAVIOUR */
 
 SELECT
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  s.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'behaviour'                           AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Behaviour' AS measurementTypeID,
   behaviour.Description                 AS measurementValue,

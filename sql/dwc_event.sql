@@ -44,7 +44,7 @@ SELECT
   edmo.Description                      AS rightsHolder,
   'sample'                              AS type,
 -- EVENT
-  c.CampaignID || ':' || s.SampleID     AS eventID,
+  c.CampaignID || '_' || s.SampleID     AS eventID,
   c.CampaignID                          AS parentEventID,
   date(s.Date)                          AS eventDate,
   s.Notes                               AS eventRemarks,
@@ -68,8 +68,8 @@ SELECT
   edmo.Description                      AS rightsHolder,
   'subSample'                           AS type,
 -- EVENT
-  c.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
-  c.CampaignID || ':' || s.SampleID     AS parentEventID,
+  c.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  c.CampaignID || '_' || s.SampleID     AS parentEventID,
   date(s.Date) || 'T' || time(p.Time) || 'Z' AS eventDate, -- p.Time is in UTC
   NULL                                  AS eventRemarks,
 -- LOCATION

@@ -2,11 +2,11 @@
 Created by Peter Desmet (INBO)
 */
 SELECT
-  c.CampaignID || ':' || s.SampleID || ':' || p.PositionID AS eventID,
+  c.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
 -- RECORD-LEVEL
   'HumanObservation'                    AS basisOfRecord,
 -- OCCURRENCE
-  c.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID AS occurrenceID,
+  c.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
 -- recordedBy: observer name(s) not available
   o.Count                               AS individualCount, -- Also in EMOF
   CASE
@@ -46,4 +46,4 @@ FROM
   LEFT JOIN behaviour
     ON o.Behaviour = behaviour.Key
 ORDER BY
-  c.CampaignID || ':' || s.SampleID || ':' || p.PositionID || ':' || o.ObservationID -- occurrenceID
+  c.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID -- occurrenceID
