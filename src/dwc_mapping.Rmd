@@ -24,7 +24,7 @@ Install required libraries (if not yet installed):
 
 ```{r}
 installed <- rownames(installed.packages())
-required <- c("magrittr", "here", "glue", "dplyr", "jsonlite", "readr", "DBI", "icesVocab")
+required <- c("magrittr", "here", "glue", "dplyr", "jsonlite", "readr", "tidyr", "DBI", "icesVocab")
 if (!all(required %in% installed)) {
   install.packages(required[!required %in% installed])
 }
@@ -39,6 +39,7 @@ library(glue)           # To insert variables in strings
 library(dplyr)          # To transform data
 library(jsonlite)       # To read JSON
 library(readr)          # To write files
+library(tidyr)          # To tidy data
 library(DBI)            # To create and query databases
 library(icesVocab)      # To get code lists
 ```
@@ -72,10 +73,26 @@ positions <- mutate(positions, across(everything(), as.character))
 observations <- mutate(observations, across(everything(), as.character))
 ```
 
+## Process data
+
 Restrict campaigns to public ones:
 
 ```{r}
 campaigns <- campaigns %>% filter(dataAccess == "Public")
+```
+
+Separate columns `dataRightsHolder`, `association` and `behaviour`, which can contain `~` delimited values, into maximum 3 columns:
+
+```{r}
+campaigns <-
+  campaigns %>%
+  tidyr::separate(
+    dataRightsHolder,
+    into = c("dataRightsHolder_1", "dataRightsHolder_2", "dataRightsHolder_3"),
+    sep = "~",
+    remove = FALSE, convert = FALSE, extra = "merge", fill = "right"
+  )
+  # country also contains ~ values, but is not used in the DwC mapping
 ```
 
 ## Read code lists

@@ -1,6 +1,37 @@
 /* EVENT CORE */
 
+/* HELPER TABLE FOR DATA RIGHTS HOLDERS
+
+Key       | Description
+--------- | -----------
+3269      | Federal Agency for Nature Conservation (BfN)
+3269~2299 | Federal Agency for Nature Conservation (BfN) | Research and Technology Centre (Buesum) (FTZ)
 */
+WITH datarightsholders AS (
+  SELECT
+    DataRightsHolder AS Key,
+    COALESCE(
+      edmo_1.Description || ' | ' || edmo_2.Description || ' | ' || edmo_3.Description,
+      edmo_1.Description || ' | ' || edmo_2.Description,
+      edmo_1.Description
+    ) AS Description
+  FROM
+    (
+      SELECT DISTINCT
+        DataRightsHolder,
+        DataRightsHolder_1,
+        DataRightsHolder_2,
+        DataRightsHolder_3
+      FROM
+        campaigns
+    ) AS c
+    LEFT JOIN edmo AS edmo_1
+      ON c.DataRightsHolder_1 = edmo_1.Key
+    LEFT JOIN edmo AS edmo_2
+      ON c.DataRightsHolder_2 = edmo_2.Key
+    LEFT JOIN edmo AS edmo_3
+      ON c.DataRightsHolder_3 = edmo_3.Key
+)
 
 /* RECORD-LEVEL */
 
@@ -19,7 +50,7 @@ FROM (
 
 SELECT
 -- RECORD-LEVEL
-  edmo.Description                      AS rightsHolder,
+  datarightsholders.Description         AS rightsHolder,
   'cruise'                              AS type,
 -- EVENT
   c.CampaignID                          AS eventID,
@@ -32,8 +63,8 @@ SELECT
   NULL                                  AS geodeticDatum
 FROM
   campaigns AS c
-  LEFT JOIN edmo
-    ON c.DataRightsHolder = edmo.Key
+  LEFT JOIN datarightsholders
+    ON c.DataRightsHolder = datarightsholders.Key
 
 UNION
 
@@ -41,7 +72,7 @@ UNION
 
 SELECT
 -- RECORD-LEVEL
-  edmo.Description                      AS rightsHolder,
+  datarightsholders.Description         AS rightsHolder,
   'sample'                              AS type,
 -- EVENT
   c.CampaignID || '_' || s.SampleID     AS eventID,
@@ -56,8 +87,8 @@ FROM
   samples AS s
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
-  LEFT JOIN edmo
-    ON c.DataRightsHolder = edmo.Key
+  LEFT JOIN datarightsholders
+    ON c.DataRightsHolder = datarightsholders.Key
 
 UNION
 
@@ -65,7 +96,7 @@ UNION
 
 SELECT
 -- RECORD-LEVEL
-  edmo.Description                      AS rightsHolder,
+  datarightsholders.Description         AS rightsHolder,
   'subSample'                           AS type,
 -- EVENT
   c.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
@@ -82,8 +113,8 @@ FROM
     ON p.SampleID = s.sampleID
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.campaignID
-  LEFT JOIN edmo
-    ON c.DataRightsHolder = edmo.Key
+  LEFT JOIN datarightsholders
+    ON c.DataRightsHolder = datarightsholders.Key
 )
 ORDER BY
   eventID
