@@ -45,13 +45,21 @@ library(icesVocab)      # To get code lists
 
 # Read source data
 
-Read public data from the [ESAS web services](https://esas.ices.dk/webservices):
+Read public data from the [ESAS web services](https://esas.ices.dk/webservices). Note that `fromJSON()` will return the data as a data frame (`simplifyDataframe = TRUE`). **This step is slow!**
 
-```{r}
-# Note that fromJSON will return the data as a data frame (simplifyDataframe = TRUE)
+```{r get_campaigns}
 campaigns <- fromJSON("https://esas.ices.dk/api/getCampaignRecords")
+```
+
+```{r get_samples}
 samples <- fromJSON("https://esas.ices.dk/api/getSampleRecords")
+```
+
+```{r get_positions}
 positions <- fromJSON("https://esas.ices.dk/api/getPositionRecords")
+```
+
+```{r get_observations}
 observations <- fromJSON("https://esas.ices.dk/api/getObservationRecords")
 ```
 
@@ -143,21 +151,21 @@ The Darwin Core mapping follows the recommendations of the [OBIS Darwin Core man
 
 Create [Event](https://rs.gbif.org/core/dwc_event_2022-02-02.xml) core:
 
-```{r}
+```{r dwc_event}
 dwc_event_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_event.sql")), .con = con)
 dwc_event <- DBI::dbGetQuery(con, dwc_event_sql)
 ```
 
 Create [Occurrence](https://rs.gbif.org/core/dwc_occurrence_2022-02-02.xml) extension:
 
-```{r}
+```{r dwc_occurrence}
 dwc_occurrence_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_occurrence.sql")), .con = con)
 dwc_occurrence <- DBI::dbGetQuery(con, dwc_occurrence_sql)
 ```
 
 Create [Extended Measurement Or Facts](https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml) extension:
 
-```{r}
+```{r dwc_emof}
 dwc_emof_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_emof.sql")), .con = con)
 dwc_emof <- DBI::dbGetQuery(con, dwc_emof_sql)
 ```
