@@ -714,7 +714,7 @@ WHERE
 
 UNION
 
-/* OBSERVATION: ASSOCIATION */
+/* OBSERVATION: ASSOCIATION x 3 */
 
 SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
@@ -732,13 +732,57 @@ FROM
   LEFT JOIN samples AS s
     ON p.SampleID = s.SampleID
   LEFT JOIN association
-    ON o.Association = association.Key
+    ON o.Association_1 = association.Key
 WHERE
-  o.Association IS NOT NULL
+  o.Association_1 IS NOT NULL
 
 UNION
 
-/* OBSERVATION: BEHAVIOUR */
+SELECT
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
+  'association'                         AS measurementType,
+  'https://vocab.ices.dk/services/rdf/collection/Association' AS measurementTypeID,
+  association.Description               AS measurementValue,
+  'https://vocab.ices.dk/services/rdf/collection/Association/' || association.Key AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN association
+    ON o.Association_2 = association.Key
+WHERE
+  o.Association_2 IS NOT NULL
+
+UNION
+
+SELECT
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
+  'association'                         AS measurementType,
+  'https://vocab.ices.dk/services/rdf/collection/Association' AS measurementTypeID,
+  association.Description               AS measurementValue,
+  'https://vocab.ices.dk/services/rdf/collection/Association/' || association.Key AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN association
+    ON o.Association_3 = association.Key
+WHERE
+  o.Association_3 IS NOT NULL
+
+UNION
+
+/* OBSERVATION: BEHAVIOUR x 3 */
 
 SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
@@ -756,6 +800,50 @@ FROM
   LEFT JOIN samples AS s
     ON p.SampleID = s.SampleID
   LEFT JOIN behaviour
-    ON o.Behaviour = behaviour.Key
+    ON o.Behaviour_1 = behaviour.Key
 WHERE
-  o.Behaviour IS NOT NULL
+  o.Behaviour_1 IS NOT NULL
+
+UNION
+
+SELECT
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
+  'behaviour'                           AS measurementType,
+  'https://vocab.ices.dk/services/rdf/collection/Behaviour' AS measurementTypeID,
+  behaviour.Description                 AS measurementValue,
+  'https://vocab.ices.dk/services/rdf/collection/Behaviour/' || behaviour.Key AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN behaviour
+    ON o.Behaviour_2 = behaviour.Key
+WHERE
+  o.Behaviour_2 IS NOT NULL
+
+UNION
+
+SELECT
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
+  s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
+  'behaviour'                           AS measurementType,
+  'https://vocab.ices.dk/services/rdf/collection/Behaviour' AS measurementTypeID,
+  behaviour.Description                 AS measurementValue,
+  'https://vocab.ices.dk/services/rdf/collection/Behaviour/' || behaviour.Key AS measurementValueID,
+  NULL                                  AS measurementUnit,
+  'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
+FROM
+  observations AS o
+  LEFT JOIN positions AS p
+    ON o.PositionID = p.PositionID
+  LEFT JOIN samples AS s
+    ON p.SampleID = s.SampleID
+  LEFT JOIN behaviour
+    ON o.Behaviour_3 = behaviour.Key
+WHERE
+  o.Behaviour_3 IS NOT NULL

@@ -95,6 +95,24 @@ campaigns <-
   # country also contains ~ values, but is not used in the DwC mapping
 ```
 
+```{r}
+observations <-
+  observations %>%
+  tidyr::separate(
+    association,
+    into = c("association_1", "association_2", "association_3"),
+    sep = "~",
+    remove = FALSE, convert = FALSE, extra = "merge", fill = "right"
+  ) %>%
+  tidyr::separate(
+    behaviour,
+    into = c("behaviour_1", "behaviour_2", "behaviour_3"),
+    sep = "~",
+    remove = FALSE, convert = FALSE, extra = "merge", fill = "right"
+  )
+  # country also contains ~ values, but is not used in the DwC mapping
+```
+
 ## Read code lists
 
 Get code lists from ICES vocabularies API:

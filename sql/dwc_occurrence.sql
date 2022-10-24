@@ -1,5 +1,38 @@
 /* OCCURRENCE EXTENSION */
 
+/* HELPER TABLE FOR BEHAVIOUR
+
+Key       | Description
+--------- | -----------
+3269      | Federal Agency for Nature Conservation (BfN)
+3269~2299 | Federal Agency for Nature Conservation (BfN) | Research and Technology Centre (Buesum) (FTZ)
+*/
+WITH behaviours AS (
+  SELECT
+    Behaviour AS Key,
+    COALESCE(
+      behaviour_1.Description || ' | ' || behaviour_2.Description || ' | ' || behaviour_3.Description,
+      behaviour_1.Description || ' | ' || behaviour_2.Description,
+      behaviour_1.Description
+    ) AS Description
+  FROM
+    (
+      SELECT DISTINCT
+        Behaviour,
+        Behaviour_1,
+        Behaviour_2,
+        Behaviour_3
+      FROM
+        observations
+    ) AS o
+    LEFT JOIN behaviour AS behaviour_1
+      ON o.behaviour_1 = behaviour_1.Key
+    LEFT JOIN behaviour AS behaviour_2
+      ON o.behaviour_2 = behaviour_2.Key
+    LEFT JOIN behaviour AS behaviour_3
+      ON o.behaviour_3 = behaviour_3.Key
+)
+
 SELECT
   c.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
 -- RECORD-LEVEL
@@ -19,11 +52,11 @@ SELECT
     WHEN o.LifeStage = 'A' THEN 'adult'
     WHEN o.LifeStage IN ('I', 1, 2, 3, 4, 5) THEN 'immature'
   END                                   AS lifeStage, -- Also in EMOF with orig vocab
-  behaviour.Description                 AS behavior, -- Also in EMOF
+  behaviours.Description                AS behavior, -- Also in EMOF
   'present'                             AS occurrenceStatus,
   CASE
-    WHEN o.Association = '10' THEN 'Pisces'
-    WHEN o.Association = '11' THEN 'Cetacea'
+    WHEN o.Association_1 = '10' OR o.Association_2 = '10' OR o.Association_3 = '10' THEN 'Pisces'
+    WHEN o.Association_1 = '11' OR o.Association_2 = '11' OR o.Association_3 = '11' THEN 'Cetacea'
     -- All other associations are non biological
   END                                   AS associatedTaxa, -- Also in EMOF with orig vocab
   o.Notes                               AS occurrenceRemarks,
@@ -42,7 +75,7 @@ FROM
     ON p.SampleID = s.SampleID
   LEFT JOIN campaigns AS c
     ON s.CampaignID = c.CampaignID
-  LEFT JOIN behaviour
-    ON o.Behaviour = behaviour.Key
+  LEFT JOIN behaviours
+    ON o.Behaviour = behaviours.Key
 ORDER BY
   c.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID -- occurrenceID
