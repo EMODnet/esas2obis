@@ -1,5 +1,5 @@
-/*
-Created by Peter Desmet (INBO)
+/* EVENT CORE */
+
 */
 
 /* RECORD-LEVEL */

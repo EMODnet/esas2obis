@@ -1,5 +1,4 @@
-/*
-Created by Peter Desmet (INBO)
+/* EXTENDED MEASUREMENT OR FACTS EXTENSION
 
 See https://github.com/inbo/esas2obis/issues/10 for mapping decisions
 */

@@ -1,6 +1,5 @@
-/*
-Created by Peter Desmet (INBO)
-*/
+/* OCCURRENCE EXTENSION */
+
 SELECT
   c.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
 -- RECORD-LEVEL
