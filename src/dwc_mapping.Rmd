@@ -179,9 +179,10 @@ Save a sample of the data, to be used in git to notice mapping issues:
 ```{r}
 # Filter data on a single campaign
 campaign_id <- "110000153"
-dwc_event_sample <- dwc_event %>% filter(grepl(campaign_id, eventID))
-dwc_occurrence_sample <- dwc_occurrence %>% filter(grepl(campaign_id, eventID))
-dwc_emof_sample <- dwc_emof %>% filter(grepl(campaign_id, eventID))
+campaign_id_regex <- paste0("^", campaign_id) # Match start of string
+dwc_event_sample <- dwc_event %>% filter(grepl(campaign_id_regex, eventID))
+dwc_occurrence_sample <- dwc_occurrence %>% filter(grepl(campaign_id_regex, eventID))
+dwc_emof_sample <- dwc_emof %>% filter(grepl(campaign_id_regex, eventID))
 
 # Write data
 directory <- here::here("data", "processed_sample")
