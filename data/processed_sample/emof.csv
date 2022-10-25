@@ -10,7 +10,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004708,,area,,0.21,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004708,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,0.7,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004708,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004708,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004708,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004708,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004708,110000153_110000153_110004708_1100031820,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004708,110000153_110000153_110004708_1100031820,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -32,7 +32,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004709,,area,,0.642,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004709,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.14,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004709,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004709,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004709,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004709,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004709,110000153_110000153_110004709_1100031824,group identifier,,1,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004709,110000153_110000153_110004709_1100031824,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -95,7 +95,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004710,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004710,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004710,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004710,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004710,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004710,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004710,110000153_110000153_110004710_1100031837,group identifier,,2,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004710,110000153_110000153_110004710_1100031837,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -180,7 +180,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004711,,area,,0.612,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004711,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.04,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004711,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004711,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004711,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004711,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004711,110000153_110000153_110004711_1100031859,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004711,110000153_110000153_110004711_1100031859,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -233,7 +233,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004712,,area,,0.39,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004712,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,1.3,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004712,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004712,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004712,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004712,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004712,110000153_110000153_110004712_1100031874,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004712,110000153_110000153_110004712_1100031874,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -271,7 +271,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004713,,area,,0.951,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004713,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.17,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004713,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004713,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004713,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004713,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004713,110000153_110000153_110004713_1100031884,group identifier,,3,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004713,110000153_110000153_110004713_1100031884,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -353,7 +353,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004714,,area,,0.57,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004714,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,1.9,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004714,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004714,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004714,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004714,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004714,110000153_110000153_110004714_1100031901,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004714,110000153_110000153_110004714_1100031901,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -377,7 +377,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004715,,area,,1.044,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004715,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.48,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004715,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004715,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004715,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004715,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004715,110000153_110000153_110004715_1100031905,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004715,110000153_110000153_110004715_1100031905,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,2,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -431,7 +431,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004716,,area,,1.176,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004716,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.92,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004716,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004716,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004716,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004716,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004716,110000153_110000153_110004716_1100031916,group identifier,,5,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004716,110000153_110000153_110004716_1100031916,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -462,7 +462,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004717,,area,,1.176,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004717,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.92,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004717,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004717,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004717,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004717,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004717,110000153_110000153_110004717_1100031922,group identifier,,6,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004717,110000153_110000153_110004717_1100031922,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -561,7 +561,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004718,,area,,0.825,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004718,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.75,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004718,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004718,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004718,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004718,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004718,110000153_110000153_110004718_1100031947,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004718,110000153_110000153_110004718_1100031947,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -579,7 +579,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004719,,area,,1.095,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004719,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.65,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004719,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004719,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004719,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004719,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004719,110000153_110000153_110004719_1100031951,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004719,110000153_110000153_110004719_1100031951,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,7,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -604,7 +604,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004720,,area,,1.095,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004720,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.65,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004720,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004720,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004720,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004720,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004720,110000153_110000153_110004720_1100031956,group identifier,,9,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004720,110000153_110000153_110004720_1100031956,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -683,7 +683,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004721,,area,,1.176,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004721,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.92,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004721,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004721,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004721,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004721,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004721,110000153_110000153_110004721_1100031975,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004721,110000153_110000153_110004721_1100031975,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -718,7 +718,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004722,,area,,0.117,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004722,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,0.39,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004722,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004722,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004722,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004722,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004722,110000153_110000153_110004722_1100031982,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004722,110000153_110000153_110004722_1100031982,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -737,7 +737,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004723,,area,,0.825,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004723,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.75,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004723,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004723,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004723,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004723,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004723,110000153_110000153_110004723_1100031985,group identifier,,10,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004723,110000153_110000153_110004723_1100031985,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -787,7 +787,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004724,,area,,1.071,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004724,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.57,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004724,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004724,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004724,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004724,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004724,110000153_110000153_110004724_1100031995,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004724,110000153_110000153_110004724_1100031995,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -837,7 +837,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004725,,area,,1.071,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004725,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.57,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004725,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004725,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004725,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004725,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004725,110000153_110000153_110004725_1100032007,behaviour,https://vocab.ices.dk/services/rdf/collection/Behaviour,Scavenging,https://vocab.ices.dk/services/rdf/collection/Behaviour/40,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004725,110000153_110000153_110004725_1100032007,group identifier,,11,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -884,7 +884,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004726,,area,,1.071,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004726,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.57,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004726,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004726,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004726,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004726,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004726,110000153_110000153_110004726_1100032016,group identifier,,12,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004726,110000153_110000153_110004726_1100032016,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -965,7 +965,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004727,,area,,1.071,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004727,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.57,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004727,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004727,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004727,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004727,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004727,110000153_110000153_110004727_1100032036,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004727,110000153_110000153_110004727_1100032036,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -973,7 +973,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004728,,area,,0.858,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004728,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.86,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004728,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004728,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004728,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004728,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004728,110000153_110000153_110004728_1100032037,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004728,110000153_110000153_110004728_1100032037,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -982,7 +982,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004729,,area,,0.642,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004729,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.14,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004729,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004729,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004729,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004729,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004729,110000153_110000153_110004729_1100032038,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004729,110000153_110000153_110004729_1100032038,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,25,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1045,7 +1045,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004730,,area,,0.75,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004730,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.5,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004730,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004730,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004730,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004730,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004730,110000153_110000153_110004730_1100032055,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004730,110000153_110000153_110004730_1100032055,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,13,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1077,7 +1077,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004731,,area,,1.101,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004731,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.67,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004731,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004731,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004731,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004731,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004731,110000153_110000153_110004731_1100032064,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004731,110000153_110000153_110004731_1100032064,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,40,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1100,7 +1100,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004732,,area,,0.771,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004732,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.57,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004732,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004732,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004732,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004732,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004732,110000153_110000153_110004732_1100032069,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004732,110000153_110000153_110004732_1100032069,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,85,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1123,7 +1123,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004733,,area,,0.429,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004733,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,1.43,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004733,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004733,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004733,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004733,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004733,110000153_110000153_110004733_1100032074,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004733,110000153_110000153_110004733_1100032074,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,7,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1131,7 +1131,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004734,,area,,0.939,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004734,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.13,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004734,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004734,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004734,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004734,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004734,110000153_110000153_110004734_1100032075,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004734,110000153_110000153_110004734_1100032075,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,14,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1167,7 +1167,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004735,,area,,0.564,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004735,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,1.88,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004735,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004735,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004735,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004735,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004735,110000153_110000153_110004735_1100032083,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004735,110000153_110000153_110004735_1100032083,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,2,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1175,7 +1175,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004736,,area,,0.543,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004736,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,1.81,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004736,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004736,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004736,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004736,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004736,110000153_110000153_110004736_1100032084,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004736,110000153_110000153_110004736_1100032084,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1184,7 +1184,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004737,,area,,0.765,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004737,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.55,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004737,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004737,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004737,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004737,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004737,110000153_110000153_110004737_1100032085,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004737,110000153_110000153_110004737_1100032085,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,60,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1211,7 +1211,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004738,,area,,0.999,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004738,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.33,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004738,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004738,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004738,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004738,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004738,110000153_110000153_110004738_1100032092,group identifier,,13,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004738,110000153_110000153_110004738_1100032092,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -1276,7 +1276,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004739,,area,,0.999,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004739,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,3.33,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004739,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004739,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004739,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004739,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004739,110000153_110000153_110004739_1100032104,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004739,110000153_110000153_110004739_1100032104,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1313,7 +1313,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004740,,area,,0.699,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004740,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,2.33,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004740,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004740,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004740,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004740,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004740,110000153_110000153_110004740_1100032113,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004740,110000153_110000153_110004740_1100032113,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,30,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1344,12 +1344,12 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004741,,area,,0.195,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004741,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,0.65,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004741,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004741,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004741,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004741,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004742,,area,,1.212,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004742,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.04,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004742,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004742,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004742,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004742,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004742,110000153_110000153_110004742_1100032121,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004742,110000153_110000153_110004742_1100032121,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,2,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1387,7 +1387,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004743,,area,,1.212,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004743,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.04,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004743,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004743,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004743,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004743,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004743,110000153_110000153_110004743_1100032128,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004743,110000153_110000153_110004743_1100032128,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,2,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1406,7 +1406,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004744,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004744,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004744,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004744,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004744,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004744,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004744,110000153_110000153_110004744_1100032131,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004744,110000153_110000153_110004744_1100032131,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1474,7 +1474,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004745,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004745,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004745,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004745,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004745,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004745,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004745,110000153_110000153_110004745_1100032146,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004745,110000153_110000153_110004745_1100032146,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1522,7 +1522,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004746,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004746,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004746,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004746,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004746,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004746,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004746,110000153_110000153_110004746_1100032156,in transect,,TRUE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004746,110000153_110000153_110004746_1100032156,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1544,7 +1544,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004747,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004747,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004747,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004747,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004747,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004747,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004747,110000153_110000153_110004747_1100032160,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004747,110000153_110000153_110004747_1100032160,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
@@ -1584,7 +1584,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004748,,area,,1.224,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004748,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,4.08,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004748,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004748,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004748,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004748,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004748,110000153_110000153_110004748_1100032168,group identifier,,15,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004748,110000153_110000153_110004748_1100032168,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
@@ -1705,7 +1705,7 @@ eventID,occurrenceID,measurementType,measurementTypeID,measurementValue,measurem
 110000153_110000153_110004749,,area,,0.489,,km2,http://vocab.nerc.ac.uk/collection/P06/current/SQKM/
 110000153_110000153_110004749,,distance,http://vocab.nerc.ac.uk/collection/P01/current/DISTPHMS/,1.63,,km,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004749,,ice cover,http://vocab.nerc.ac.uk/collection/P07/current/CFSN0424/,0,,percent,http://vocab.nerc.ac.uk/collection/P06/current/UPCT/
-110000153_110000153_110004749,,visibility,http://vocab.nerc.ac.uk/collection/S06/current/S0600244/,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
+110000153_110000153_110004749,,visibility,https://vocab.ices.dk/services/rdf/collection/Visibility,5-10,https://vocab.ices.dk/services/rdf/collection/Visibility/C,,http://vocab.nerc.ac.uk/collection/P06/current/ULKM/
 110000153_110000153_110004749,,wind force,http://vocab.nerc.ac.uk/collection/P01/current/WMOCWFBF/,Moderate breeze,https://vocab.ices.dk/services/rdf/collection/Beaufort/4,Beaufort,	http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
 110000153_110000153_110004749,110000153_110000153_110004749_1100032193,in transect,,FALSE,,,http://vocab.nerc.ac.uk/collection/P06/current/XXXX/
 110000153_110000153_110004749,110000153_110000153_110004749_1100032193,individual count,http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/,1,,,http://vocab.nerc.ac.uk/collection/P06/current/UUUU/
