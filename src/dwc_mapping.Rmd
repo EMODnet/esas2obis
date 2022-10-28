@@ -24,7 +24,7 @@ Install required libraries (if not yet installed):
 
 ```{r}
 installed <- rownames(installed.packages())
-required <- c("magrittr", "here", "glue", "dplyr", "jsonlite", "readr", "tidyr", "DBI", "icesVocab")
+required <- c("magrittr", "here", "glue", "dplyr", "jsonlite", "assertthat", "readr", "tidyr", "DBI", "icesVocab")
 if (!all(required %in% installed)) {
   install.packages(required[!required %in% installed])
 }
@@ -37,31 +37,28 @@ library(magrittr)       # To use pipes
 library(here)           # To find files
 library(glue)           # To insert variables in strings
 library(dplyr)          # To transform data
-library(jsonlite)       # To read JSON
 library(readr)          # To write files
 library(tidyr)          # To tidy data
+library(jsonlite)       # To handle json
+library(assertthat)     # To return errors
 library(DBI)            # To create and query databases
 library(icesVocab)      # To get code lists
 ```
 
 # Read source data
 
-Read public data from the [ESAS web services](https://esas.ices.dk/webservices). Note that `fromJSON()` will return the data as a data frame (`simplifyDataframe = TRUE`). **This step is slow!**
+Read public data from the [ESAS web services](https://esas.ices.dk/webservices) with a custom function. **This step can be slow.**
 
-```{r get_campaigns}
-campaigns <- fromJSON("https://esas.ices.dk/api/getCampaignRecords")
+```{r}
+# Load function
+source(here::here("R", "get_data.R"))
 ```
 
-```{r get_samples}
-samples <- fromJSON("https://esas.ices.dk/api/getSampleRecords")
-```
-
-```{r get_positions}
-positions <- fromJSON("https://esas.ices.dk/api/getPositionRecords")
-```
-
-```{r get_observations}
-observations <- fromJSON("https://esas.ices.dk/api/getObservationRecords")
+```{r get_data}
+campaigns <- get_data("campaigns", "DataAccess=Public")
+samples <- get_data("samples")
+positions <- get_data("positions")
+observations <- get_data("observations")
 ```
 
 Set all columns to character to avoid date interpretation issues in SQLite (see https://stackoverflow.com/a/13462536/2463806)
@@ -74,12 +71,6 @@ observations <- mutate(observations, across(everything(), as.character))
 ```
 
 ## Process data
-
-Restrict campaigns to public ones:
-
-```{r}
-campaigns <- campaigns %>% filter(dataAccess == "Public")
-```
 
 Separate columns `dataRightsHolder`, `association` and `behaviour`, which can contain `~` delimited values, into maximum 3 columns:
 
