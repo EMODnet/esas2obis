@@ -47,39 +47,61 @@ library(icesVocab)      # To get code lists
 
 # Read source data
 
-Read public data from the [ESAS web services](https://esas.ices.dk/webservices) with a custom function. **This step can be slow.**
+Public data can be read automatically from the [ESAS web services](https://esas.ices.dk/webservices), but this is currently incredibly slow and likely to result in an error:
 
-```{r}
-# Load function
+```{r get_remote_data eval=FALSE}
+# THIS STEP IS SKIPPED
+# Load custom function
 source(here::here("R", "get_data.R"))
-```
 
-```{r get_data}
+# Query data
 campaigns <- get_data("campaigns", "DataAccess=Public")
 samples <- get_data("samples")
 positions <- get_data("positions")
 observations <- get_data("observations")
-```
 
-Set all columns to character to avoid date interpretation issues in SQLite (see https://stackoverflow.com/a/13462536/2463806)
-
-```{r}
+# Set all columns to character to avoid date interpretation issues in SQLite
+# see https://stackoverflow.com/a/13462536/2463806
 campaigns <- mutate(campaigns, across(everything(), as.character))
 samples <- mutate(samples, across(everything(), as.character))
 positions <- mutate(positions, across(everything(), as.character))
 observations <- mutate(observations, across(everything(), as.character))
+
+# Note that fields returned by the API are lowerCamelCase, while the official 
+# names are UpperCamelCase and returned as such by CSV downloads.
+# The following steps (especially "Process data") assume UpperCamelCase
+# The SQLite queries are case insensitive
+```
+
+We therefore recommend the following **manual steps**:
+
+1. Go to <https://esas.ices.dk/inventory>
+2. Filter on `Access: Public`
+3. Click `Download Data` and accept disclaimer.
+4. Download the data from the download request page
+5. Unzip the data and place it in a `data/raw` directory (ignored by git)
+6. Read the data:
+
+```{r get_local_data}
+# Set all columns to character to avoid date interpretation issues in SQLite
+# see https://stackoverflow.com/a/13462536/2463806
+as_character <- cols(.default = "c")
+campaigns <- read_csv(here::here("data", "raw", "Campaigns.csv"), col_types = as_character)
+samples <- read_csv(here::here("data", "raw", "Samples.csv"), col_types = as_character)
+positions <- read_csv(here::here("data", "raw", "Positions.csv"), col_types = as_character)
+observations <- read_csv(here::here("data", "raw", "Observations.csv"), col_types = as_character)
 ```
 
 ## Process data
 
-Separate columns `dataRightsHolder`, `association` and `behaviour`, which can contain `~` delimited values, into maximum 3 columns:
+Separate columns `DataRightsHolder`, `Association` and `Behaviour`, which can contain `~` delimited values, into maximum 3 columns:
 
 ```{r}
 campaigns <-
   campaigns %>%
   tidyr::separate(
-    dataRightsHolder,
-    into = c("dataRightsHolder_1", "dataRightsHolder_2", "dataRightsHolder_3"),
+    DataRightsHolder,
+    into = c("DataRightsHolder_1", "DataRightsHolder_2", "DataRightsHolder_3"),
     sep = "~",
     remove = FALSE, convert = FALSE, extra = "merge", fill = "right"
   )
@@ -90,14 +112,14 @@ campaigns <-
 observations <-
   observations %>%
   tidyr::separate(
-    association,
-    into = c("association_1", "association_2", "association_3"),
+    Association,
+    into = c("Association_1", "Association_2", "Association_3"),
     sep = "~",
     remove = FALSE, convert = FALSE, extra = "merge", fill = "right"
   ) %>%
   tidyr::separate(
-    behaviour,
-    into = c("behaviour_1", "behaviour_2", "behaviour_3"),
+    Behaviour,
+    into = c("Behaviour_1", "Behaviour_2", "Behaviour_3"),
     sep = "~",
     remove = FALSE, convert = FALSE, extra = "merge", fill = "right"
   )
@@ -108,7 +130,7 @@ observations <-
 
 Get code lists from ICES vocabularies API:
 
-```{r}
+```{r get_vocabularies}
 edmo <- getCodeList("EDMO")
 shipc <- getCodeList("SHIPC")
 platformclass <- getCodeList(URLencode("Platform Class"))
