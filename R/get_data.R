@@ -30,18 +30,18 @@ get_data <- function(table, querystring = "") {
   while(!end) {
     url <- paste0(
       "https://esas.ices.dk/api/", service,
-      "?offset=", offset,
-      "&limit=", limit,
+      "?offset=", format(offset, scientific = FALSE),
+      "&limit=", format(limit, scientific = FALSE),
       "&", querystring
     )
     response <- jsonlite::fromJSON(url, simplifyDataFrame = TRUE)
-    if (offset == 0) {
-      message(glue::glue("Retrieving {response$recordsCount} records ..."))
+    new_data <- response$results
+    if (length(response$results) != 0) {
+      data <- dplyr::bind_rows(data, new_data)
+      offset <- offset + limit
+    } else {
+      end <- TRUE
     }
-    message(offset)
-    data <- dplyr::bind_rows(data, response$results)
-    end <- response$endOfRecords
-    offset <- offset + limit
   }
 
   return(data)
