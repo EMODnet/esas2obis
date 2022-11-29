@@ -1,4 +1,6 @@
-/* EVENT CORE */
+/*
+Schema: https://rs.gbif.org/core/dwc_event_2022-02-02.xml
+*/
 
 /* HELPER TABLE FOR DATA RIGHTS HOLDERS
 

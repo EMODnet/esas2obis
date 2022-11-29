@@ -1,4 +1,6 @@
-/* OCCURRENCE EXTENSION */
+/*
+Schema: https://rs.gbif.org/core/dwc_occurrence_2022-02-02.xml
+*/
 
 /* HELPER TABLE FOR BEHAVIOUR
 

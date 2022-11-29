@@ -1,5 +1,5 @@
-/* EXTENDED MEASUREMENT OR FACTS EXTENSION
-
+/*
+Schema: https://rs.gbif.org/extension/obis/extended_measurement_or_fact.xml
 See https://github.com/inbo/esas2obis/issues/10 for mapping decisions
 */
 
