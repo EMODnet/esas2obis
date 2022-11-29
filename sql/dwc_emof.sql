@@ -515,9 +515,8 @@ SELECT
     ELSE o.ObservationDistance -- Expressed as number
   END                                   AS measurementValue,
   CASE
-    WHEN observationdistance.Key IN ('A', 'B', 'C', 'D', 'E', 'F', 'W')
+    WHEN observationdistance.Key IN ('A', 'B', 'C', 'D', 'E', 'F', 'W') -- Only when expressed as letter
       THEN 'https://vocab.ices.dk/services/rdf/collection/ObservationDistance/' || observationdistance.Key
-    ELSE NULL -- Expressed as number, not a vocab term
   END                                   AS measurementValueID,
   CASE
     WHEN observationdistance.Key = 'F' THEN NULL -- Not meters
