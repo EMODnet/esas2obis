@@ -2,14 +2,13 @@
 Schema: https://rs.gbif.org/core/dwc_occurrence_2022-02-02.xml
 */
 
-/* HELPER TABLE FOR BEHAVIOUR
+/* HELPER TABLES */
 
-Key       | Description
---------- | -----------
-3269      | Federal Agency for Nature Conservation (BfN)
-3269~2299 | Federal Agency for Nature Conservation (BfN) | Research and Technology Centre (Buesum) (FTZ)
-*/
-WITH behaviours AS (
+WITH
+-- BEHAVIOURS
+-- Concatenate up to 3 behaviours with " | " into a single value
+-- E.g. Courtship display | Play
+behaviours AS (
   SELECT
     Behaviour AS Key,
     COALESCE(

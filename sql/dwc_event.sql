@@ -2,14 +2,13 @@
 Schema: https://rs.gbif.org/core/dwc_event_2022-02-02.xml
 */
 
-/* HELPER TABLE FOR DATA RIGHTS HOLDERS
+/* HELPER TABLES */
 
-Key       | Description
---------- | -----------
-3269      | Federal Agency for Nature Conservation (BfN)
-3269~2299 | Federal Agency for Nature Conservation (BfN) | Research and Technology Centre (Buesum) (FTZ)
-*/
-WITH datarightsholders AS (
+WITH
+-- DATA RIGHTS HOLDERS
+-- Concatenate up to 3 data rights holders with " | " into a single value
+-- E.g. Federal Agency for Nature Conservation (BfN) | Research and Technology Centre (Buesum) (FTZ)
+datarightsholders AS (
   SELECT
     DataRightsHolder AS Key,
     COALESCE(
