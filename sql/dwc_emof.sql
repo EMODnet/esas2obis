@@ -291,17 +291,20 @@ SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'visibility'                          AS measurementType,
-  'https://vocab.ices.dk/services/rdf/collection/Visibility' AS measurementTypeID,
   CASE
-    WHEN visibility.Key = 'A' THEN '0-1'
-    WHEN visibility.Key = 'B' THEN '1-5'
-    WHEN visibility.Key = 'C' THEN '5-10'
-    WHEN visibility.Key = 'D' THEN '>10'
-    ELSE visibility.Key -- Keys expressed in km
-  END                                   AS measurementValue,
-  'https://vocab.ices.dk/services/rdf/collection/Visibility/' || visibility.Key AS measurementValueID,
-  NULL                                  AS measurementUnit,
-  'http://vocab.nerc.ac.uk/collection/P06/current/ULKM/' AS measurementUnitID
+    WHEN visibility.Key IN ('A', 'B', 'C', 'D') THEN 'http://vocab.nerc.ac.uk/collection/P01/current/VISHOR04/' -- ESAS specific
+    ELSE 'http://vocab.nerc.ac.uk/collection/P01/current/VISHOR03/' -- Numeric values
+  END                                   AS measurementTypeID,
+  visibility.Key                        AS measurementValue,
+  'https://vocab.ices.dk/services/rdf/collection/Visibility/' || visibility.Key AS measurementValueID, -- Numeric values are also in vocab
+  CASE
+    WHEN visibility.Key IN ('A', 'B', 'C', 'D') THEN NULL
+    ELSE 'km'
+  END                                   AS measurementUnit,
+  CASE
+    WHEN visibility.Key IN ('A', 'B', 'C', 'D') THEN NULL
+    ELSE 'http://vocab.nerc.ac.uk/collection/P06/current/ULKM/'
+  END                                   AS measurementUnitID
 FROM
   positions AS p
   LEFT JOIN samples AS s
