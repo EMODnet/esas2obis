@@ -62,7 +62,7 @@ SELECT
   NULL                                  AS decimalLatitude,
   NULL                                  AS decimalLongitude,
   NULL                                  AS geodeticDatum,
-  NULL                                  AS coordinateUncertaintyInMeters
+  NULL                                  AS georeferenceRemarks
 FROM
   campaigns AS c
   LEFT JOIN datarightsholders
@@ -85,7 +85,7 @@ SELECT
   NULL                                  AS decimalLatitude,
   NULL                                  AS decimalLongitude,
   NULL                                  AS geodeticDatum,
-  NULL                                  AS coordinateUncertaintyInMeters
+  NULL                                  AS georeferenceRemarks
 FROM
   samples AS s
   LEFT JOIN campaigns AS c
@@ -110,18 +110,7 @@ SELECT
   p.Latitude                            AS decimalLatitude,
   p.Longitude                           AS decimalLongitude,
   'EPSG:4326'                           AS geodeticDatum,
-  COALESCE(
-  /*
-  Coordinate uncertainty is not recorded and can very a lot (e.g. historical vs current data).
-  We make a best attempt by:
-  - Assuming coordinates are recorded by GPS: 30m, http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters
-  - Assuming coordinates are precise to 3 decimals: 157m, https://doi.org/10.15468/doc-gg7h-s853#table-uncertainty
-  - Considering the Distance that the ship has travelled: converted from km to m
-  - Not considering the ObservationDistance, because it can vary too much (0 - 5km)
-  */
-    30 + 157 + ROUND(p.distance * 1000),
-    30 + 157
-  )                                     AS coordinateUncertaintyInMeters
+  'coordinate uncertainty unknown, see https://github.com/inbo/esas2obis/issues/5' AS georeferenceRemarks
 FROM
   positions AS p
   LEFT JOIN samples AS s
