@@ -225,9 +225,9 @@ Save all data, to be used for IPT upload:
 ```{r}
 directory <- here::here("data", "processed")
 if (!dir.exists(directory)) { dir.create(directory) }
-write_csv(dwc_event, file.path(directory, "event.csv"), na = "")
-write_csv(dwc_occurrence, file.path(directory, "occurrence.csv"), na = "")
-write_csv(dwc_emof, file.path(directory, "emof.csv"), na = "")
+write_csv(dwc_event, file.path(directory, "event.csv.gz"), na = "")
+write_csv(dwc_occurrence, file.path(directory, "occurrence.csv.gz"), na = "")
+write_csv(dwc_emof, file.path(directory, "emof.csv.gz"), na = "")
 ```
 
 Save a sample of the data, to be used in git to notice mapping issues:
