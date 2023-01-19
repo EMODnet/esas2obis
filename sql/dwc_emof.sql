@@ -9,7 +9,7 @@ SELECT
   s.CampaignID || '_' || s.SampleID     AS eventID,
   NULL                                  AS occurrenceID,
   'platform code'                       AS measurementType,
-  'http://vocab.nerc.ac.uk/collection/C17/current/' AS measurementTypeID,
+  'http://vocab.nerc.ac.uk/collection/Q01/current/Q0100001/' AS measurementTypeID,
   shipc.Description                     AS measurementValue,
   'http://vocab.nerc.ac.uk/collection/C17/current/' || shipc.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
@@ -560,7 +560,7 @@ SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'life stage'                          AS measurementType,
-  'http://vocab.nerc.ac.uk/collection/S11/current/' AS measurementTypeID,
+  'http://vocab.nerc.ac.uk/collection/P01/current/LSTAGE01/' AS measurementTypeID,
   lower(lifestage.Description)          AS measurementValue,
   CASE
     WHEN lifestage.Key = 'A' THEN 'http://vocab.nerc.ac.uk/collection/S11/current/S1116/'
@@ -645,7 +645,7 @@ SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'sex'                                 AS measurementType,
-  'http://vocab.nerc.ac.uk/collection/S10/current/' AS measurementTypeID,
+  'http://vocab.nerc.ac.uk/collection/P01/current/ENTSEX01/' AS measurementTypeID,
   lower(sex.Description)                AS measurementValue,
   CASE
     WHEN sex.Key = 'F' THEN 'http://vocab.nerc.ac.uk/collection/S10/current/S102/'
