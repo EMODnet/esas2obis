@@ -64,13 +64,14 @@ SELECT
 -- IDENTIFICATION
 -- identifiedBy: observer name(s) not available
 -- TAXON
-  'urn:lsid:marinespecies.org:taxname:' || o.wormsAphiaID AS scientificNameID,
-  'Animalia'                            AS kingdom
+  'urn:lsid:marinespecies.org:taxname:' || o.WormsAphiaID AS scientificNameID,
   CASE
-    WHEN o.speciesScientificName IS NOT NULL o.speciesScientificName
-    ELSE o.wormsScientificName -- Use WoRMS name in case scientific name is empty (e.g. "Cetacea" for "unidentified small whale")
+    WHEN o.SpeciesScientificName IS NOT NULL THEN o.SpeciesScientificName
+    ELSE o.WormsScientificName -- Use WoRMS name in case scientific name is empty (e.g. "Cetacea" for "unidentified small whale")
   END                                   AS scientificName,
+  'Animalia'                            AS kingdom,
 -- taxonRank: not available
+  o.SpeciesEnglishName                  AS vernacularName
 FROM
   observations AS o
   LEFT JOIN positions AS p
