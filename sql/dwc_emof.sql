@@ -249,7 +249,7 @@ SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID AS eventID,
   NULL                                  AS occurrenceID,
   'area'                                AS measurementType,
-  NULL                                  AS measurementTypeID,
+  'https://vocab.nerc.ac.uk/collection/P01/current/SAMPARAX/' AS measurementTypeID,
   p.Area                                AS measurementValue,
   NULL                                  AS measurementValueID,
   'km2'                                 AS measurementUnit,
