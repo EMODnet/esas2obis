@@ -218,7 +218,9 @@ dwc_emof_sql <- glue::glue_sql(readr::read_file(here::here("sql", "dwc_emof.sql"
 dwc_emof <- DBI::dbGetQuery(con, dwc_emof_sql)
 ```
 
-## Save data to CSV
+## Save data to file
+
+Files are saved as tab delimited text files, to avoid [parsing issues](https://github.com/gbif/ipt/issues/1930) with commas in fields.
 
 Save all data, to be used for IPT upload:
 
