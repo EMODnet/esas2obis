@@ -295,7 +295,7 @@ SELECT
     WHEN visibility.Key IN ('A', 'B', 'C', 'D') THEN 'http://vocab.nerc.ac.uk/collection/P01/current/VISHOR04/' -- ESAS specific
     ELSE 'http://vocab.nerc.ac.uk/collection/P01/current/VISHOR03/' -- Numeric values
   END                                   AS measurementTypeID,
-  visibility.Key                        AS measurementValue,
+  visibility.Key                        AS measurementValue, -- Codes, not descriptions (defined as such in http://vocab.nerc.ac.uk/collection/P01/current/VISHOR04/)
   'https://vocab.ices.dk/services/rdf/collection/Visibility/' || visibility.Key AS measurementValueID, -- Numeric values are also in vocab
   CASE
     WHEN visibility.Key IN ('A', 'B', 'C', 'D') THEN NULL
