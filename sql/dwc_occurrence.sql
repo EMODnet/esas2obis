@@ -53,7 +53,7 @@ SELECT
     WHEN o.LifeStage = 'A' THEN 'adult'
     WHEN o.LifeStage IN ('I', 1, 2, 3, 4, 5) THEN 'immature'
   END                                   AS lifeStage, -- Also in EMOF with orig vocab
-  behaviours.Description                AS behavior, -- Also in EMOF
+  lower(behaviours.Description)         AS behavior, -- Also in EMOF
   'present'                             AS occurrenceStatus,
   CASE
     WHEN o.Association_1 = '10' OR o.Association_2 = '10' OR o.Association_3 = '10' THEN 'Pisces'

@@ -833,7 +833,7 @@ SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'behaviour'                           AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Behaviour' AS measurementTypeID,
-  behaviour.Description                 AS measurementValue,
+  lower(behaviour.Description)          AS measurementValue,
   'https://vocab.ices.dk/services/rdf/collection/Behaviour/' || behaviour.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
@@ -855,7 +855,7 @@ SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'behaviour'                           AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Behaviour' AS measurementTypeID,
-  behaviour.Description                 AS measurementValue,
+  lower(behaviour.Description)          AS measurementValue,
   'https://vocab.ices.dk/services/rdf/collection/Behaviour/' || behaviour.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID

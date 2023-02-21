@@ -186,8 +186,8 @@ eventID	basisOfRecord	occurrenceID	individualCount	sex	lifeStage	behavior	occurr
 110000153_110000153_110004724	HumanObservation	110000153_110000153_110004724_1100032004	2		adult		present			urn:lsid:marinespecies.org:taxname:137138	Larus argentatus	Animalia	European Herring Gull
 110000153_110000153_110004724	HumanObservation	110000153_110000153_110004724_1100032005	1		immature		present			urn:lsid:marinespecies.org:taxname:137188	Gavia stellata	Animalia	Red-throated Diver
 110000153_110000153_110004724	HumanObservation	110000153_110000153_110004724_1100032006	1		immature		present			urn:lsid:marinespecies.org:taxname:137149	Larus ridibundus	Animalia	Black-headed Gull
-110000153_110000153_110004725	HumanObservation	110000153_110000153_110004725_1100032007	1		immature	Scavenging	present			urn:lsid:marinespecies.org:taxname:137146	Larus marinus	Animalia	Great Black-backed Gull
-110000153_110000153_110004725	HumanObservation	110000153_110000153_110004725_1100032008	1			Dead	present			urn:lsid:marinespecies.org:taxname:137128	Alca torda	Animalia	Razorbill
+110000153_110000153_110004725	HumanObservation	110000153_110000153_110004725_1100032007	1		immature	scavenging	present			urn:lsid:marinespecies.org:taxname:137146	Larus marinus	Animalia	Great Black-backed Gull
+110000153_110000153_110004725	HumanObservation	110000153_110000153_110004725_1100032008	1			dead	present			urn:lsid:marinespecies.org:taxname:137128	Alca torda	Animalia	Razorbill
 110000153_110000153_110004725	HumanObservation	110000153_110000153_110004725_1100032009	1		adult		present			urn:lsid:marinespecies.org:taxname:137188	Gavia stellata	Animalia	Red-throated Diver
 110000153_110000153_110004725	HumanObservation	110000153_110000153_110004725_1100032010	1		adult		present			urn:lsid:marinespecies.org:taxname:137141	Larus canus	Animalia	Common Gull
 110000153_110000153_110004725	HumanObservation	110000153_110000153_110004725_1100032011	1		adult		present			urn:lsid:marinespecies.org:taxname:137141	Larus canus	Animalia	Common Gull
@@ -233,7 +233,7 @@ eventID	basisOfRecord	occurrenceID	individualCount	sex	lifeStage	behavior	occurr
 110000153_110000153_110004729	HumanObservation	110000153_110000153_110004729_1100032051	35				present			urn:lsid:marinespecies.org:taxname:137073	Melanitta nigra	Animalia	Common Scoter
 110000153_110000153_110004729	HumanObservation	110000153_110000153_110004729_1100032052	1		immature		present			urn:lsid:marinespecies.org:taxname:137141	Larus canus	Animalia	Common Gull
 110000153_110000153_110004729	HumanObservation	110000153_110000153_110004729_1100032053	3				present			urn:lsid:marinespecies.org:taxname:137073	Melanitta nigra	Animalia	Common Scoter
-110000153_110000153_110004729	HumanObservation	110000153_110000153_110004729_1100032054	1	male	immature	Dead	present			urn:lsid:marinespecies.org:taxname:137074	Somateria mollissima	Animalia	Common Eider
+110000153_110000153_110004729	HumanObservation	110000153_110000153_110004729_1100032054	1	male	immature	dead	present			urn:lsid:marinespecies.org:taxname:137074	Somateria mollissima	Animalia	Common Eider
 110000153_110000153_110004730	HumanObservation	110000153_110000153_110004730_1100032055	13				present			urn:lsid:marinespecies.org:taxname:137073	Melanitta nigra	Animalia	Common Scoter
 110000153_110000153_110004730	HumanObservation	110000153_110000153_110004730_1100032056	17				present			urn:lsid:marinespecies.org:taxname:137073	Melanitta nigra	Animalia	Common Scoter
 110000153_110000153_110004730	HumanObservation	110000153_110000153_110004730_1100032057	1				present			urn:lsid:marinespecies.org:taxname:137188	Gavia stellata	Animalia	Red-throated Diver
@@ -332,7 +332,7 @@ eventID	basisOfRecord	occurrenceID	individualCount	sex	lifeStage	behavior	occurr
 110000153_110000153_110004745	HumanObservation	110000153_110000153_110004745_1100032150	1		adult		present			urn:lsid:marinespecies.org:taxname:137141	Larus canus	Animalia	Common Gull
 110000153_110000153_110004745	HumanObservation	110000153_110000153_110004745_1100032151	1				present			urn:lsid:marinespecies.org:taxname:137133	Uria aalge	Animalia	Common Guillemot
 110000153_110000153_110004745	HumanObservation	110000153_110000153_110004745_1100032152	1				present			urn:lsid:marinespecies.org:taxname:137133	Uria aalge	Animalia	Common Guillemot
-110000153_110000153_110004745	HumanObservation	110000153_110000153_110004745_1100032153	1			Sick, unwell	present		14.1800000000	urn:lsid:marinespecies.org:taxname:137182	Podiceps cristatus	Animalia	Great Crested Grebe
+110000153_110000153_110004745	HumanObservation	110000153_110000153_110004745_1100032153	1			sick, unwell	present		14.1800000000	urn:lsid:marinespecies.org:taxname:137182	Podiceps cristatus	Animalia	Great Crested Grebe
 110000153_110000153_110004745	HumanObservation	110000153_110000153_110004745_1100032154	1				present			urn:lsid:marinespecies.org:taxname:137141	Larus canus	Animalia	Common Gull
 110000153_110000153_110004745	HumanObservation	110000153_110000153_110004745_1100032155	2		adult		present			urn:lsid:marinespecies.org:taxname:567449	Hydrocoloeus minutus	Animalia	Little Gull
 110000153_110000153_110004746	HumanObservation	110000153_110000153_110004746_1100032156	1				present		14.3600000000	urn:lsid:marinespecies.org:taxname:137133	Uria aalge	Animalia	Common Guillemot
