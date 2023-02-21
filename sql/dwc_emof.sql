@@ -10,7 +10,7 @@ SELECT
   NULL                                  AS occurrenceID,
   'platform code'                       AS measurementType,
   'http://vocab.nerc.ac.uk/collection/Q01/current/Q0100001/' AS measurementTypeID,
-  shipc.Description                     AS measurementValue,
+  shipc.Description                     AS measurementValue, -- Keep capitalization
   'http://vocab.nerc.ac.uk/collection/C17/current/' || shipc.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
@@ -150,7 +150,7 @@ SELECT
   'target taxa'                         AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/TargetTaxa' AS measurementTypeID,
   CASE
-    -- Preserve capitalization of Larus
+    -- Keep capitalization of Larus
     WHEN targettaxa.Key = 2 THEN 'all species except Larus gulls'
     WHEN targettaxa.Key = 4 THEN 'all species except Larus gulls, fulmars and kittiwakes'
     ELSE lower(targettaxa.Description)
@@ -365,7 +365,7 @@ SELECT
   NULL                                  AS occurrenceID,
   'cloud cover'                         AS measurementType,
   'http://vocab.nerc.ac.uk/collection/P02/current/CHEX/' AS measurementTypeID,
-  cloudcover.Description                AS measurementValue,
+  lower(cloudcover.Description)         AS measurementValue,
   'https://vocab.ices.dk/services/rdf/collection/CloudCover/' || cloudcover.Key AS measurementValueID,
   'okta'                                AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/UUUU/' AS measurementUnitID
@@ -429,7 +429,7 @@ SELECT
   NULL                                  AS occurrenceID,
   'observation conditions'              AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Sightability' AS measurementTypeID,
-  sightability.Description              AS measurementValue,
+  lower(sightability.Description)       AS measurementValue,
   'https://vocab.ices.dk/services/rdf/collection/Sightability/' || sightability.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
@@ -618,7 +618,7 @@ SELECT
   'plumage'                             AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Plumage' AS measurementTypeID,
   CASE
-    -- Preserve capitalization of LL, ...
+    -- Keep capitalization of LL, ...
     WHEN plumage.Key = 'L' THEN 'light morph (skuas/double light LL fulmars)'
     WHEN plumage.Key = 'C' THEN 'coloured morph (L, D & DD fulmars)'
     ELSE lower(plumage.Description)
@@ -715,7 +715,7 @@ SELECT
   'prey'                                AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/PreyType' AS measurementTypeID,
   CASE
-    -- Preserve capitalization of scientific names
+    -- Keep capitalization of scientific names
     WHEN preytype.Key = 34 THEN 'worm (e.g. Nereis)'
     WHEN preytype.Key = 35 THEN 'barnacles (Balanidae)'
     ELSE lower(preytype.Description)
@@ -743,7 +743,7 @@ SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'association'                         AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Association' AS measurementTypeID,
-  lower(substr(association.Description, 1, 1)) || substr(association.Description, 2) AS measurementValue, -- Preserve capitalization of MSFA by lowercasing first letter only
+  lower(substr(association.Description, 1, 1)) || substr(association.Description, 2) AS measurementValue, -- Keep capitalization of MSFA by lowercasing first letter only
   'https://vocab.ices.dk/services/rdf/collection/Association/' || association.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
@@ -765,7 +765,7 @@ SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'association'                         AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Association' AS measurementTypeID,
-  lower(substr(association.Description, 1, 1)) || substr(association.Description, 2) AS measurementValue, -- Preserve capitalization of MSFA by lowercasing first letter only
+  lower(substr(association.Description, 1, 1)) || substr(association.Description, 2) AS measurementValue, -- Keep capitalization of MSFA by lowercasing first letter only
   'https://vocab.ices.dk/services/rdf/collection/Association/' || association.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
@@ -787,7 +787,7 @@ SELECT
   s.CampaignID || '_' || s.SampleID || '_' || p.PositionID || '_' || o.ObservationID AS occurrenceID,
   'association'                         AS measurementType,
   'https://vocab.ices.dk/services/rdf/collection/Association' AS measurementTypeID,
-  lower(substr(association.Description, 1, 1)) || substr(association.Description, 2) AS measurementValue, -- Preserve capitalization of MSFA by lowercasing first letter only
+  lower(substr(association.Description, 1, 1)) || substr(association.Description, 2) AS measurementValue, -- Keep capitalization of MSFA by lowercasing first letter only
   'https://vocab.ices.dk/services/rdf/collection/Association/' || association.Key AS measurementValueID,
   NULL                                  AS measurementUnit,
   'http://vocab.nerc.ac.uk/collection/P06/current/XXXX/' AS measurementUnitID
