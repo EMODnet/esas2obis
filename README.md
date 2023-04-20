@@ -8,12 +8,19 @@ This repository contains the functionality to standardize the data of the [Europ
 
 ## Workflow
 
-1. Download public ESAS data from [ICES](https://esas.ices.dk/inventory).
-2. Place data in `data/raw`.
-3. Run Darwin Core [mapping script](src/dwc_mapping.Rmd). Transforms input data to [Darwin Core files](data/processed) using [SQL](SQL).
-4. Upload Darwin Core files to the [VLIZ "upload" IPT](https://ipt.vliz.be/upload/resource?r=esas).
-5. Validate Darwin Core Archive (by EurOBIS staff).
-7. Publish dataset to OBIS and GBIF (by EurOBIS staff).
+To republish the data:
+
+1. Clone this repository to your computer.
+2. Download all public ESAS data from [ICES](https://esas.ices.dk/inventory).
+3. Place the downloaded data in `data/raw`. The directory is ignored by git, so you will have to create it.
+4. Open the repository in RStudio by opening the `esas2obis.Rproj` file.
+5. Open the Darwin Core mapping script [`dwc_mapping.Rmd`](src/dwc_mapping.Rmd).
+6. Click `Run > Run All` to transform the data to [Darwin Core files](data/processed) using [SQL](SQL). This will take a while.
+7. Verify that all steps in the the mapping script ran without errors.
+8. Verify in git or GitHub Desktop that the [sample data](data/processed_sample) are not affected (changes would indicate updates or issues in the mapping).
+9. Upload the Darwin Core files to the [VLIZ "upload" IPT](https://ipt.vliz.be/upload/resource?r=esas).
+10. Validate the Darwin Core Archive (by EurOBIS staff).
+11. Publish the dataset to OBIS and GBIF (by EurOBIS staff).
 
 ## Published dataset
 
@@ -130,13 +137,6 @@ The repository structure is based on [Cookiecutter Data Science](http://drivenda
     ├── processed          : Darwin Core output of mapping script GENERATED
     └── processed_sample   : Darwin Core sample output of mapping script for git comparison GENERATED
 ```
-
-## Installation
-
-1. Clone this repository to your computer
-2. Open the RStudio project file
-3. Open the `dwc_mapping.Rmd` [R Markdown file](https://rmarkdown.rstudio.com/) in RStudio
-4. Click `Run > Run All` to generate the processed data
 
 ## License
 
