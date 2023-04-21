@@ -11,8 +11,8 @@ This repository contains the functionality to standardize the data of the [Europ
 To republish the data:
 
 1. Clone this repository to your computer.
-2. Download all public ESAS data from [ICES](https://esas.ices.dk/inventory).
-3. Place the downloaded data in `data/raw`. The directory is ignored by git, so you will have to create it.
+2. Download all public ESAS data from [ICES](https://esas.ices.dk/inventory?selectedDataAccess=Public).
+3. Unzip the download and move the files to the repository in a `data/raw` directory. The directory (and the files it contains) is ignored by git, so you will have to create it.
 4. Open the repository in RStudio by opening the `esas2obis.Rproj` file.
 5. Open the Darwin Core mapping script [`dwc_mapping.Rmd`](src/dwc_mapping.Rmd).
 6. Click `Run > Run All` to transform the data to [Darwin Core files](data/processed) using [SQL](SQL). This will take a while.

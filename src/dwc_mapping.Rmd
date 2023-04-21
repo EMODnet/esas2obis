@@ -73,13 +73,13 @@ observations <- mutate(observations, across(everything(), as.character))
 # The SQLite queries are case insensitive
 ```
 
-We therefore recommend the following **manual steps**:
+We therefore recommend the following **manual steps** (also listed in README):
 
-1. Go to <https://esas.ices.dk/inventory>
-2. Filter on `Access: Public`
-3. Click `Download Data` and accept disclaimer.
-4. Download the data from the download request page
-5. Unzip the data and place it in a `data/raw` directory (ignored by git)
+1. Go to <https://esas.ices.dk/inventory>.
+2. Filter on `Access: Public`.
+3. Click `Download Data` and accept the disclaimer.
+4. Download the data from the download request page.
+5. Unzip the download and move the files to the repository in a `data/raw` directory (ignored by git).
 6. Read the data:
 
 ```{r get_local_data}
