@@ -24,9 +24,10 @@ To republish the data:
 
 ## Published dataset
 
-- [Dataset on the VLIZ "upload" IPT](https://ipt.vliz.be/upload/resource?r=esas)
+- [Dataset on IMIS](https://www.vliz.be/imis?dasid=3117&doiid=826): source for the metadata and landing page for the DOI (<https://doi.org/10.14284/601>)
+- [Dataset on the VLIZ "upload" IPT](https://ipt.vliz.be/upload/resource?r=esas): source for the data
 - [Dataset on OBIS](#) - TBD
-- [Dataset on GBIF](#) - TBD
+- [Dataset on GBIF](https://www.gbif.org/dataset/3470d506-e667-4e3f-b178-819669684c05)
 
 ## Darwin Core transformation
 
