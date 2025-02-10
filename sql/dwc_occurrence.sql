@@ -54,7 +54,10 @@ SELECT
     WHEN o.LifeStage IN ('I', 1, 2, 3, 4, 5) THEN 'immature'
   END                                   AS lifeStage, -- Also in EMOF with orig vocab
   lower(behaviours.Description)         AS behavior, -- Also in EMOF
-  'present'                             AS occurrenceStatus,
+  CASE
+    WHEN o.Count = 0 OR o.Count = '0' THEN 'absent'
+    ELSE 'present'
+  END                                   AS occurrenceStatus,
   CASE
     WHEN o.Association_1 = '10' OR o.Association_2 = '10' OR o.Association_3 = '10' THEN 'Pisces'
     WHEN o.Association_1 = '11' OR o.Association_2 = '11' OR o.Association_3 = '11' THEN 'Cetacea'
