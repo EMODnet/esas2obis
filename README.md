@@ -18,14 +18,14 @@ To republish the data:
 6. Click `Run > Run All` to transform the data to [Darwin Core files](data/processed) using [SQL](SQL). This will take a while.
 7. Verify that all steps in the the mapping script ran without errors.
 8. Verify in git or GitHub Desktop that the [sample data](data/processed_sample) are not affected (changes would indicate updates or issues in the mapping).
-9. Upload the Darwin Core files to the [VLIZ "upload" IPT](https://ipt.vliz.be/upload/resource?r=esas).
+9. Upload the Darwin Core files to the [EurOBIS IPT](https://ipt.vliz.be/eurobis/resource?r=esas).
 10. Validate the Darwin Core Archive (by EurOBIS staff).
 11. Publish the dataset to OBIS and GBIF (by EurOBIS staff).
 
 ## Published dataset
 
 - [Dataset on IMIS](https://www.vliz.be/imis?dasid=3117&doiid=826): source for the metadata and landing page for the DOI (<https://doi.org/10.14284/601>)
-- [Dataset on the VLIZ "upload" IPT](https://ipt.vliz.be/upload/resource?r=esas): source for the data
+- [Dataset on the EurOBIS IPT](https://ipt.vliz.be/eurobis/resource?r=esas): source for the data
 - [Dataset on OBIS](https://obis.org/dataset/86453e9e-24f5-47b1-b442-b6f86a9979b7)
 - [Dataset on GBIF](https://www.gbif.org/dataset/3470d506-e667-4e3f-b178-819669684c05)
 
